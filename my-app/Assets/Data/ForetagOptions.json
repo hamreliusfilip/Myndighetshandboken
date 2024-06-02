@@ -1,0 +1,14 @@
+{
+    "option1": {
+        "responsive": true,
+        "plugins": {
+            "legend": {
+                "position": "left"
+            },
+            "title": {
+                "display": false,
+                "text": "Utgifter - 2020, Wikipedia (procent)"
+            }
+        }
+    }
+}

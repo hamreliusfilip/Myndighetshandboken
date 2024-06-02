@@ -1,0 +1,46 @@
+{
+    "option1": {
+        "title": "Antal mandat i riksdagen",
+        "responsive": true,
+        "scales": {
+            "x": {
+                "type": "category"
+            },
+            "y": {
+                "beginAtZero": true
+            }
+        },
+        "plugins": {
+            "legend": {
+                "display": false,
+                "position": "top"
+            },
+            "title": {
+                "display": false,
+                "text": "Antal mandat i riksdagen"
+            }
+        }
+    },
+    "option2": {
+        "title": "Fördelning i regeringen",
+        "responsive": true,
+        "scales": {
+            "x": {
+                "type": "category"
+            },
+            "y": {
+                "beginAtZero": true
+            }
+        },
+        "plugins": {
+            "legend": {
+                "display": false,
+                "position": "top"
+            },
+            "title": {
+                "display": false,
+                "text": "Fördelning i regeringen"
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "data1": {
+        "labels": [
+            "Socialdemokraterna",
+            "Sverigedemokraterna",
+            "Moderaterna",
+            "Vänsterpartiet",
+            "Centerpartiet",
+            "Kristdemokraterna",
+            "Miljöpartiet",
+            "Liberalerna"
+        ],
+        "datasets": [
+            {
+                "label": "",
+                "data": [
+                    107,
+                    73,
+                    68,
+                    24,
+                    24,
+                    19,
+                    18,
+                    16
+                ],
+                "backgroundColor": [
+                    "rgb(237, 27, 52)",
+                    "rgb(255, 221, 1)",
+                    "rgb(82, 189, 236)",
+                    "rgb(218, 41, 28)",
+                    "rgb(0, 153, 51)",
+                    "rgb(0, 0, 119)",
+                    "rgb(131, 207, 57)",
+                    "rgb(0, 106, 179)"
+                ],
+                "borderWidth": 1,
+                "borderRadius": 15
+            }
+        ]
+    },
+    "data2": {
+        "labels": [
+            "Moderaterna",
+            "Kristdemokraterna",
+            "Liberalerna"
+        ],
+        "datasets": [
+            {
+                "label": "",
+                "data": [
+                    13,
+                    6,
+                    5
+                ],
+                "backgroundColor": [
+                    "rgb(82, 189, 236)",
+                    "rgb(0, 0, 119)",
+                    "rgb(0, 106, 179)"
+                ],
+                "borderWidth": 1,
+                "borderRadius": 15
+            }
+        ]
+    }
+}

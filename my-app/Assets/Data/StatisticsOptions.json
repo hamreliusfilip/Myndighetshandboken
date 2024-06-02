@@ -1,0 +1,266 @@
+{
+  "option1": {
+    "title": "Antal män och kvinnor i statlig sektor per ålderskategori, 2021",
+    "responsive": true,
+    "scales": {
+      "x": {
+        "type": "category"
+      },
+      "y": {
+        "beginAtZero": true
+      }
+    },
+    "plugins": {
+      "legend": {
+        "position": "top"
+      },
+      "title": {
+        "display": true,
+        "text": "Antal män och kvinnor i statlig sektor per ålderskategori, 2021"
+      }
+    }
+  },
+  "option2": {
+    "title": "Kvinnor och män i statlig sektor",
+    "responsive": true,
+    "scales": {
+      "x": {
+        "type": "category"
+      },
+      "y": {
+        "beginAtZero": true,
+        "ticks": {
+          "callback": "function (value: number) { return value + '%'; }"
+        }
+      }
+    },
+    "plugins": {
+      "legend": {
+        "position": "top"
+      },
+      "title": {
+        "display": true,
+        "text": "Kvinnor och män i statlig sektor"
+      }
+    }
+  },
+  "option3": {
+    "title": "Anställda i myndigheter under regeringen per arbetsområde 2022",
+    "responsive": true,
+    "scales": {
+      "x": {
+        "type": "category"
+      },
+      "y": {
+        "beginAtZero": true,
+        "ticks": {
+          "callback": "function (value: number) { return value + '%'; }"
+        }
+      }
+    },
+    "plugins": {
+      "legend": {
+        "position": "top"
+      },
+      "title": {
+        "display": true,
+        "text": "Anställda i myndigheter under regeringen per arbetsområde 2022"
+      }
+    }
+  },
+  "option4": {
+    "title": "Andel anställda i staten och övriga sektorer 2021",
+    "responsive": true,
+    "scales": {
+      "x": {
+        "type": "category"
+      },
+      "y": {
+        "beginAtZero": true,
+        "ticks": {
+          "callback": "function (value: number) { return value + '%'; }"
+        }
+      }
+    },
+    "plugins": {
+      "legend": {
+        "position": "top"
+      },
+      "title": {
+        "display": true,
+        "text": "Andel anställda i staten och övriga sektorer 2021"
+      }
+    }
+  },
+  "option5": {
+    "title": "Andel anställda kvinnor och män inom olika verksamhetsområden, 2022",
+    "responsive": true,
+    "scales": {
+      "x": {
+        "type": "category"
+      },
+      "y": {
+        "beginAtZero": true,
+        "ticks": {
+          "callback": "function (value: number) { return value + '%'; }"
+        }
+      }
+    },
+    "plugins": {
+      "legend": {
+        "position": "top"
+      },
+      "title": {
+        "display": true,
+        "text": "Andel anställda kvinnor och män inom olika verksamhetsområden, 2022"
+      }
+    }
+  },
+  "option6": {
+    "title": "Andel som instämmer i påståenden, 2022",
+    "responsive": true,
+    "scales": {
+      "x": {
+        "type": "category"
+      },
+      "y": {
+        "beginAtZero": true
+      }
+    },
+    "plugins": {
+      "legend": {
+        "position": "top"
+      },
+      "title": {
+        "display": true,
+        "text": "Andel som instämmer i påståenden, 2022"
+      }
+    }
+  },
+  "option7": {
+    "title": "Antal myndigheter under regeringen efter verksamhetsområde, 2023",
+    "responsive": true,
+    "scales": {
+      "x": {
+        "type": "category"
+      },
+      "y": {
+        "beginAtZero": true
+      }
+    },
+    "plugins": {
+      "legend": {
+        "position": "top"
+      },
+      "title": {
+        "display": true,
+        "text": "Antal myndigheter under regeringen efter verksamhetsområde, 2023"
+      }
+    }
+  },
+  "option8": {
+    "title": "Myndigheternas ledningsform (antal) - 2023",
+    "responsive": true,
+    "scales": {
+      "x": {
+        "type": "category"
+      },
+      "y": {
+        "beginAtZero": true
+      }
+    },
+    "plugins": {
+      "legend": {
+        "position": "top"
+      },
+      "title": {
+        "display": true,
+        "text": "Myndigheternas ledningsform (antal) - 2023"
+      }
+    }
+  },
+  "option9": {
+    "title": "Antal statligt förvärvsarbetande per län, 2023",
+    "responsive": true,
+    "scales": {
+      "x": {
+        "type": "category"
+      },
+      "y": {
+        "beginAtZero": true
+      }
+    },
+    "plugins": {
+      "legend": {
+        "position": "top"
+      },
+      "title": {
+        "display": true,
+        "text": "Antal statligt förvärvsarbetande per län, 2023"
+      }
+    }
+  },
+  "option10": {
+    "title": "Antal myndigheter genom åren, 2023",
+    "responsive": true,
+    "scales": {
+      "x": {
+        "type": "category"
+      },
+      "y": {
+        "beginAtZero": true
+      }
+    },
+    "plugins": {
+      "legend": {
+        "position": "top"
+      },
+      "title": {
+        "display": true,
+        "text": "Antal myndigheter genom åren, 2023"
+      }
+    }
+  },
+  "option11": {
+    "title": "Svenska folkets bedömning av tio myndigheters arbete 2021",
+    "responsive": true,
+    "scales": {
+      "x": {
+        "type": "category"
+      },
+      "y": {
+        "beginAtZero": true
+      }
+    },
+    "plugins": {
+      "legend": {
+        "position": "top"
+      },
+      "title": {
+        "display": true,
+        "text": "Svenska folkets bedömning av tio myndigheters arbete 2021"
+      }
+    }
+  },
+  "option12": {
+    "title": "Antal anställda i statlig sektor 2011–2021, 2021",
+    "responsive": true,
+    "scales": {
+      "x": {
+        "type": "category"
+      },
+      "y": {
+        "beginAtZero": true
+      }
+    },
+    "plugins": {
+      "legend": {
+        "position": "top"
+      },
+      "title": {
+        "display": true,
+        "text": "Antal anställda i statlig sektor 2011–2021, 2021"
+      }
+    }
+  }
+}
