@@ -7,8 +7,11 @@ import NavCardsHoms from '../components/LandingPage/navCardsHoms';
 import Footer from '../components/Main/footer';
 import LandingFiller from '../components/LandingPage/landingFiller';
 import LandingFiller2 from "@/components/LandingPage/landingFiller2";
+import LandingFiller3 from "@/components/LandingPage/landingFiller3";
+import LandingFiller4 from "@/components/LandingPage/landingFiller4";
 import Info from "../components/LandingPage/infoText";
 import Facts from "@/components/LandingPage/facts";
+
 
 import MobileLogo from '@/components/mobileComponents/mobileLogo';
 import MobileWarning from '@/components/mobileComponents/warningPrompt';
@@ -39,7 +42,10 @@ export default function Home() {
       {!isMobile && <NavCardsHoms />}
       {!isMobile && <Facts />}
       {!isMobile && <LandingFiller />}
+      {!isMobile && <LandingFiller3 />}
       {!isMobile && <LandingFiller2 />}
+      {!isMobile && <LandingFiller4 />}
+
       {!isMobile && <Footer />}
 
       {isMobile && <MobileLogo />}

@@ -64,7 +64,7 @@ export default function AboutMynVsCom() {
                         </CardContent>
                         <CardContent>
                             <Link href="https://chat.openai.com" target="_blank">
-                                <Button variant="outline" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white">ChatGPT - OpenAI</Button>
+                                <Button variant="outline" className='bg-white text-black m-1'>ChatGPT - OpenAI</Button>
                             </Link>
                         </CardContent>
                     </Card>

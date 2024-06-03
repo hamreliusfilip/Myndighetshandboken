@@ -111,7 +111,7 @@ export default function GraphForetag() {
                                 </div>
                                 <div className='m-10'>
                                     <p className='font-bold text-sm text-left mb-2'>IB = Intressebolag</p>
-                                    
+
                                 </div>
                             </CardContent>
                         </Card>
@@ -157,7 +157,7 @@ export default function GraphForetag() {
                         </CardContent>
                         <CardContent>
                             <Link href="https://data.riksdagen.se/dokument/HA03140" target="_blank">
-                                <Button variant="outline" className='m-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>Riksdagen</Button>
+                                <Button variant="outline" className='bg-white text-black m-1'>Riksdagen</Button>
                             </Link>
                         </CardContent>
                     </Card>

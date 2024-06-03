@@ -35,6 +35,13 @@
     --radius: 0.5rem;
   }
 
+  .custom-blur-gradient {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.5), transparent);
+    backdrop-filter: blur(5px);
+}
+
+  
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;

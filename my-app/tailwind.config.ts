@@ -25,6 +25,12 @@ const config: Config = {
       },
     },
     extend: {
+      backdropBlur: {
+        'custom': '10px',
+      },
+      backgroundImage: {
+        'gradient-blur': 'linear-gradient(to left, rgba(255, 255, 255, 0.5), transparent)',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -81,8 +87,16 @@ const config: Config = {
         },
       },
       height: {
-        '120': '48rem', // Example added height
-        // Add more as needed
+        '120': '48rem',
+        '100': '36rem' // Example added height
+      },
+      margin: {
+        '120': '48rem',
+        '100': '44rem' 
+      },
+      width: {
+        '120': '48rem',
+        '100': '44rem' 
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

@@ -255,13 +255,13 @@ const App: React.FC = () => {
             </CardContent>
             <CardContent>
               <Link href="https://www.statskontoret.se/publicerat/publikationer/publikationer-2023/statsforvaltningen-i-korthet-2023/" target="_blank">
-                <Button variant="outline" className='m-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>Statskontoret - Rapport</Button>
+                <Button variant="outline" className='bg-white text-black m-1'>Statskontoret - Rapport</Button>
               </Link>
               <Link href="https://www.statskontoret.se" target="_blank">
-                <Button variant="outline" className='m-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>Statskontoret - Hemsida</Button>
+                <Button variant="outline" className='bg-white text-black m-1'>Statskontoret - Hemsida</Button>
               </Link>
               <Link href="https://www.riksdagen.se/sv/sa-fungerar-riksdagen/demokrati/sa-bildas-regeringen/regeringen/" target="_blank">
-                <Button variant="outline" className='m-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>Regeringskansliet: Information & Bilder</Button>
+                <Button variant="outline" className='bg-white text-black m-1'>Regeringskansliet: Information & Bilder</Button>
               </Link>
             </CardContent>
           </Card>

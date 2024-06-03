@@ -95,10 +95,10 @@ export default function Budget() {
                     </CardContent>
                     <CardContent>
                         <Link href="https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf" target="_blank">
-                            <Button variant="outline" className='m-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>Budget proposition</Button>
+                            <Button variant="outline" className='bg-white text-black m-1'>Budget proposition</Button>
                         </Link>
                         <Link href="https://sv.wikipedia.org/wiki/Sveriges_statsbudget" target="_blank">
-                            <Button variant="outline" className='m-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>Wikipedia - Sveriges Statsbudget</Button>
+                            <Button variant="outline" className='bg-white text-black m-1'>Wikipedia - Sveriges Statsbudget</Button>
                         </Link>
                     </CardContent>
                 </Card>

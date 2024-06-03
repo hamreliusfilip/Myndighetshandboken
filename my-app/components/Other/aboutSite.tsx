@@ -24,10 +24,10 @@ export default function AboutSite() {
                     </CardContent>
                     <CardContent>
                         <Link href="https://www.linkedin.com/in/annagranberg00/" target="_blank">
-                            <Button variant="outline" className='m-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>Anna Granberg</Button>
+                            <Button variant="outline" className='bg-white text-black m-1'>Anna Granberg</Button>
                         </Link>
                         <Link href="https://www.linkedin.com/in/filip-hamrelius/" target="_blank">
-                            <Button variant="outline" className='m-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>Filip Hamrelius</Button>
+                            <Button variant="outline" className='bg-white text-black m-1'>Filip Hamrelius</Button>
                         </Link>
                     </CardContent>
                 </Card>
@@ -41,22 +41,22 @@ export default function AboutSite() {
                     </CardContent>
                     <CardContent>
                         <Link href="https://riksarkivet.se/start" target="_blank">
-                            <Button variant="outline" className='m-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>Riksarkivet</Button>
+                            <Button variant="outline" className='bg-white text-black m-1'>Riksarkivet</Button>
                         </Link>
                         <Link href="https://myndighetsregistret.scb.se/Myndighet" target="_blank">
-                            <Button variant="outline" className='m-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>SCB - Myndighetsregistret</Button>
+                            <Button variant="outline" className='bg-white text-black m-1'>SCB - Myndighetsregistret</Button>
                         </Link>
                         <Link href="https://www.regeringen.se/regeringskansliet/" target="_blank">
-                            <Button variant="outline" className='m-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>Regeringskansliet</Button>
+                            <Button variant="outline" className='bg-white text-black m-1'>Regeringskansliet</Button>
                         </Link>
                         <Link href="https://www.statskontoret.se/publicerat/publikationer/publikationer-2023/statsforvaltningen-i-korthet-2023/" target="_blank">
-                            <Button variant="outline" className='m-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>Statskontoret - Statsförvaltning i korthet</Button>
+                            <Button variant="outline" className='bg-white text-black m-1'>Statskontoret - Statsförvaltning i korthet</Button>
                         </Link>
                         <Link href="https://sv.wikipedia.org/wiki/Portal:Huvudsida" target="_blank">
-                            <Button variant="outline" className='m-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>Wikipedia</Button>
+                            <Button variant="outline" className='bg-white text-black m-1'>Wikipedia</Button>
                         </Link>
                         <Link href="https://www.allabolag.se" target="_blank">
-                            <Button variant="outline" className="m-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white">Alla Bolag</Button>
+                            <Button variant="outline" className='bg-white text-black m-1'>Alla Bolag</Button>
                         </Link>
                     </CardContent>
                 </Card>
@@ -70,22 +70,22 @@ export default function AboutSite() {
                     </CardContent>
                     <CardContent>
                         <Link href="https://riksarkivet.se/start" target="_blank">
-                            <Button variant="outline" className='m-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>Riksarkivet</Button>
+                            <Button variant="outline" className='bg-white text-black m-1'>Riksarkivet</Button>
                         </Link>
                         <Link href="https://www.regeringen.se/regeringskansliet/" target="_blank">
-                            <Button variant="outline" className='m-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>Regeringskansliet</Button>
+                            <Button variant="outline" className='bg-white text-black m-1'>Regeringskansliet</Button>
                         </Link>
                         <Link href="https://www.statskontoret.se/publicerat/publikationer/publikationer-2023/statsforvaltningen-i-korthet-2023/" target="_blank">
-                            <Button variant="outline" className='m-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>Statskontoret - Statsförvaltning i korthet</Button>
+                            <Button variant="outline" className='bg-white text-black m-1'>Statskontoret - Statsförvaltning i korthet</Button>
                         </Link>
                         <Link href="https://sv.wikipedia.org/wiki/Portal:Huvudsida" target="_blank">
-                            <Button variant="outline" className='m-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>Wikipedia</Button>
+                            <Button variant="outline" className='bg-white text-black m-1'>Wikipedia</Button>
                         </Link>
                         <Link href="https://myndighetsregistret.scb.se/Myndighet" target="_blank">
-                            <Button variant="outline" className='m-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>SCB - Myndighetsregistret</Button>
+                            <Button variant="outline" className='bg-white text-black m-1'>SCB - Myndighetsregistret</Button>
                         </Link>
                         <Link href="https://chat.openai.com" target="_blank">
-                            <Button variant="outline" className="m-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white">ChatGPT - OpenAI</Button>
+                            <Button variant="outline" className='bg-white text-black m-1'>ChatGPT - OpenAI</Button>
                         </Link>
                     </CardContent>
                 </Card>

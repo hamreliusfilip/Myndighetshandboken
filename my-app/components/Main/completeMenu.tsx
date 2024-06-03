@@ -42,14 +42,6 @@ export default function CompleteMenu() {
             </div>}
           </MenubarMenu>
         </Link>
-        <Link href="/company">
-          <MenubarMenu>
-            <MenubarTrigger>Statliga företag</MenubarTrigger>
-            {isCurrentPath("/company") && <div className="flex justify-center">
-              <div className="bg-slate-300 h-1 w-5 -mt-1 mb-1 rounded rounded-corners"></div>
-            </div>}
-          </MenubarMenu>
-        </Link>
         <Link href="/departement">
           <MenubarMenu>
             <MenubarTrigger>Departement</MenubarTrigger>
@@ -58,6 +50,34 @@ export default function CompleteMenu() {
             </div>}
           </MenubarMenu>
         </Link>
+        <Link href="/company">
+          <MenubarMenu>
+            <MenubarTrigger>Statliga företag</MenubarTrigger>
+            {isCurrentPath("/company") && <div className="flex justify-center">
+              <div className="bg-slate-300 h-1 w-5 -mt-1 mb-1 rounded rounded-corners"></div>
+            </div>}
+          </MenubarMenu>
+        </Link>
+
+        <MenubarMenu>
+          <MenubarTrigger>Utrikes</MenubarTrigger>
+          <MenubarContent>
+            <Link href="/utrikesrelationer/relations">
+              <MenubarItem>Internationella relationer</MenubarItem>
+              {isCurrentPath("/utrikesrelationer/relations") && <div className="flex justify-start">
+                <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
+              </div>}
+            </Link>
+            <MenubarSeparator />
+            <Link href="/utrikesrelationer/abroadMyndighet">
+              <MenubarItem>Utlänska myndigheter</MenubarItem>
+              {isCurrentPath("/utrikesrelationer/abroadMyndighet") && <div className="flex justify-start">
+                <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
+              </div>}
+            </Link>
+          </MenubarContent>
+        </MenubarMenu>
+
         <MenubarMenu>
           <MenubarTrigger>Fakta & Statistik</MenubarTrigger>
           <MenubarContent>
@@ -90,6 +110,12 @@ export default function CompleteMenu() {
             <MenubarSub>
               <MenubarSubTrigger>Fakta</MenubarSubTrigger>
               <MenubarSubContent>
+              <Link href="/faktaover/politik">
+                  <MenubarItem>Politik</MenubarItem>
+                  {isCurrentPath("/faktaover/politik") && <div className="flex justify-start">
+                    <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
+                  </div>}
+                </Link>
                 <Link href="/faktaover/foretagMyndigheter">
                   <MenubarItem>Myndigheter & Företag</MenubarItem>
                   {isCurrentPath("/faktaover/foretagMyndigheter") && <div className="flex justify-start">
@@ -114,9 +140,18 @@ export default function CompleteMenu() {
             </MenubarSub>
           </MenubarContent>
         </MenubarMenu>
+        <Link href="/Tips">
+          <MenubarMenu>
+            <MenubarTrigger>Tips</MenubarTrigger>
+            {isCurrentPath("/Tips") && <div className="flex justify-center">
+              <div className="bg-slate-300 h-1 w-5 -mt-1 mb-1 rounded rounded-corners"></div>
+            </div>}
+          </MenubarMenu>
+        </Link>
+
         <Link href="/om">
           <MenubarMenu>
-            <MenubarTrigger>Om hemsidan</MenubarTrigger>
+            <MenubarTrigger>Om oss</MenubarTrigger>
             {isCurrentPath("/om") && <div className="flex justify-center">
               <div className="bg-slate-300 h-1 w-5 -mt-1 mb-1 rounded rounded-corners"></div>
             </div>}
