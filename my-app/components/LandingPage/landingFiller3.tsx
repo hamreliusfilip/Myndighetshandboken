@@ -25,7 +25,7 @@ export default function LandingFiller3() {
 
                     </div>
                     <p className="absolute top-0 left-0 text-white text-5xl mt-32 ml-72 font-bold">Internationella relationer</p>
-                    <p className="absolute bottom-0 right-0 text-white text-4xl mb-32 mr-96 font-light">NATO <span className='font-black'> - </span>  FN <span className='font-black'> - </span> EU </p>
+                    <p className="absolute bottom-0 right-0 text-white text-4xl mb-32 mr-96 font-light"> NATO - FN - EU </p> 
                     <Link href='/utrikesrelationer/relations'>
                         <Button className='absolute bottom-0 left-0 mb-12 ml-72 bg-white text-black font-bold'>Läs mer</Button>
                     </Link>

@@ -80,7 +80,7 @@ export default function Page() {
             if (storedFilters) {
                 return JSON.parse(storedFilters).slider1Value;
             }
-            return '1477';
+            return '1200';
         }
     });
 
@@ -210,7 +210,7 @@ export default function Page() {
         setRelationFilters({});
         setSearchQuery('');
         setFilterReset(true);
-        setSlider1Value('1477');
+        setSlider1Value('1200');
         setSlider2Value('2024');
         localStorage.setItem('mynSort', 'alfa');
         setMyndigheter([...myndigheter].sort((a, b) => a.name.localeCompare(b.name)));
@@ -319,7 +319,7 @@ export default function Page() {
                                                 <p className='mr-4'>Från</p>
                                                 <input
                                                     type="number"
-                                                    min="1477"
+                                                    min="1200"
                                                     max="2024"
                                                     value={slider1Value}
                                                     onChange={handleInput1Change}
@@ -330,7 +330,7 @@ export default function Page() {
                                                 <p className='mr-4 font-semibold text-sm'>Till&nbsp;&nbsp;</p>
                                                 <input
                                                     type="number"
-                                                    min="1477"
+                                                    min="1200"
                                                     max="2024"
                                                     value={slider2Value}
                                                     onChange={handleInput2Change}
