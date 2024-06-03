@@ -33,19 +33,19 @@ export default function TipsCom() {
                     <hr className="w-96 h-1 mx-auto my-4 bg-gradient-to-r from-cyan-500 to-blue-500 border-0 rounded md:my-10 dark:bg-gray-700" />
                 </div>
             </div>
-            <div className="grid grid-cols-1 gap-4 px-4 py-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {tipsData.map((tip, index) => (
-                    <Card key={index}>
-                        <CardHeader>
-                            <CardTitle>{tip.name}</CardTitle>
-                        </CardHeader>
-                        <CardContent>
+                    <Card key={index} className="m-12 p-2">
+                  
+                        <div className="ml-6">
                             <img src={tip.img} alt={tip.name} className="w-56 rounded-sm mt-5 mb-5" />
+                        </div>
+                        <CardContent>
                             <p className="text-black font-regular">{tip.info}</p>
                         </CardContent>
                         <CardContent>
                             <Link href={tip.web} target="_blank">
-                                <Button variant="outline" className='bg-white text-black m-1'>Läs mer</Button>
+                                <Button variant="outline" className='bg-white text-black'>Läs mer</Button>
                             </Link>
                         </CardContent>
                     </Card>
