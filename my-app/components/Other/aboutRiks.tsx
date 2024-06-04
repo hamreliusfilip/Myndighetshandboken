@@ -13,8 +13,8 @@ import { Button } from "@/components/ui/button"
 import { Bar } from 'react-chartjs-2';
 import { Chart, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 
-import data from '../../Assets/Data/VoteData.json';
 import option from '../../Assets/Data/VoteOptions.json';
+import data from '../../Assets/Data/VoteData.json';
 
 Chart.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 

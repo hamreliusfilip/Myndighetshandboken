@@ -53,7 +53,7 @@ export default function NavCardsHoms() {
                             <p className='text-white'>Filtrera, sök och utforska de svenska myndigheterna med vår unika databas. Enkel och effektiv sökning som saknar motstycke.</p>
                         </CardContent>
                         <CardContent>
-                            <Button className='bg-white text-black'>Läs mer</Button>
+                            <Button variant = {"outline"} className='bg-white text-black'>Läs mer</Button>
                         </CardContent>
                     </Card>
                 </Link>

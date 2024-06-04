@@ -81,7 +81,6 @@ export default function List({ type }: ListProps) {
             <Link href={backButtonHref}>
                 <Button variant="outline" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white ml-8 mt-8">Tillbaka</Button>
             </Link>
-
             <Card className="h-5/6 w-2/4 mx-auto">
                 <CardContent className="m-1 my-10">
                     <CardTitle className="my-10">{cardTitle}</CardTitle>
