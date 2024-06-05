@@ -56,15 +56,14 @@ export default function FormVariant({ data, type }: any) {
 
     const handleChange = (e: any) => {
         const { name, value } = e.target;
-
+    
         setFormData((prevData: any) => ({
             ...prevData,
             [name]: value,
         }));
     }
-
+    
     const validateFormData = (formData: any) => {
-
         return true;
     }
 
@@ -122,7 +121,7 @@ export default function FormVariant({ data, type }: any) {
                             name="Country"
                             type="text"
                             onChange={handleChange}
-                            required={true}
+                            required={false}
                             value={formData.Country}
                             placeholder={`${type === "Amyndighet" ? "Myndighetens" : "Företagets"} namn`}
                             className="border-solid border-2 border-slate-300 rounded-sm p-1 pl-2 mt-1"
@@ -135,9 +134,9 @@ export default function FormVariant({ data, type }: any) {
                         <input
                             id="City"
                             name="City"
-                            type="number"
+                            type="text"
                             onChange={handleChange}
-                            required={true}
+                            required={false}
                             value={formData.City}
                             placeholder="xxxx"
                             className="border-solid border-2 border-slate-300 rounded-sm p-1 pl-2 mt-1"
@@ -169,7 +168,7 @@ export default function FormVariant({ data, type }: any) {
                             name="Email"
                             type="text"
                             onChange={handleChange}
-                            required={true}
+                            required={false}
                             value={formData.Email}
                             placeholder="Mailadress"
                             className="border-solid border-2 border-slate-300 rounded-sm p-1 pl-2 mt-1"
@@ -183,7 +182,7 @@ export default function FormVariant({ data, type }: any) {
                         <input
                             id="Web"
                             name="Web"
-                            type="Web"
+                            type="text"
                             onChange={handleChange}
                             required={false}
                             value={formData.Web}
