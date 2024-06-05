@@ -77,6 +77,30 @@ export default function AdminMenu() {
                     </MenubarContent>
                 </MenubarMenu>
 
+
+                <MenubarMenu>
+                    <MenubarTrigger>Utlandsmyndigheter</MenubarTrigger>
+                    <MenubarContent>
+
+                        <Link href="/admin/adminAddAMyn/new">
+                            <MenubarItem>Lägg till myndighet</MenubarItem>
+                            {isCurrentPath("/admin/adminAddAMyn/new") && <div className="flex justify-start">
+                                <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
+                            </div>}
+                        </Link>
+
+                        <MenubarSeparator />
+
+                        <Link href="/admin/adminListPageA">
+                            <MenubarItem>Alla myndigheter - Redigera</MenubarItem>
+                            {isCurrentPath("/admin/adminListPageA") && <div className="flex justify-start">
+                                <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
+                            </div>}
+                        </Link>
+
+                    </MenubarContent>
+                </MenubarMenu>
+
                 <Link href="/">
                     <MenubarMenu>
                         <MenubarTrigger>Användarstartsida</MenubarTrigger>

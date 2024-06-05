@@ -14,20 +14,18 @@ export default function List({ type }: ListProps) {
     const [items, setItems] = useState<any[]>([]);
 
     const fetchItems = async () => {
+
         try {
-            const endpoint = type === 'myndighet'
-                ? 'myndigheter'
-                : type === 'company'
-                ? 'companies'
-                : 'Amyndigheter';
-            const res = await fetch(`http://localhost:3000/api/${endpoint}?fields=name,_id`);
-            const data = await res.json();
-            return data[type];
+          const res = await fetch("http://localhost:3000/api/Amyndigheter?fields=Country,City", {
+            method: "GET",
+          });
+          const data = await res.json();
+          return data.Amyndighet;
         } catch (error) {
-            console.error(`Error fetching ${type}:`, error);
-            return [];
+          console.error("Error fetching Amyndigheter:", error);
+          return [];
         }
-    };
+      }
 
     useEffect(() => {
         fetchItems().then((items) => {
@@ -40,11 +38,11 @@ export default function List({ type }: ListProps) {
 
     const groupAndSortItems = (items: any[]) => {
         const grouped = items.reduce((acc: any, item: any) => {
-            const firstLetter = item.name.charAt(0).toUpperCase();
+            const firstLetter = item.Country.charAt(0).toUpperCase();
             acc[firstLetter] = acc[firstLetter] || [];
             acc[firstLetter].push({
                 id: item._id,
-                name: item.name
+                Country: item.Country
             });
             return acc;
         }, {});
@@ -52,8 +50,8 @@ export default function List({ type }: ListProps) {
         Object.keys(grouped).forEach((key) => {
             grouped[key].sort((a: any, b: any) => {
                 const normalize = (str: string) => str.replace(/[^a-zA-Z0-9]/g, '').toUpperCase();
-                const aName = normalize(a.name);
-                const bName = normalize(b.name);
+                const aName = normalize(a.Country);
+                const bName = normalize(b.Country);
                 return aName.localeCompare(bName);
             });
         });
@@ -75,11 +73,6 @@ export default function List({ type }: ListProps) {
         );
     }
 
-    const backButtonHref = type === 'myndighet'
-        ? '/myndighet'
-        : type === 'company'
-        ? '/company'
-        : '/Amyndighet';
     const cardTitle = type === 'myndighet'
         ? 'Myndigheter under regeringen utifrån alfabetisk ordning'
         : type === 'company'
@@ -88,7 +81,7 @@ export default function List({ type }: ListProps) {
 
     return (
         <div>
-            <Link href={backButtonHref}>
+            <Link href={'/abroadMyndighet'}>
                 <Button variant="outline" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white ml-8 mt-8">Tillbaka</Button>
             </Link>
             <Card className="h-5/6 w-2/4 mx-auto">
@@ -102,7 +95,7 @@ export default function List({ type }: ListProps) {
                                 <div key={letter}>
                                     <h2 className='font-bold'>{letter}</h2>
                                     {grouped[letter].map((item: any) => (
-                                        <p key={item.id}>{item.name}</p>
+                                        <p key={item.id}>{item.Country}</p>
                                     ))}
                                 </div>
                             ))}

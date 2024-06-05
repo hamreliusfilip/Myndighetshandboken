@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import dbConnect from "../../../lib/dbConnect";
-import Myndigheter from "../../../lib/models/myndighet";
+import AMyndigheter from "../../../lib/models/Amyndighet";
 
 export async function GET(req: any) {
   try {
@@ -16,12 +16,12 @@ export async function GET(req: any) {
           });
         }
 
-        const myndighet = await Myndigheter.find({}, projection);
+        const Amyndighet = await AMyndigheter.find({}, projection);
 
-      return NextResponse.json({ myndighet }, { status: 200 });
+      return NextResponse.json({ Amyndighet }, { status: 200 });
 
   } catch (error) {
-      return NextResponse.json({ status: 500, message: 'Error finding myndigheter' });
+      return NextResponse.json({ status: 500, message: 'Error finding Amyndigheter' });
   }
 }
 
@@ -29,10 +29,10 @@ export async function POST(req: any) {
   try {
 
     const body = await req.json(); 
-    await Myndigheter.create(body);
+    await AMyndigheter.create(body);
     
 
-    return NextResponse.json({ status: 200, message: 'Myndighet created' });
+    return NextResponse.json({ status: 200, message: 'AMyndighet created' });
     
   } catch (error) {
     return NextResponse.json({ status: 500, message: error });

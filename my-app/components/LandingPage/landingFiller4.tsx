@@ -57,7 +57,7 @@ export default function LandingFiller4() {
                 </Card>
                 <Card className="w-96 h-96 bg-black">
                     <CardHeader>
-                        <CardTitle className='text-white'>Politik</CardTitle>
+                        <CardTitle className='text-white'>Politiska ledare & partier</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="size-10">
@@ -65,7 +65,7 @@ export default function LandingFiller4() {
                         </svg>
                     </CardContent>
                     <CardContent>
-                        <p className='text-white'>Myndighetshandboken erbjuder grundläggande och simpel information kring politik - allt på ett modernt och intuitivt sätt.</p>
+                        <p className='text-white'>Myndighetshandboken erbjuder snabb men detaljerad information om våra politiska ledare och partierna de representerar. Vill du veta hur mycket varje parti får i statligt stöd? Upptäck det här!</p>
                     </CardContent>
                     <CardContent>
                         <Link href='/faktaover/politik'>

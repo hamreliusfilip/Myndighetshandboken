@@ -4,7 +4,7 @@ interface CheckboxFilterProps {
     options: string[];
     onChange: (filters: Record<string, boolean>) => void;
     reset: boolean;
-    storageKey: 'myndighetFilters' | 'compFilters';
+    storageKey: 'myndighetFilters' | 'compFilters' | 'AmyndighetFilters';
 }
 
 const CheckFilter: React.FC<CheckboxFilterProps> = ({ options, onChange, reset, storageKey }) => {
@@ -20,8 +20,13 @@ const CheckFilter: React.FC<CheckboxFilterProps> = ({ options, onChange, reset, 
                     ...parsedFilters.ruleFilters,
                     ...parsedFilters.relationFilters
                 }
-                : {
+                : storageKey === 'compFilters'
+                ? {
                     ...parsedFilters.ruleFilters
+                }
+                : {
+                    ...parsedFilters.ruleFilters,
+                    ...parsedFilters.extraFilters
                 };
             setFilters(combinedFilters);
         } else {
