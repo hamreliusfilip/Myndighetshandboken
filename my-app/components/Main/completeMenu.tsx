@@ -13,6 +13,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger
 } from "@/components/ui/menubar";
+import { Menu } from 'lucide-react';
 
 export default function CompleteMenu() {
   const [currentPath, setCurrentPath] = useState('');
@@ -72,13 +73,6 @@ export default function CompleteMenu() {
               </div>}
             </Link>
             <MenubarSeparator />
-            <Link href="/abroadMyndighet">
-              <MenubarItem>Utländska myndigheter</MenubarItem>
-              {isCurrentPath("/abroadMyndighet") && <div className="flex justify-start">
-                <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
-              </div>}
-            </Link>
-            <MenubarSeparator />
             <Link href="/company">
               <MenubarItem>Statliga företag</MenubarItem>
               {isCurrentPath("/company") && <div className="flex justify-start">
@@ -89,6 +83,13 @@ export default function CompleteMenu() {
             <Link href="/departement">
               <MenubarItem>Departement - karta</MenubarItem>
               {isCurrentPath("/departement") && <div className="flex justify-start">
+                <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
+              </div>}
+            </Link>
+            <MenubarSeparator />
+            <Link href="/abroadMyndighet">
+              <MenubarItem>Utländska myndigheter</MenubarItem>
+              {isCurrentPath("/abroadMyndighet") && <div className="flex justify-start">
                 <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
               </div>}
             </Link>

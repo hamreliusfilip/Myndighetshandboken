@@ -149,7 +149,7 @@ export default function FormVariant({ data, type }: any) {
                         <input
                             id="Phone"
                             name="Phone"
-                            type="number"
+                            type="text"
                             onChange={handleChange}
                             required={false}
                             value={formData.Phone}
