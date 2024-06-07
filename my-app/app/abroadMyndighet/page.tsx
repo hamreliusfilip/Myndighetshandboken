@@ -75,7 +75,7 @@ export default function Page() {
   const fetchAMyndigheter = async () => {
 
     try {
-      const res = await fetch("http://localhost:3000/api/Amyndigheter?fields=Country,_id,City", {
+      const res = await fetch("/api/Amyndigheter?fields=Country,_id,City", {
         method: "GET",
       });
       const data = await res.json();
@@ -210,7 +210,7 @@ export default function Page() {
         <div className='basis-1/2'>
           <input
             type="text"
-            placeholder="Sök med land eller stad..."
+            placeholder="Sök på ett land, stad, generalkonsulat, ambassad eller delegation..."
             value={searchQuery}
             onChange={handleSearchChange}
             className="border border-gray-200 rounded-md p-2 w-full mb-4 font-light font-sans text-sm"

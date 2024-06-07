@@ -11,12 +11,13 @@ import LandingFiller3 from "@/components/LandingPage/landingFiller3";
 import LandingFiller4 from "@/components/LandingPage/landingFiller4";
 import Info from "../components/LandingPage/infoText";
 import Facts from "@/components/LandingPage/facts";
-
-
 import MobileLogo from '@/components/mobileComponents/mobileLogo';
 import MobileWarning from '@/components/mobileComponents/warningPrompt';
 import MobileFooter from '@/components/mobileComponents/mobileFooter';
 import MobileInfo from '@/components/mobileComponents/mobileFiller';
+import LandingFiller22 from '@/components/mobileComponents/landingFiller22';
+import LandingFiller33 from '@/components/mobileComponents/landingFiller33';
+import LandingFiller44 from '@/components/mobileComponents/landingFiller44';
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -37,7 +38,8 @@ export default function Home() {
     <div>
 
       {!isMobile && <Logo />}
-      {!isMobile && <CompleteMenu />}
+      {isMobile && <MobileLogo />}
+      <CompleteMenu />
       {!isMobile && <Info />}
       {!isMobile && <NavCardsHoms />}
       {!isMobile && <Facts />}
@@ -48,9 +50,12 @@ export default function Home() {
 
       {!isMobile && <Footer />}
 
-      {isMobile && <MobileLogo />}
+   
       {isMobile && <MobileInfo />}
       {isMobile && <MobileWarning />}
+      {isMobile && <LandingFiller22 />}
+      {isMobile && <LandingFiller33 />}
+      {isMobile && <LandingFiller44 />} 
       {isMobile && <MobileFooter />}
 
     </div>

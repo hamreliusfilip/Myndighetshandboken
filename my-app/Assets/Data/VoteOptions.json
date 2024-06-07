@@ -2,6 +2,7 @@
     "option1": {
         "title": "Antal mandat i riksdagen",
         "responsive": true,
+        "maintainAspectRatio": false,
         "scales": {
             "x": {
                 "type": "category"
@@ -24,6 +25,7 @@
     "option2": {
         "title": "Fördelning i regeringen",
         "responsive": true,
+        "maintainAspectRatio": false,
         "scales": {
             "x": {
                 "type": "category"

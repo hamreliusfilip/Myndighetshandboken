@@ -16,7 +16,7 @@ export default function List({ type }: ListProps) {
     const fetchItems = async () => {
 
         try {
-          const res = await fetch("http://localhost:3000/api/Amyndigheter?fields=Country,City", {
+          const res = await fetch("/api/Amyndigheter?fields=Country,City", {
             method: "GET",
           });
           const data = await res.json();

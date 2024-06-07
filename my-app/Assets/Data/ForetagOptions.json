@@ -1,9 +1,36 @@
 {
     "option1": {
         "responsive": true,
+        "maintainAspectRatio": false,
         "plugins": {
             "legend": {
-                "position": "left"
+                "display": false
+            },
+            "title": {
+                "display": false,
+                "text": "Utgifter - 2020, Wikipedia (procent)"
+            }
+        }
+    },
+    "option2": {
+        "responsive": true,
+        "maintainAspectRatio": false,
+        "plugins": {
+            "legend": {
+                "display": false
+            },
+            "title": {
+                "display": false,
+                "text": "Utgifter - 2020, Wikipedia (procent)"
+            }
+        }
+    },
+    "option3": {
+        "responsive": true,
+        "maintainAspectRatio": false,
+        "plugins": {
+            "legend": {
+                "display": false
             },
             "title": {
                 "display": false,

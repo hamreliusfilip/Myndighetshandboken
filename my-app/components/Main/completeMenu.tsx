@@ -25,7 +25,7 @@ export default function CompleteMenu() {
   const isCurrentPath = (path: string): boolean => currentPath === path;
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mr-5 ml-5">
       <Menubar>
         <Link href="/">
           <MenubarMenu>
@@ -143,12 +143,14 @@ export default function CompleteMenu() {
                     <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
                   </div>}
                 </Link>
+                <MenubarSeparator />
                 <Link href="/faktaover/politik">
                   <MenubarItem>Riksdagspartier</MenubarItem>
                   {isCurrentPath("/faktaover/politik") && <div className="flex justify-start">
                     <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
                   </div>}
                 </Link>
+                <MenubarSeparator />
                 <Link href="/faktaover/foretagMyndigheter">
                   <MenubarItem>Myndigheter & Företag</MenubarItem>
                   {isCurrentPath("/faktaover/foretagMyndigheter") && <div className="flex justify-start">

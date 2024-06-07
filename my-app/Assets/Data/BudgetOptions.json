@@ -1,6 +1,7 @@
 {
     "option1": {
         "responsive": true,
+        "maintainAspectRatio": false,
         "scales": {
             "x": {
                 "type": "category"
@@ -21,9 +22,10 @@
     },
     "option2": {
         "responsive": true,
+        "maintainAspectRatio": false,
         "plugins": {
             "legend": {
-                "position": "left"
+                "display": false
             },
             "title": {
                 "display": false,

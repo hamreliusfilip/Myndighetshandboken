@@ -7,7 +7,7 @@ import logo from '/Assets/Icons/logga_svart.svg';
 export default function MobileLogo() {
     return (
         <Link href="/">
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center mb-5 mt-5">
                 <div>
                     <Image src={logo} alt="Svenska Myndigheter" width={300} height={300}/>
                 </div>

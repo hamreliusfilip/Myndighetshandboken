@@ -27,15 +27,14 @@ export default function TipsCom() {
     return (
         <div>
             <div className="text-center">
-                <div className="mb-8">
+                <div className="mb-8 p-3">
                     <h1 className="font-bold text-4xl mt-20 bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text px-1 pb-1">Hemsidor för pålitlig information och kvalitetsinnehåll</h1>
-                    <p className='text-center font-normal text-l mt-5'> Vår sammanställning av resurser erbjuder en omfattande guide till högkvalitativa <br></br>  webbplatser och länkar där du kan hitta relevant och auktoritativt innehåll. <br></br>Från officiella myndighetswebbplatser till statliga databaser.</p>
-                    <hr className="w-96 h-1 mx-auto my-4 bg-gradient-to-r from-cyan-500 to-blue-500 border-0 rounded md:my-10 dark:bg-gray-700" />
+                    <p className='text-center font-normal text-l mt-5'> Vår sammanställning erbjuder en kort guide till högkvalitativa <br></br>  webbplatser där du kan hitta relevant och auktoritativt innehåll.</p>
                 </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {tipsData.map((tip, index) => (
-                    <Card key={index} className="m-12 p-2">
+                    <Card key={index} className="m-5">
                   
                         <div className="ml-6">
                             <img src={tip.img} alt={tip.name} className="w-56 rounded-sm mt-5 mb-5" />

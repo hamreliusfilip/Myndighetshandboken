@@ -24,25 +24,28 @@ export default function AboutRiks() {
             <div className="text-center">
                 <h1 className="font-bold text-4xl mt-20 bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text px-1 pb-1"> Vem styr Sverige? </h1>
                 <p className='text-center font-normal text-l mt-5'> Information, statistik och förklarande, <br></br> texter kring det svenska politiska systemet. </p>
-                <hr className="w-96 h-1 mx-auto my-4 bg-gradient-to-r from-cyan-500 to-blue-500 border-0 rounded md:my-10 dark:bg-gray-700" />
             </div>
-            <div className="grid grid-cols-2 gap-8 p-10">
+            <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 p-10">
                 <div>
                     <p className="text-center font-semibold text-2xl">Fördelning i Riksdagen</p>
                     <hr className="w-24 h-1 mx-auto my-4 bg-gradient-to-r from-cyan-500 to-blue-500 border-0 rounded md:my-10 dark:bg-gray-700" />
-                    {/* @ts-ignore */}
-                    <Bar data={data.data1} options={option.option1} />
+                    <div className="chart-container min-h-[300px]">
+                        {/* @ts-ignore */}
+                        <Bar data={data.data1} options={option.option1} />
+                    </div>
                 </div>
                 <div>
                     <p className="text-center font-semibold text-2xl">Fördelning i Regeringen</p>
                     <hr className="w-24 h-1 mx-auto my-4 bg-gradient-to-r from-cyan-500 to-blue-500 border-0 rounded md:my-10 dark:bg-gray-700" />
-                    {/* @ts-ignore */}
-                    <Bar data={data.data2} options={option.option2} />
+                    <div className="chart-container min-h-[300px]">
+                        {/* @ts-ignore */}
+                        <Bar data={data.data2} options={option.option2} />
+                    </div>
                 </div>
             </div>
-            <div className="px-4 pt-16">
-                <div className="flex flex-wrap justify-center">
-                    <Card className="m-4 p+2 w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3">
+            <div className="flex justify-center mt-10">
+                <div className="sm:w-full lg:w-1/2 m-3">
+                    <Card className="">
                         <CardHeader>
                             <CardTitle>Riksdagen</CardTitle>
                             <CardDescription className="text-sm"><span className='bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text'>Vad gör riksdagen?</span></CardDescription>
@@ -51,7 +54,7 @@ export default function AboutRiks() {
                             <p>Riksdagen är Sveriges lagstiftande församling och består av 349 ledamöter som väljs vart fjärde år i allmänna val. Valresultatet avgör hur de 349 platserna eller mandaten ska fördelas mellan de politiska partierna. För att komma in i riksdagen måste ett parti ha fått minst fyra procent av alla röster i riksdagsvalet eller minst 12 procent av rösterna i en valkrets. Svenska medborgare som är eller har varit bosatta i landet och har fyllt 18 år senast på valdagen har rätt att kandidera till riksdagen. För att kunna väljas in i riksdagen måste man företräda ett politiskt parti. Partimedlemmarna utser de personer inom det egna partiet som de tycker är lämpliga att representera partiet i riksdagen. <br></br> <br></br> Riksdagens viktigaste uppgifter är att stifta lagar, besluta om statens finanser och kontrollera regeringens arbete. Talmannen leder riksdagens arbete och är riksdagens högste ämbetsman. Ett lagförslag som läggs fram av en riksdagsman eller ett parti kallas motion. Ett förslag från regeringen kallas proposition. Innan riksdagen röstar om ett lagförslag förbereds frågan i något av riksdagens utskott. Utskotten är arbetsgrupper med ansvar för olika politikområden där alla riksdagspartierna finns representerade. Exempel på utskott är Finansutskottet och Arbetsmarknadsutskottet. En annan viktig uppgift för riksdagen är att besluta om statens utgifter och inkomster. Detta görs med utgångspunkt i två propositioner som regeringen lämnar i april och september varje år: den ekonomiska vårpropositionen och budgetpropositionen. En ytterligare uppgift för riksdagen är att kontrollera regeringen och den offentliga förvaltningen. Det kallas riksdagens kontrollmakt. Reglerna för denna kontroll finns i regeringsformen. Riksdagen har fem kontrollinstrument: Konstitutionsutskottets granskning av regeringen. Misstroendeförklaring mot statsråd. Riksdagens ombudsmän. Riksrevisionen. Ledamöternas interpellationer och frågor till statsråden.</p>
                         </CardContent>
                     </Card>
-                    <Card className="m-4 p+2 w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3">
+                    <Card className="mt-10">
                         <CardHeader>
                             <CardTitle>Regeringen</CardTitle>
                             <CardDescription><span className='bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text'>Vad gör regeringen?</span></CardDescription>
@@ -62,9 +65,9 @@ export default function AboutRiks() {
                     </Card>
                 </div>
             </div>
-            <div className="flex justify-center pt-16">
-                <div className="w-full sm:w-3/4 lg:w-1/2">
-                    <Card className="m-4 p+2 text-left">
+            <div className="flex justify-center mt-10">
+                <div className="sm:w-full lg:w-1/2 m-3">
+                    <Card className="">
                         <CardHeader>
                             <CardTitle>Om datan</CardTitle>
                             <CardDescription className="text-sm bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text">Vart kommer informationen ifrån?</CardDescription>

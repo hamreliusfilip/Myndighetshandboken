@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+.chart-container {
+  @apply relative w-full h-auto flex-1 min-h-[500px];
+}
+
+@screen sm {
+  .chart-container {
+    @apply min-h-[500px];
+  }
+}
+
+.chart-container2 {
+  @apply relative w-full h-auto flex-1 max-h-[1000px];
+}
+
+@screen sm {
+  .chart-container2 {
+    @apply max-h-[1000px];
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

@@ -3,9 +3,9 @@ import Link from 'next/link';
 
 export default function LandingFiller2() {
     return (
-        <div className='mt-10 mb-72 bg-white h-96 flex justify-center items-center '>
+        <div className='mt-10 bg-white h-96 flex justify-center items-center'>
             <div className='mt-20'>
-                <h1 className='text-center font-bold text-4xl text-black mb-5 '>
+                <h1 className='text-center font-bold text-4xl text-black mb-5 mt-48 '>
                     All <span className='bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text'>data</span> på ett och <span className='bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text font-extrabold'>samma ställe</span>
                 </h1>
                 <h1 className='text-center font-normal text-l text-black mb-10 '>
@@ -13,7 +13,7 @@ export default function LandingFiller2() {
                 </h1>
 
                 <div className='mt-20'>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 justify-center items-center">
+                    <div className="grid grid-cols-3 gap-4 justify-center items-center">
 
                         <Link href="/faktaover/riksdagen">
                             <div className="flex flex-col items-center">

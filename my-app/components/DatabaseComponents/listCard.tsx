@@ -21,7 +21,7 @@ export default function ListCard({ myndighet, company }: ListCardProps) {
                 <div className='grid grid-cols-2' style={{ gridTemplateColumns: '3fr 1fr' }}>
                     <div className='flex-1'>
                         <CardTitle>{item.name}</CardTitle>
-                        <CardDescription className='mt-2'>{item.created}</CardDescription>
+                        <CardDescription className='mt-2'>{item.org}</CardDescription>
                         {isOpen ? (
                             <CollapsibleContent className="space-y-2">
                                 <p className='mt-2'>{item.info}</p>

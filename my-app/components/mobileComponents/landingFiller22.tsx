@@ -1,23 +1,19 @@
-import React from 'react';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import React from "react";
 import {
     Card,
     CardContent,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card";
+} from "@/components/ui/card"
+import { Button } from "@/components/ui/button";
+import Link from 'next/link';
 
-export default function LandingFiller4() {
+export default function LandingFiller22() {
+
 
     return (
-        <div className='mt-72 mb-72'>
+        <div className='mt-20'>
             <div className='flex flex-col lg:flex-row justify-center items-center relative'>
-                <div className='mb-10 lg:mb-0 lg:ml-10'>
-                    <h1 className='text-left font-bold text-4xl sm:text-5xl lg:text-6xl text-black'>
-                        <span className='bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text pb-2'>Allmänbildning</span> <br></br>på ett snabbt <br></br> och <span className='pt-2 bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text'> intuitivt </span> sätt.
-                    </h1>
-                </div>
                 <div className='grid grid-cols-1 sm:grid-cols-1 2xl:grid-cols-3 gap-4 bg-white rounded-xl p-6 sm:p-10 lg:p-20'>
 
                     <Card className="w-full h-96 bg-black">

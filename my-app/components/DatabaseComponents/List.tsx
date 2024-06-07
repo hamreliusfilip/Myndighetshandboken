@@ -20,7 +20,7 @@ export default function List({ type }: ListProps) {
                 : type === 'company'
                 ? 'companies'
                 : 'Amyndigheter';
-            const res = await fetch(`http://localhost:3000/api/${endpoint}?fields=name,_id`);
+            const res = await fetch(`/api/${endpoint}?fields=name,_id`);
             const data = await res.json();
             return data[type];
         } catch (error) {
