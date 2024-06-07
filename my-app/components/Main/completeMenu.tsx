@@ -93,6 +93,13 @@ export default function CompleteMenu() {
                 <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
               </div>}
             </Link>
+            <MenubarSeparator />
+            <Link href="/SekretessMyndighet">
+              <MenubarItem>Sekretessbelagda organ</MenubarItem>
+              {isCurrentPath("/SekretessMyndighet") && <div className="flex justify-start">
+                <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
+              </div>}
+            </Link>
           </MenubarContent>
         </MenubarMenu>
         {/* 

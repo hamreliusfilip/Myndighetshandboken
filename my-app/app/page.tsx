@@ -18,6 +18,7 @@ import MobileInfo from '@/components/mobileComponents/mobileFiller';
 import LandingFiller22 from '@/components/mobileComponents/landingFiller22';
 import LandingFiller33 from '@/components/mobileComponents/landingFiller33';
 import LandingFiller44 from '@/components/mobileComponents/landingFiller44';
+import LandingFiller5 from "../components/LandingPage/landingFiller5";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -43,19 +44,23 @@ export default function Home() {
       {!isMobile && <Info />}
       {!isMobile && <NavCardsHoms />}
       {!isMobile && <Facts />}
+
+      {!isMobile && <LandingFiller5 />}
+
       {!isMobile && <LandingFiller />}
+
       {!isMobile && <LandingFiller3 />}
       {!isMobile && <LandingFiller2 />}
       {!isMobile && <LandingFiller4 />}
 
       {!isMobile && <Footer />}
 
-   
+
       {isMobile && <MobileInfo />}
       {isMobile && <MobileWarning />}
       {isMobile && <LandingFiller22 />}
       {isMobile && <LandingFiller33 />}
-      {isMobile && <LandingFiller44 />} 
+      {isMobile && <LandingFiller44 />}
       {isMobile && <MobileFooter />}
 
     </div>

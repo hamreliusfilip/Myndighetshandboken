@@ -37,7 +37,7 @@ export default function PolCom() {
                     <h1 className="font-bold text-3xl bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text px-1 pb-1">Partier i riksdagen</h1>
                 </CardHeader>
                 <div className="flex justify-center">
-                    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
                         {tipsData.map((tip: any, index: any) => (
                             <Card key={index} className="m-5 w-auto">
                                 <div className="ml-6 mt-6 flex justify-between items-center">

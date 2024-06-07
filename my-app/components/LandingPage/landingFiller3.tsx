@@ -7,7 +7,7 @@ export default function LandingFiller3() {
     const circles = new Array(18).fill(null);
 
     return (
-        <div className='mt-10 mb-72 bg-black h-100 flex justify-center items-center relative'>
+        <div className='mt-10 mb-36 bg-black h-100 flex justify-center items-center relative'>
             <div className='mt-20'>
                 <div className="">
                     <div className="grid grid-cols-6 gap-4 justify-center items-center mb-20">
@@ -26,7 +26,7 @@ export default function LandingFiller3() {
                     </div>
                     <p className="absolute top-0 left-0 text-white text-3xl sm:text-5xl mt-32 ml-8 sm:ml-72 font-bold">Internationella relationer</p>
                     <p className="absolute bottom-0 right-0 text-white text-2xl sm:text-4xl mb-32 mr-8 sm:mr-96 font-light">NATO - FN - EU</p> 
-                    <Link href='/utrikesrelationer/relations'>
+                    <Link href='/faktaover/relations'>
                         <Button variant={"outline"} className='absolute bottom-0 left-0 mb-12 ml-8 sm:ml-72 bg-white'>Läs mer</Button>
                     </Link>
                 </div>
