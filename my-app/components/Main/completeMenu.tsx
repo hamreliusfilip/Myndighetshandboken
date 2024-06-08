@@ -35,34 +35,6 @@ export default function CompleteMenu() {
             </div>}
           </MenubarMenu>
         </Link>
-
-        {/* <Link href="/myndighet">
-          <MenubarMenu>
-            <MenubarTrigger>Myndigheter</MenubarTrigger>
-            {isCurrentPath("/myndighet") && <div className="flex justify-center">
-              <div className="bg-slate-300 h-1 w-5 -mt-1 mb-1 rounded rounded-corners"></div>
-            </div>}
-          </MenubarMenu>
-        </Link>
-
-        <Link href="/abroadMyndighet">
-          <MenubarMenu>
-            <MenubarTrigger>Utlänska myndigheter</MenubarTrigger>
-            {isCurrentPath("/abroadMyndighet") && <div className="flex justify-start">
-              <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
-            </div>}
-          </MenubarMenu>
-        </Link>
-
-        <Link href="/company">
-          <MenubarMenu>
-            <MenubarTrigger>Statliga företag</MenubarTrigger>
-            {isCurrentPath("/company") && <div className="flex justify-center">
-              <div className="bg-slate-300 h-1 w-5 -mt-1 mb-1 rounded rounded-corners"></div>
-            </div>}
-          </MenubarMenu>
-        </Link> */}
-
         <MenubarMenu>
           <MenubarTrigger>Sökmotorer & Databaser</MenubarTrigger>
           <MenubarContent>
@@ -74,44 +46,34 @@ export default function CompleteMenu() {
             </Link>
             <MenubarSeparator />
             <Link href="/company">
-              <MenubarItem>Statliga företag</MenubarItem>
+              <MenubarItem>Statliga Företag</MenubarItem>
               {isCurrentPath("/company") && <div className="flex justify-start">
                 <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
               </div>}
             </Link>
             <MenubarSeparator />
             <Link href="/departement">
-              <MenubarItem>Departement - karta</MenubarItem>
+              <MenubarItem>Departementkarta</MenubarItem>
               {isCurrentPath("/departement") && <div className="flex justify-start">
                 <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
               </div>}
             </Link>
             <MenubarSeparator />
             <Link href="/abroadMyndighet">
-              <MenubarItem>Utländska myndigheter</MenubarItem>
+              <MenubarItem>Utländska Myndigheter</MenubarItem>
               {isCurrentPath("/abroadMyndighet") && <div className="flex justify-start">
                 <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
               </div>}
             </Link>
             <MenubarSeparator />
             <Link href="/SekretessMyndighet">
-              <MenubarItem>Sekretessbelagda organ</MenubarItem>
+              <MenubarItem>Sekretessbelagda Organ</MenubarItem>
               {isCurrentPath("/SekretessMyndighet") && <div className="flex justify-start">
                 <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
               </div>}
             </Link>
           </MenubarContent>
         </MenubarMenu>
-        {/* 
-        <Link href="/departement">
-          <MenubarMenu>
-            <MenubarTrigger>Departement</MenubarTrigger>
-            {isCurrentPath("/departement") && <div className="flex justify-center">
-              <div className="bg-slate-300 h-1 w-5 -mt-1 mb-1 rounded rounded-corners"></div>
-            </div>}
-          </MenubarMenu>
-        </Link> */}
-
         <MenubarMenu>
           <MenubarTrigger>Fakta & Statistik</MenubarTrigger>
           <MenubarContent>
@@ -126,7 +88,7 @@ export default function CompleteMenu() {
                 </Link>
                 <MenubarSeparator />
                 <Link href="/faktaover/statistikForetag">
-                  <MenubarItem>Statens bolagsportfölj</MenubarItem>
+                  <MenubarItem>Statens Bolagsportfölj</MenubarItem>
                   {isCurrentPath("/faktaover/statistikForetag") && <div className="flex justify-start">
                     <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
                   </div>}
@@ -194,25 +156,24 @@ export default function CompleteMenu() {
             </MenubarSub>
           </MenubarContent>
         </MenubarMenu>
-
-        {/*         
-        <Link href="/Tips">
-          <MenubarMenu>
-            <MenubarTrigger>Tips</MenubarTrigger>
-            {isCurrentPath("/Tips") && <div className="flex justify-center">
-              <div className="bg-slate-300 h-1 w-5 -mt-1 mb-1 rounded rounded-corners"></div>
-            </div>}
-          </MenubarMenu>
-        </Link> */}
-
-        <Link href="/om">
-          <MenubarMenu>
-            <MenubarTrigger>Om oss</MenubarTrigger>
-            {isCurrentPath("/om") && <div className="flex justify-center">
-              <div className="bg-slate-300 h-1 w-5 -mt-1 mb-1 rounded rounded-corners"></div>
-            </div>}
-          </MenubarMenu>
-        </Link>
+        <MenubarMenu>
+          <MenubarTrigger>Om oss</MenubarTrigger>
+          <MenubarContent>
+            <Link href="/om/OmOss">
+              <MenubarItem>Hemsidan</MenubarItem>
+              {isCurrentPath("/om/OmOss") && <div className="flex justify-start">
+                <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
+              </div>}
+            </Link>
+            <MenubarSeparator />
+            <Link href="/om/OmInfo">
+              <MenubarItem>Informationen</MenubarItem>
+              {isCurrentPath("/om/OmInfo") && <div className="flex justify-start">
+                <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
+              </div>}
+            </Link>
+          </MenubarContent>
+        </MenubarMenu>
       </Menubar>
     </div>
   );
