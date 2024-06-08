@@ -20,10 +20,11 @@ Chart.register(ArcElement, CategoryScale, LinearScale, Title, Tooltip, Legend, B
 
 export default function GraphForetag() {
     return (
+
         <div className="text-center">
-            <div className="mb-2">
+            <div className="mb-8">
                 <h1 className="font-bold text-4xl mt-20 bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text px-1 pb-1"> Statens bolagsportfölj </h1>
-                <p className='text-center font-normal text-l m-5'> Statens bolagsportfölj bestod av 43 bolag vid årsskiftet 2022/23 <br></br>och har sin tyngdpunkt inom basindustri och energi.</p>
+                <p className='text-center font-normal text-l mt-5'> Statens bolagsportfölj bestod av 43 bolag vid årsskiftet 2022/23 <br></br> och har sin tyngdpunkt inom basindustri och energi.</p>
             </div>
             <div className='flex justify-center'>
                 <div className="grid gap-4 sm:grid-cols-1 xl:grid-cols-3 sm:w-full lg:w-2/3">
@@ -58,7 +59,7 @@ export default function GraphForetag() {
                     </div>
                     <div className="flex justify-center">
                         <div className="grid gap-4 p-5 grid-cols-1">
-                        <Card className='w-96 h-96'>
+                            <Card className='w-96 h-96'>
                                 <CardContent className=''>
                                     <div className='m-10'>
                                         <p className='font-bold text-sm text-left mb-2'>Styrelseordförande och ledamöter</p>
@@ -88,7 +89,7 @@ export default function GraphForetag() {
 
                     <div className="flex justify-center">
                         <div className="grid gap-4 p-5 grid-cols-1">
-                        <Card className='w-96 h-96'>
+                            <Card className='w-96 h-96'>
                                 <CardContent>
                                     <div className='m-10'>
                                         <p className='font-bold text-sm text-left mb-2'>Nettoomstättning Exkl. IB</p>

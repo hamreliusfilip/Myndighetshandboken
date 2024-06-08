@@ -38,8 +38,7 @@ export default function Home() {
 
     <div>
 
-      {!isMobile && <Logo />}
-      {isMobile && <MobileLogo />}
+      <Logo />
       <CompleteMenu />
       {!isMobile && <Info />}
       {!isMobile && <NavCardsHoms />}

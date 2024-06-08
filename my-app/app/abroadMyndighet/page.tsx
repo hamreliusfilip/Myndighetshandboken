@@ -12,12 +12,6 @@ import {
   SelectLabel,
   SelectTrigger,
 } from "@/components/ui/select"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
 import { Button } from '@/components/ui/button';
 import {
   NavigationMenu,
@@ -36,11 +30,24 @@ import ListCard from '@/components/DatabaseComponents/listCardVariant';
 
 export default function Page() {
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      const userAgent = navigator.userAgent;
+      const isMobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+      const isiPad = /iPad/i.test(userAgent);
+
+      return isMobile && !isiPad;
+    }
+    setIsMobile(checkIfMobile());
+  }, []);
+
   const [loading, setLoading] = useState(true);
   const [Amyndigheter, setAMyndigheter] = useState<AMyndigheter[]>([]);
   const [filterReset, setFilterReset] = useState(false);
   const [filteredAMyndigheter, setFilteredAMyndigheter] = useState<AMyndigheter[]>([]);
-  const [sortingPlaceholder, setSortingPlaceholder] = useState("Alfabetisk ordning - land");
+  const [sortingPlaceholder, setSortingPlaceholder] = useState("Alfabetisk - Underrubrik");
 
   const [searchQuery, setSearchQuery] = useState(() => {
     if (typeof window !== 'undefined') {
@@ -107,7 +114,7 @@ export default function Page() {
 
         setAMyndigheter(sortedAMyndigheter);
         localStorage.setItem('compSort2', 'alfa2');
-        setSortingPlaceholder("Alfabetisk ordning - stad");
+        setSortingPlaceholder("Alfabetisk - Underrubrik");
 
       } else {
         const normalize = (str: string) => str.replace(/[^a-zA-Z0-9]/g, '').toUpperCase();
@@ -119,7 +126,7 @@ export default function Page() {
 
         setAMyndigheter(sortedAMyndigheter);
         localStorage.setItem('compSort2', 'alfa');
-        setSortingPlaceholder("Alfabetisk ordning - land");
+        setSortingPlaceholder("Alfabetisk - Rubrik");
       }
 
     }).catch((error) => {
@@ -147,7 +154,7 @@ export default function Page() {
     setFilterReset(true);
     localStorage.setItem('mynSort2', 'alfa');
     setAMyndigheter([...Amyndigheter].sort((a, b) => a.Country.localeCompare(b.Country)));
-    setSortingPlaceholder("Alfabetisk ordning - land");
+    setSortingPlaceholder("Alfabetisk - Rubrik");
 
     setTimeout(() => {
       setFilterReset(false);
@@ -180,7 +187,7 @@ export default function Page() {
 
       setAMyndigheter(sortedAMyndigheter);
       localStorage.setItem('compSort2', 'alfa');
-      setSortingPlaceholder("Alfabetisk ordning på land");
+      setSortingPlaceholder("Alfabetisk - Rubrik");
     }
     if (value === 'alfa2') {
       const normalize = (str: string) => str.replace(/[^a-zA-Z0-9]/g, '').toUpperCase();
@@ -192,7 +199,7 @@ export default function Page() {
 
       setAMyndigheter(sortedAMyndigheter);
       localStorage.setItem('compSort2', 'alfa');
-      setSortingPlaceholder("Alfabetisk ordning på stad");
+      setSortingPlaceholder("Alfabetisk - Underrubrik");
     }
   }
 
@@ -202,27 +209,74 @@ export default function Page() {
         <Logo />
         <CompleteMenu />
         <div className="text-center">
-          <h1 className="font-bold text-4xl bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text mt-10 mb-1 px-1 pb-1"> Sveriges ambassader och generalkonsulat </h1>
-          <p className="font-semibold text-small text-slate-300 mb-10">Alla svenska utlandsmyndigheter</p>
+          <h1 className="font-bold text-4xl bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text mt-10 mb-1 px-1 pb-1">
+            Sveriges ambassader och generalkonsulat
+          </h1>
+          <p className="font-semibold text-small text-slate-300 mb-10">
+            Alla svenska utlandsmyndigheter
+          </p>
         </div>
       </div>
-      <div className='flex justify-center'>
-        <div className='basis-1/2'>
-          <input
-            type="text"
-            placeholder="Sök på ett land, stad, generalkonsulat, ambassad eller delegation..."
-            value={searchQuery}
-            onChange={handleSearchChange}
-            className="border border-gray-200 rounded-md p-2 w-full mb-4 font-light font-sans text-sm"
-          />
-          <p className='font-slate-300 text-sm font-light'>Antal hittade utlandsmyndigheter: {filteredAMyndigheter.length} st</p>
+      <div className="flex flex-col lg:flex-row justify-center m-4 gap-5">
 
-          {loading == true ? (
+        <div className="lg:basis-1/2 w-full">
+          <div className="flex justify-between">
+            <input
+              type="text"
+              placeholder="Sök på ett land, stad, generalkonsulat, ambassad eller delegation..."
+              value={searchQuery}
+              onChange={handleSearchChange}
+              className="border border-gray-200 rounded-md p-2 w-full mb-4 font-light font-sans text-sm"
+            />
+            <div className="ml-3 w-72">
+              <Select onValueChange={changeSorting}>
+                <SelectTrigger>
+                  <p>{sortingPlaceholder}</p>
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectLabel>Sortering</SelectLabel>
+                    <SelectItem value="alfa">Alfabetisk - Rubrik</SelectItem>
+                    <SelectItem value="alfa2">Alfabetisk - Underrubrik</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+          <div className='flex justify-between items-center'>
+            <p className="font-slate-300 text-sm font-light">
+              Antal hittade utlandsmyndigheter: {filteredAMyndigheter.length} st
+            </p>
+            {!isMobile && (
+              <div className="">
+                <NavigationMenu>
+                  <NavigationMenuList className="border border-bg-slate-300 rounded-md">
+                    <NavigationMenuItem>
+                      <NavigationMenuTrigger className="font-regular">Hjälp</NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <div className="w-full lg:w-96 h-68 p-7">
+                          Detta är en sökmotor för svenska utlandsmyndigheter. Du kan söka på samtliga utlandsmyndigheter i Sverige och filtrera på olika kriterier. Använd Filtreringsalternativen till vänster eller sökrutan för att hitta en specifik myndighet. Klickar du på knappen högst upp i högra hörnet på varje myndighet kommer du till den specifika sidan för just den myndigheten.
+                        </div>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem>
+                      <Link href="abroadMyndighet/listaAmyndighet" legacyBehavior passHref>
+                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                          Generisk lista
+                        </NavigationMenuLink>
+                      </Link>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
+              </div>
+            )}
+          </div>
+          {loading ? (
             <Card className="h-120 overflow-y-auto mt-4">
               <>{cards}</>
             </Card>
           ) : (
-            <div className='overflow-y-auto mt-4'>
+            <div className="overflow-y-auto mt-4">
               <Card className="h-120 overflow-y-auto">
                 {filteredAMyndigheter.map((Amyndighet: any) => (
                   <div key={Amyndighet._id}>
@@ -230,48 +284,11 @@ export default function Page() {
                   </div>
                 ))}
               </Card>
-            </div>)}
-        </div>
-        <div className='ml-5'>
-          <div className=''>
-            <NavigationMenu>
-              <NavigationMenuList className="border border-bg-slate-300 rounded-md">
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className='font-regular'>Hjälp</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className='w-96 h-68 p-7'>
-                      Detta är en sökmotor för svenska utlands myndigheter. Du kan söka på samtliga utlandsmyndigheter i Sverige och filtrera på olika kriterier. Använd Filtreringsalternativen till vänster eller sökrutan för att hitta en specifik myndighet. Klickar du på knappen högst upp i högra hörnet på varje myndighet kommer du till den specifka sidan för just den myndigheten.
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                <NavigationMenuItem >
-                  <Link href="abroadMyndighet/listaAmyndighet" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()} >
-                      Generisk lista
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-            <div className='mt-3 font-regular'>
-              <Select onValueChange={changeSorting} >
-                <SelectTrigger>
-                  <p>{sortingPlaceholder}</p>
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel>Sortering</SelectLabel>
-                    <SelectItem value="alfa">Alfabetisk ordning - land</SelectItem>
-                    <SelectItem value="alfa2">Alfabetisk ordning - stad</SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
             </div>
-            <Button className='bg-red-600 mt-3 font-normal w-full' onClick={handleClearFilters}>Rensa filter</Button>
-          </div>
+          )}
         </div>
 
-      </div >
+      </div>
       <Footer />
     </>
   );

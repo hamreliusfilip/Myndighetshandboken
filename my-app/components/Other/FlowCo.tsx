@@ -131,8 +131,8 @@ const App: React.FC = () => {
   return (
     <div>
       <div className='flex flex-col justify-center md:flex-row'>
-        <div className="w-full md:w-1/2 mt-10 md:ml-10 md:mr-10 flex">
-          <Card className='w-full'>
+        <div className="md:w-1/2 mt-10 md:ml-10 md:mr-10 mr-5 ml-5 flex">
+          <Card className='w-full '>
             <CardHeader>
               <CardTitle>{d1 ? d1.name : 'Välj ett departement'}</CardTitle>
             </CardHeader>
@@ -141,7 +141,7 @@ const App: React.FC = () => {
             </CardContent>
           </Card>
         </div>
-        <div className="w-full md:w-1/2 mt-10 md:ml-10 md:mr-10 flex">
+        <div className=" md:w-1/2 mt-10 md:ml-10 md:mr-10 mr-5 ml-5 flex">
           <Card className='w-full'>
             <CardHeader>
               <CardTitle>Ansvariga ministrar</CardTitle>
@@ -149,7 +149,7 @@ const App: React.FC = () => {
             <CardContent>
               <div className='flex flex-wrap justify-left'>
                 {d1 && Object.keys(d1).filter(key => key !== 'info').map((key, index) => (
-                  <div key={index} className={`p-2 ${index > 2 ? 'ml-5' : ''}`}>
+                  <div key={index} className={`p-2 ${index > 1 ? 'ml-5' : ''}`}>
                     {d1[key] && (
                       <div className="image-container">
                         <h2 className="font-bold">{d1[key].name} </h2>

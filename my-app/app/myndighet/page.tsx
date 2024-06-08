@@ -33,10 +33,24 @@ import CompleteMenu from '../../components/Main/completeMenu';
 import Logo from '../../components/Main/logo';
 import Footer from '../../components/Main/footer';
 import ListCard from '@/components/DatabaseComponents/listCard';
-
 import CheckFilter from '@/components/DatabaseComponents/CheckFilter';
 
+import MobileMyndighet from '@/components/mobileComponents/mobileMyndighet';
+
 export default function Page() {
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkIfMobile = () => {
+            const userAgent = navigator.userAgent;
+            const isMobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+            const isiPad = /iPad/i.test(userAgent);
+
+            return isMobile && !isiPad;
+        }
+        setIsMobile(checkIfMobile());
+    }, []);
 
     const [loading, setLoading] = useState(true);
     const [myndigheter, setMyndigheter] = useState<Myndigheter[]>([]);
@@ -122,7 +136,7 @@ export default function Page() {
     }
 
     const fetchMyndigheter = async () => {
-        
+
         try {
             const res = await fetch("/api/myndigheter?fields=name,_id,relation,created,rule,info,org", {
                 method: "GET",
@@ -162,7 +176,7 @@ export default function Page() {
                     const bName = normalize(b.name);
                     return aName.localeCompare(bName);
                 });
-                
+
                 setMyndigheter(sortedMyndigheter);
                 localStorage.setItem('compSort', 'alfa');
                 setSortingPlaceholder("Alfabetisk ordning");
@@ -188,7 +202,7 @@ export default function Page() {
 
     useEffect(() => {
         const filteredMyndigheter = myndigheter.filter(myndighet => {
-            
+
             const nameMatch = myndighet.name.toLowerCase().includes(searchQuery.toLowerCase());
             const orgMatch = myndighet.org.toLowerCase().includes(searchQuery.toLowerCase());
 
@@ -247,15 +261,15 @@ export default function Page() {
 
         if (value === 'alfa') {
             const normalize = (str: string) => str.replace(/[^a-zA-Z0-9]/g, '').toUpperCase();
-                const sortedMyndigheter = [...myndigheter].sort((a, b) => {
-                    const aName = normalize(a.name);
-                    const bName = normalize(b.name);
-                    return aName.localeCompare(bName);
-                });
-                
-                setMyndigheter(sortedMyndigheter);
-                localStorage.setItem('compSort', 'alfa');
-                setSortingPlaceholder("Alfabetisk ordning");
+            const sortedMyndigheter = [...myndigheter].sort((a, b) => {
+                const aName = normalize(a.name);
+                const bName = normalize(b.name);
+                return aName.localeCompare(bName);
+            });
+
+            setMyndigheter(sortedMyndigheter);
+            localStorage.setItem('compSort', 'alfa');
+            setSortingPlaceholder("Alfabetisk ordning");
         }
         if (value === 'yearDec') {
             setMyndigheter([...myndigheter].sort((a, b) => b.created.toString().localeCompare(a.created.toString())));
@@ -274,144 +288,172 @@ export default function Page() {
             <div>
                 <Logo />
                 <CompleteMenu />
-                <div className="text-center">
-                    <h1 className="font-bold text-4xl bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text mt-10 mb-1 px-1 pb-1"> Myndigheter </h1>
-                    <p className="font-semibold text-small text-slate-300 mb-10">Alla svenska myndigheter</p>
-                </div>
             </div>
-            <div className='flex flex-column m-4 gap-5 justify-items-center h-30'>
-                <div className='basis-1/3 ml-10'>
-                    <Card className='p-5'>
-                        <CardTitle className='mb-5'>Filtreringsalternativ</CardTitle>
-                        <CardContent className='grid grid-cols-1'>
-                            <Accordion type="single" defaultValue='item-1' collapsible>
-                                <AccordionItem value="item-1">
-                                    <AccordionTrigger>Departement</AccordionTrigger>
-                                    <AccordionContent>
-                                        <CheckFilter
-                                            options={['Arbetsmarknadsdepartementet', 'Finansdepartementet', 'Försvarsdepartementet', 'Justitiedepartementet', 'Klimat- och näringslivsdepartementet', 'Kulturdepartementet', 'Landsbygds- och infrastrukturdepartementet', 'Socialdepartementet', 'Statsrådsberedningen', 'Utbildningsdepartementet', 'Utrikesdepartementet']}
-                                            onChange={handleRelationFilterChange}
-                                            reset={filterReset}
-                                            storageKey="myndighetFilters"
-                                        />
-                                    </AccordionContent>
-                                </AccordionItem>
-                            </Accordion>
-                            <Accordion type="single" defaultValue='item-2' collapsible>
-                                <AccordionItem value="item-2">
-                                    <AccordionTrigger>Styre</AccordionTrigger>
-                                    <AccordionContent>
-                                        <CheckFilter
-                                            options={['Styrelse', 'Enrådighet', 'SBA', 'Nämnd', 'Kommitté', 'Universitet eller högskola', 'Regeringskansliet', 'Arbetsgivarkollegium', 'Domstol', 'AP-Fond', 'Hyresnämnd', 'Lagråd', 'Övrigt']}
-                                            onChange={handleRuleFilterChange}
-                                            reset={filterReset}
-                                            storageKey="myndighetFilters"
-                                        />
-                                    </AccordionContent>
-                                </AccordionItem>
-                            </Accordion>
-                            <Accordion type="single" defaultValue='item-3' collapsible>
-                                <AccordionItem value="item-3">
-                                    <AccordionTrigger>Årtal</AccordionTrigger>
-                                    <AccordionContent>
-                                        <div className='flex items-center mt-3'>
-                                            <div className='flex items-center text-sm font-semibold'>
-                                                <p className='mr-4'>Från</p>
-                                                <input
-                                                    type="number"
-                                                    min="1200"
-                                                    max="2024"
-                                                    value={slider1Value}
-                                                    onChange={handleInput1Change}
-                                                    className=' border border-bg-slate-300 rounded p-1'
-                                                />
-                                            </div>
-                                            <div className='flex items-center ml-7 text-sm font-semibold'>
-                                                <p className='mr-4 font-semibold text-sm'>Till&nbsp;&nbsp;</p>
-                                                <input
-                                                    type="number"
-                                                    min="1200"
-                                                    max="2024"
-                                                    value={slider2Value}
-                                                    onChange={handleInput2Change}
-                                                    className=' border border-bg-slate-300 rounded p-1'
-                                                />
-                                            </div>
-                                        </div>
-                                    </AccordionContent>
-                                </AccordionItem>
-                            </Accordion>
-                        </CardContent>
-                        <Button className='bg-red-600 mt-5' onClick={handleClearFilters}>Rensa filter</Button>
-                    </Card>
-                    <div className='flex justify-start mt-5'>
-                        <NavigationMenu>
-                            <NavigationMenuList className="border border-bg-slate-300 rounded-md">
-                                <NavigationMenuItem>
-                                    <NavigationMenuTrigger>Hjälp</NavigationMenuTrigger>
-                                    <NavigationMenuContent>
-                                        <div className='w-96 h-68 p-7'>
-                                            Detta är en sökmotor för svenska myndigheter. Du kan söka på samtliga myndigheter i Sverige och filtrera på olika kriterier. Det finns tio datapunkter för varje myndighet, till exempel generell fakta, mailadress och logotyp. Använd Filtreringsalternativen till vänster eller sökrutan för att hitta en specifik myndighet Klickar du på knappen högst upp i högra hörnet på varje myndighet kommer du till den specifka sidan för just den myndigheten.
-                                        </div>
-                                    </NavigationMenuContent>
-                                </NavigationMenuItem>
-                                <NavigationMenuItem>
-                                    <Link href="myndighet/listaMyndighet" legacyBehavior passHref>
-                                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                            Generisk lista
-                                        </NavigationMenuLink>
-                                    </Link>
-                                </NavigationMenuItem>
-                            </NavigationMenuList>
-                        </NavigationMenu>
+            {isMobile ? (
+                <MobileMyndighet
+                    searchQuery={searchQuery}
+                    setSearchQuery={setSearchQuery}
+                    slider1Value={slider1Value}
+                    setSlider1Value={setSlider1Value}
+                    slider2Value={slider2Value}
+                    setSlider2Value={setSlider2Value}
+                    handleRelationFilterChange={handleRelationFilterChange}
+                    handleRuleFilterChange={handleRuleFilterChange}
+                    handleClearFilters={handleClearFilters}
+                    filteredMyndigheter={filteredMyndigheter}
+                    loading={loading}
+                    cards={cards}
+                    changeSorting={changeSorting}
+                    sortingPlaceholder={sortingPlaceholder}
+                    filterReset={filterReset}
+                />
+            ) : (
+                <div>
+                    <div className="text-center">
+                        <h1 className="font-bold text-4xl bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text mt-10 mb-1 px-1 pb-1">
+                            Myndigheter
+                        </h1>
+                        <p className="font-semibold text-small text-slate-300 mb-10">Alla svenska myndigheter</p>
                     </div>
-                </div>
-                <div className='basis-1/2'>
-                    <input
-                        type="text"
-                        placeholder="Sök med namn eller organisationsnummer..."
-                        value={searchQuery}
-                        onChange={handleSearchChange}
-                        className="border border-gray-200 rounded-md p-2 w-full mb-4 font-light font-sans text-sm"
-                    />
-                    <p className='font-slate-300 text-sm font-light'>Antal hittade myndigheter: {filteredMyndigheter.length} st</p>
-
-                    {loading == true ? (
-                        <Card className="h-120 overflow-y-auto mt-4">
-                            <>{cards}</>
-                        </Card>
-                    ) : (
-                        <div className='overflow-y-auto mt-4'>
-                            <Card className="h-120 overflow-y-auto">
-                                {filteredMyndigheter.map((myndighet: any) => (
-                                    <div key={myndighet._id}>
-                                        <ListCard myndighet={myndighet} />
-                                    </div>
-                                ))}
+                    <div className="flex flex-col lg:flex-row m-4 gap-5 justify-items-center">
+                        <div className="lg:basis-1/3 lg:ml-10">
+                            <Card className="p-5">
+                                <CardTitle className="mb-5">Filtreringsalternativ</CardTitle>
+                                <CardContent className="grid grid-cols-1">
+                                    <Accordion type="single" defaultValue="item-1" collapsible>
+                                        <AccordionItem value="item-1">
+                                            <AccordionTrigger>Departement</AccordionTrigger>
+                                            <AccordionContent>
+                                                <CheckFilter
+                                                    options={[
+                                                        'Arbetsmarknadsdepartementet', 'Finansdepartementet', 'Försvarsdepartementet', 'Justitiedepartementet', 'Klimat- och näringslivsdepartementet', 'Kulturdepartementet', 'Landsbygds- och infrastrukturdepartementet', 'Socialdepartementet', 'Statsrådsberedningen', 'Utbildningsdepartementet', 'Utrikesdepartementet'
+                                                    ]}
+                                                    onChange={handleRelationFilterChange}
+                                                    reset={filterReset}
+                                                    storageKey="myndighetFilters"
+                                                />
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+                                    <Accordion type="single" defaultValue="item-2" collapsible>
+                                        <AccordionItem value="item-2">
+                                            <AccordionTrigger>Styre</AccordionTrigger>
+                                            <AccordionContent>
+                                                <CheckFilter
+                                                    options={[
+                                                        'Styrelse', 'Enrådighet', 'SBA', 'Nämnd', 'Kommitté', 'Universitet eller högskola', 'Regeringskansliet', 'Arbetsgivarkollegium', 'Domstol', 'AP-Fond', 'Hyresnämnd', 'Lagråd', 'Övrigt'
+                                                    ]}
+                                                    onChange={handleRuleFilterChange}
+                                                    reset={filterReset}
+                                                    storageKey="myndighetFilters"
+                                                />
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+                                    <Accordion type="single" defaultValue="item-3" collapsible>
+                                        <AccordionItem value="item-3">
+                                            <AccordionTrigger>Årtal</AccordionTrigger>
+                                            <AccordionContent>
+                                                <div className="flex items-center mt-3">
+                                                    <div className="flex items-center text-sm font-semibold">
+                                                        <p className="mr-4">Från</p>
+                                                        <input
+                                                            type="number"
+                                                            min="1200"
+                                                            max="2024"
+                                                            value={slider1Value}
+                                                            onChange={handleInput1Change}
+                                                            className="border border-bg-slate-300 rounded p-1"
+                                                        />
+                                                    </div>
+                                                    <div className="flex items-center ml-7 text-sm font-semibold">
+                                                        <p className="mr-4 font-semibold text-sm">Till&nbsp;&nbsp;</p>
+                                                        <input
+                                                            type="number"
+                                                            min="1200"
+                                                            max="2024"
+                                                            value={slider2Value}
+                                                            onChange={handleInput2Change}
+                                                            className="border border-bg-slate-300 rounded p-1"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+                                </CardContent>
+                                <Button className="bg-red-600 mt-5" onClick={handleClearFilters}>Rensa filter</Button>
                             </Card>
-                        </div>)}
-                </div>
-                <div className='basis-1/6 pr-10'>
-                    <div className=''>
-                        <Select onValueChange={changeSorting} >
-                            <SelectTrigger className="w-[180px]">
-                                <p>{sortingPlaceholder}</p>
-                            </SelectTrigger>
-                            <SelectContent>
-                                <SelectGroup>
-                                    <SelectLabel>Sortering</SelectLabel>
-                                    <SelectItem value="alfa">Alfabetisk ordning</SelectItem>
-                                    <SelectItem value="yearDec">Nyast till äldst</SelectItem>
-                                    <SelectItem value="yearInc">Äldst till nyast</SelectItem>
-                                </SelectGroup>
-                            </SelectContent>
-                        </Select>
+                            <div className="flex justify-start mt-5">
+                                <NavigationMenu>
+                                    <NavigationMenuList className="border border-bg-slate-300 rounded-md">
+                                        <NavigationMenuItem>
+                                            <NavigationMenuTrigger>Hjälp</NavigationMenuTrigger>
+                                            <NavigationMenuContent>
+                                                <div className="w-96 h-68 p-7">
+                                                    Detta är en sökmotor för svenska myndigheter. Du kan söka på samtliga myndigheter i Sverige och filtrera på olika kriterier. Det finns tio datapunkter för varje myndighet, till exempel generell fakta, mailadress och logotyp. Använd Filtreringsalternativen till vänster eller sökrutan för att hitta en specifik myndighet Klickar du på knappen högst upp i högra hörnet på varje myndighet kommer du till den specifika sidan för just den myndigheten.
+                                                </div>
+                                            </NavigationMenuContent>
+                                        </NavigationMenuItem>
+                                        <NavigationMenuItem>
+                                            <Link href="myndighet/listaMyndighet" legacyBehavior passHref>
+                                                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                                    Generisk lista
+                                                </NavigationMenuLink>
+                                            </Link>
+                                        </NavigationMenuItem>
+                                    </NavigationMenuList>
+                                </NavigationMenu>
+                            </div>
+                        </div>
+                        <div className="lg:basis-1/2">
+                            <div className="flex justify-between">
+                                <input
+                                    type="text"
+                                    placeholder="Sök med namn eller organisationsnummer..."
+                                    value={searchQuery}
+                                    onChange={handleSearchChange}
+                                    className="border border-gray-200 rounded-md p-2 w-full mb-4 font-light font-sans text-sm"
+                                />
+                                <div className="ml-3">
+                                    <div>
+                                        <Select onValueChange={changeSorting}>
+                                            <SelectTrigger className="w-[180px]">
+                                                <p>{sortingPlaceholder}</p>
+                                            </SelectTrigger>
+                                            <SelectContent>
+                                                <SelectGroup>
+                                                    <SelectLabel>Sortering</SelectLabel>
+                                                    <SelectItem value="alfa">Alfabetisk ordning</SelectItem>
+                                                    <SelectItem value="yearDec">Nyast till äldst</SelectItem>
+                                                    <SelectItem value="yearInc">Äldst till nyast</SelectItem>
+                                                </SelectGroup>
+                                            </SelectContent>
+                                        </Select>
+                                    </div>
+                                </div>
+                            </div>
+                            <p className="font-slate-300 text-sm font-light">Antal hittade myndigheter: {filteredMyndigheter.length} st</p>
+                            {loading ? (
+                                <Card className="h-120 overflow-y-auto mt-4">
+                                    <>{cards}</>
+                                </Card>
+                            ) : (
+                                <div className="overflow-y-auto mt-4">
+                                    <Card className="h-120 overflow-y-auto">
+                                        {filteredMyndigheter.map((myndighet: any) => (
+                                            <div key={myndighet._id}>
+                                                <ListCard myndighet={myndighet} />
+                                            </div>
+                                        ))}
+                                    </Card>
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
-            </div >
+            )}
             <Footer />
         </>
     );
 }
-
-
