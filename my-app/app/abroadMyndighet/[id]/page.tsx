@@ -35,7 +35,7 @@ export default async function Page({ params }: any) {
         <Button variant="outline" className='mt-8 ml-8 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>Tillbaka</Button>
       </Link>
       <div className="mx-auto w-4/5 ">
-        <div className="mx-auto w-4/5 flex justify-center items-center">
+        <div className="mx-auto w-4/5 flex justify-center items-center mt-10">
           <div className="grid grid-cols-1 gap-10 items-center">
             <p className="2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl font-bold text-center">{data.Country} - {data.City}</p>
           </div>

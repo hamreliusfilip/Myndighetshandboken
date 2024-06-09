@@ -23,7 +23,7 @@ export default function Page() {
                 </h1>
                 <p className="font-regular text-small text-slate-300 mb-10">Vilka ligger bakom den här hemsidan?</p>
                 <div className="flex justify-center mt-10">
-                    <Card className="m-4 p+2 w-1/2">
+                    <Card className="m-4 p+2 w-full md:w-1/2">
                         <div className="p-5">
                             <CardContent>
                                 <p>Denna hemsida har utvecklats av två masterstudenter vid Linköpings universitet inom ramen för kursen Avancerad Webbprogrammering (TDDD27). Syftet med hemsidan är att, utöver kursens innehåll, ge en tydlig överblick över hur den svenska staten fungerar och bidra med intressant fakta och statisitik på ett och samma ställe. Den här typen av data är svår att få tag och ligger ofta djupt på statliga hemsidor det krävs ofta ett flertal källor för att få en sammanhängande bild. Denna hemsida erbjuder all denna information på ett och samma ställe, presenterat på ett intuitivt sätt. Denna hemsida är inte officiell och har ingen koppling till regeringen eller någon annan myndighet.</p>

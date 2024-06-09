@@ -135,7 +135,8 @@
     },
     "plugins": {
       "legend": {
-        "position": "top"
+        "display": true,
+        "position": "left"
       },
       "title": {
         "display": true,
@@ -245,7 +246,8 @@
     },
     "plugins": {
       "legend": {
-        "position": "top"
+        "display": true,
+        "position": "left"
       },
       "title": {
         "display": true,

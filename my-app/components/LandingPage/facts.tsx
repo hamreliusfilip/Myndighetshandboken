@@ -14,13 +14,13 @@ export default function Facts() {
                 <h1 className='text-center font-bold text-4xl text-white'>
                     Statistik
                 </h1>
-                <p className='text-center font-nornal text-l mt-5 text-white'> Hur mycket kan du om statens anställda och dess arbetsgivare? <br></br> Vi har samlat data i enkla intuitva grafer - allt från jämställdhet till roller inom statens myndigheter.</p>
+                <p className='text-center font-nornal text-l mt-5 text-white'> Hur mycket kan du om statens anställda och dess arbetsgivare? <br></br> Vi har samlat data i enkla intuitva grafer - allt från jämställdhet inom myndigheterna till omstättning i statens företag.</p>
             </div>
 
             <div className="flex flex-wrap justify-center mt-5">
                 <div className='transition-all duration-300 hover:scale-105'>
                     <Link href="/faktaover/statistik">
-                        <Card className="m-4 p+2 w-64 h-32 flex flex-col justify-center items-center bg-white">
+                        <Card className="m-4 p+2 w-72 h-32 flex flex-col justify-center items-center bg-white">
                             <CardHeader>
                                 <CardTitle className='text-center text-darkGreyBackgroundCustomColor'>342 Myndigheter</CardTitle>
                             </CardHeader>
@@ -28,19 +28,19 @@ export default function Facts() {
                     </Link>
                 </div>
 
-                <Link href="/faktaover/statistik">
+                <Link href="/faktaover/statistikForetag">
                 <div className='transition-all duration-300 hover:scale-105'>
-                    <Card className="m-4 p+2 w-64 h-32 flex flex-col justify-center items-center bg-white">
+                    <Card className="m-4 p+2 w-72 h-32 flex flex-col justify-center items-center bg-white">
                         <CardHeader>
-                            <CardTitle className='text-center text-darkGreyBackgroundCustomColor'>11 Departement</CardTitle>
+                            <CardTitle className='text-center text-darkGreyBackgroundCustomColor'>42 Statliga Företag</CardTitle>
                         </CardHeader>
                     </Card>
                     </div>
                 </Link>
 
-                <Link href="/faktaover/statistik">
+                <Link href="/faktaover/statsbudget">
                 <div className='transition-all duration-300 hover:scale-105'>
-                    <Card className="m-4 p+2 w-64 h-32 flex flex-col justify-center items-center bg-white">
+                    <Card className="m-4 p+2 w-72 h-32 flex flex-col justify-center items-center bg-white">
                         <CardHeader>
                             <CardTitle className='text-center text-darkGreyBackgroundCustomColor'>1331 miljarder kr</CardTitle>
                         </CardHeader>

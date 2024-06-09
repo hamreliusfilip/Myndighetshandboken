@@ -37,9 +37,9 @@ export default function Budget() {
             <div className='flex justify-center'>
                 <div className="grid grid-cols-1 sm:w-full lg:w-2/3">
 
-                    <div className="chart-container2 min-h-[400px] p-5">
+                    <div className="chart-container2 min-h-[500px] p-5">
                         {/* @ts-ignore */}
-                        <Bar data={data.data2} options={option.option2} />
+                        <Doughnut data={data.data2} options={option.option2} />
                     </div>
 
 
@@ -59,7 +59,7 @@ export default function Budget() {
 
                     <div className="text-center">
                         <h1 className="font-bold text-4xl mt-20 bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text"> Kommande år </h1>
-                        <p className="font-semibold text-small text-slate-300 m-4">Statens budgetsaldo 2023–2027 (miljarder kronor)</p>
+                        <p className="font-semibold text-small text-slate-300 m-4">Statens budgetsaldo 2024–2027 (miljarder kronor)</p>
                     </div>
                     <div className="flex justify-center items-center">
                         <div className="chart-container min-h-[300px] p-5">

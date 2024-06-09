@@ -23,14 +23,14 @@ export default function Page() {
                 </h1>
                 <p className="font-regular text-small text-slate-300 mb-10">Vart kommer all information och alla databaser ifrån? <br></br> Är det trovärdigt? </p>
                 <div className="flex justify-center mt-10">
-                    <Card className="m-4 p+2 w-1/2">
+                    <Card className="m-4 p+2 w-full md:w-1/2">
                         <div className="p-5">
                             <CardContent>
                                 <p>Informationen på den här hemsidan är hämtad från trovärdiga källor och myndighetskällor. I vissa fall har Wikipedia använts, detta är alltid förtydligat längst ner på sidan. </p>
                                 <br></br>
                                 <p>Denna hemsida arbetar med ett flertal olika databaser, till exemepl en för myndigheter eller en för statliga företag. Alla databaserna har konstruerats av oss själva - detta menar både ur tekniskt perspktiv men också angående datan och informationen. Databaserna saknar motstycke och har konstruerats på olika sätt, databasen över myndigheterna är konstruerad med information från Riksarkivet, SCB:s myndighetsregister, Regeringskansliets hemsida, Statskontorets rapport 'Statsförvaltningen i korthet' - 2023 och Wikipedia. Logotyperna har hämtats från respektive myndighets hemsida. Det ska dock noteras att informationen är inte kontrollerad, i vissa fall uppkommer felaktigheter - detta beror på diskreptenser i källor. Ett tydligt exempel är disprektansen mellan SCB's myndighetregister och Statskontorets rapport: båda källorna från 2023 skiljer 4 myndigheter i deras listor - där SCB har fyra fler: RIKSDAGENS OMBUDSMÄN, RIKSDAGSFÖRVALTNINGEN, RIKSREVISIONEN och SVERIGES RIKSBANK. Skillnader som dessa kan göra att även våra databaser är felaktiga, men i det stora hela stämmer de till största del.</p>
                             </CardContent>
-                            <p className=""> Exempel på använda källor: </p>  
+                            <p className="mb-3 text-slate-500"> Exempel på använda källor: </p>  
                             <CardContent>
                                 <Link href="https://riksarkivet.se/start" target="_blank">
                                     <Button variant="outline" className='bg-white text-black m-1'>Riksarkivet</Button>

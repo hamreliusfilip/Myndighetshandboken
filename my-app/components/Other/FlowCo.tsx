@@ -147,45 +147,42 @@ const App: React.FC = () => {
               <CardTitle>Ansvariga ministrar</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className='flex flex-wrap justify-left'>
+              <div className='grid grid-cols-1 lg:grid-cols-2'>
                 {d1 && Object.keys(d1).filter(key => key !== 'info').map((key, index) => (
-                  <div key={index} className={`p-2 ${index > 1 ? 'ml-5' : ''}`}>
-                    {d1[key] && (
-                      <div className="image-container">
-                        <h2 className="font-bold">{d1[key].name} </h2>
-                        <p className="font-regular mt-1">{d1[key].role}</p>
-                        {d1[key].image && (
-                          <Image
-                            src={d1[key].image}
-                            width={190}
-                            height={108}
-                            alt={d1[key].name}
-                            className="large-image rounded-md mt-3"
-                          />
-                        )}
-                        {d1[key].p && (
-                          <Image
-                            src={d1[key].p}
-                            width={30}
-                            height={30}
-                            alt={d1[key].name}
-                            className="small-image rounded-md mt-3"
-                          />
-                        )}
-                        <div>
+                  d1[key] && (d1[key].name || d1[key].role || d1[key].image || d1[key].p) ? (
+                    <Card key={index} className='p-3 m-3'>
+                      {d1[key] && (
+                        <div className="image-container mt-2">
+                          <h2 className="font-bold">{d1[key].name} </h2>
+                          <p className="font-light text-sm mt-1 w-1/2">{d1[key].role}</p>
                           {d1[key].image && (
-                            <div>
-                              <p className='text-black text-sm text-light mt-5'> Foto: Kristian Pohl/Regeringskansliet </p>
-                            </div>
+                            <Image
+                              src={d1[key].image}
+                              width={171}
+                              height={97.2}
+                              alt={d1[key].name}
+                              className="large-image rounded-md mt-2"
+                            />
+                          )}
+                          {d1[key].p && (
+                            <Image
+                              src={d1[key].p}
+                              width={30}
+                              height={30}
+                              alt={d1[key].name}
+                              className="small-image rounded-md mt-2"
+                            />
                           )}
                         </div>
-
-                      </div>
-
-                    )}
-
-                  </div>
+                      )}
+                    </Card>
+                  ) : null
                 ))}
+              </div>
+            </CardContent>
+            <CardContent>
+              <div>
+                <p className='text-black text-sm text-light mt-5'> Foto: Kristian Pohl/Regeringskansliet </p>
               </div>
             </CardContent>
           </Card>
