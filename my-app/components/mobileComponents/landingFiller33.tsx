@@ -12,7 +12,7 @@ export default function LandingFiller33() {
 
 
     return (
-        <div className='mt-20 p-14 bg-gradient-to-r from-cyan-500 to-blue-500'>
+        <div className='p-14 bg-gradient-to-r from-cyan-500 to-blue-500'>
             <div className='mb-2'>
                 <h1 className='text-center font-bold text-4xl text-white'>
                     Statistik

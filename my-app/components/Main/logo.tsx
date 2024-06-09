@@ -24,9 +24,9 @@ export default function Logo() {
     return (
         <div>
             {isMobile ? (
-                <div className="flex items-center justify-center mt-5 mb-5">
+                <div className="flex justify-start ml-3">
                     <Link href="/">
-                        <Image src={logo} alt="Svenska Myndigheter" width={300} height={300} />
+                        <Image src={logo} alt="Svenska Myndigheter" width={250} height={250} />
                     </Link>
                 </div>
             ) : (

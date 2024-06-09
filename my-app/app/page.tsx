@@ -11,7 +11,6 @@ import LandingFiller3 from "@/components/LandingPage/landingFiller3";
 import LandingFiller4 from "@/components/LandingPage/landingFiller4";
 import Info from "../components/LandingPage/infoText";
 import Facts from "@/components/LandingPage/facts";
-import MobileLogo from '@/components/mobileComponents/mobileLogo';
 import MobileWarning from '@/components/mobileComponents/warningPrompt';
 import MobileFooter from '@/components/mobileComponents/mobileFooter';
 import MobileInfo from '@/components/mobileComponents/mobileFiller';
