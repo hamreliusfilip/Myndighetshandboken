@@ -18,6 +18,9 @@ import LandingFiller22 from '@/components/mobileComponents/landingFiller22';
 import LandingFiller33 from '@/components/mobileComponents/landingFiller33';
 import LandingFiller44 from '@/components/mobileComponents/landingFiller44';
 import LandingFiller5 from "../components/LandingPage/landingFiller5";
+import LandingFiller55 from "@/components/mobileComponents/landingFiller55";
+import AboutWeb from "@/components/LandingPage/aboutWeb";
+import AboutMobile from "@/components/mobileComponents/aboutMobile";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -50,15 +53,18 @@ export default function Home() {
       {!isMobile && <LandingFiller3 />}
       {!isMobile && <LandingFiller2 />}
       {!isMobile && <LandingFiller4 />}
+      {!isMobile && <AboutWeb />}
 
       {!isMobile && <Footer />}
 
 
       {isMobile && <MobileInfo />}
       {isMobile && <MobileWarning />}
-      {isMobile && <LandingFiller22 />}
       {isMobile && <LandingFiller33 />}
+      {isMobile && <LandingFiller22 />}  
       {isMobile && <LandingFiller44 />}
+      {isMobile && <LandingFiller55 />}
+      {isMobile && <AboutMobile />}
       {isMobile && <MobileFooter />}
 
     </div>

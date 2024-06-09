@@ -12,7 +12,7 @@ export default function LandingFiller33() {
 
 
     return (
-        <div className='p-14 bg-gradient-to-r from-cyan-500 to-blue-500'>
+        <div className='mt-20 p-14 bg-gradient-to-r from-cyan-500 to-blue-500'>
             <div className='mb-2'>
                 <h1 className='text-center font-bold text-4xl text-white'>
                     Statistik
@@ -24,7 +24,7 @@ export default function LandingFiller33() {
                 <div className="grid grid-cols-2 gap-4 mt-5">
 
                     <Link href="/faktaover/statistik">
-                        <Card className="w-32 h-24 flex justify-center items-center">
+                        <Card className="w-38 h-24 flex justify-center items-center">
                             <CardHeader>
                                 <CardTitle className='text-center text-darkGreyBackgroundCustomColor text-sm'>342 Myndigheter</CardTitle>
                             </CardHeader>
@@ -34,7 +34,7 @@ export default function LandingFiller33() {
 
                     <Link href="/faktaover/statistik">
 
-                        <Card className="w-32 h-24 flex justify-center items-center">
+                        <Card className="w-38 h-24 flex justify-center items-center">
                             <CardHeader>
                                 <CardTitle className='text-center text-darkGreyBackgroundCustomColor text-sm'>11 Departement</CardTitle>
                             </CardHeader>
@@ -44,7 +44,7 @@ export default function LandingFiller33() {
 
                     <Link href="/faktaover/statistik">
 
-                        <Card className="w-32 h-24 flex justify-center items-center">
+                        <Card className="w-38 h-24 flex justify-center items-center">
                             <CardHeader>
                                 <CardTitle className='text-center text-darkGreyBackgroundCustomColor text-sm'>1331 miljarder kr</CardTitle>
                             </CardHeader>
@@ -54,7 +54,7 @@ export default function LandingFiller33() {
 
                     <Link href="/faktaover/statistik">
 
-                        <Card className="w-32 h-24 flex justify-center items-center">
+                        <Card className="w-38 h-24 flex justify-center items-center">
                             <CardHeader>
                                 <CardTitle className='text-center text-darkGreyBackgroundCustomColor text-sm'>42 statliga företag</CardTitle>
                             </CardHeader>

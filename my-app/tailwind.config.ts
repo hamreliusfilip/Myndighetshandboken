@@ -65,8 +65,8 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        darkGreyBackgroundCustomColor: "#3C414B", // Custom color, dark background
-        yellowCustomColor: "#FFF6AA", // Yellow color for the warning
+        darkGreyBackgroundCustomColor: "#3C414B", 
+        yellowCustomColor: "#FFF6AA", 
       },
       borderRadius: {
         lg: "var(--radius)",
