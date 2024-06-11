@@ -89,7 +89,8 @@ const config: Config = {
       height: {
         '120': '48rem',
         '100': '36rem', 
-        '200': '72rem'
+        '200': '72rem',
+        '210': '68rem'
       },
       margin: {
         '120': '48rem',

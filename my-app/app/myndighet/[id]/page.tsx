@@ -44,7 +44,7 @@ export default async function Page({ params }: any) {
             <p className="text-2xl 2xl:text-4xl xl:text-3xl font-bold text-center">{data.name}</p>
             {base64String ? (
               <div className="flex justify-center">
-                <img className="h-auto max-h-40 w-auto max-w-md" src={base64String} alt="Base64 Encoded" />
+                <img className="h-auto max-h-40 max-w-96 lg:w-auto max-w-md" src={base64String} alt="Base64 Encoded" />
               </div>
             ) : null}
           </div>
@@ -52,8 +52,8 @@ export default async function Page({ params }: any) {
 
         <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-5 mt-10">
           <div>
-            <Card className="h-96 m-5">
-              <div className='grid grid-cols-2 gap-5 p-5 overflow-y-auto'>
+            <Card className="h-96 m-2">
+              <div className='grid md:grid-cols-2 grid-cols-1 gap-4 p-5 overflow-y-auto'>
                 {data.relation && (
                   <div className="col-span-1">
                     <p className="text-m font-bold">Departement:</p>
@@ -83,7 +83,7 @@ export default async function Page({ params }: any) {
                 )}
               </div>
 
-              <div className="grid grid-cols-1 gap-2 p-5">
+              <div className="grid grid-cols-1 gap-2 pl-5">
                 {data.web && (
                   <div className="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mr-2">
@@ -113,7 +113,7 @@ export default async function Page({ params }: any) {
             </Card>
           </div>
           <div>
-            <Card className='h-96 m-5 p-5 overflow-y-auto'>
+            <Card className='h-96 m-2 p-5 overflow-y-auto'>
               <CardDescription>{data.info}</CardDescription>
             </Card>
           </div>

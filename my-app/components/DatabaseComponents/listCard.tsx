@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Card, CardDescription, CardTitle } from '../ui/card';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
@@ -20,7 +22,7 @@ export default function ListCard({ myndighet, company }: ListCardProps) {
             <Collapsible open={isOpen} onOpenChange={setIsOpen}>
                 <div className='grid grid-cols-2' style={{ gridTemplateColumns: '3fr 1fr' }}>
                     <div className='flex-1'>
-                        <CardTitle>{item.name}</CardTitle>
+                        <p className='text-lg md:text-2xl font-semibold'>{item.name}</p>
                         <CardDescription className='mt-2'>{item.org}</CardDescription>
                         {isOpen ? (
                             <CollapsibleContent className="space-y-2">
