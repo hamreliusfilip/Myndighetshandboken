@@ -10,11 +10,11 @@ import {
 } from "@/components/ui/card"
 import Link from "next/link";
 import { Button } from "@/components/ui/button"
-import { Bar } from 'react-chartjs-2';
-import { Chart, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
-
 import option from '../../Assets/Data/VoteOptions.json';
 import data from '../../Assets/Data/VoteData.json';
+
+import { Bar } from 'react-chartjs-2';
+import { Chart, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 
 Chart.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 

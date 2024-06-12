@@ -1,0 +1,226 @@
+{
+    "S": {
+        "labels": [
+            "2022",
+            "2018",
+            "2014",
+            "2010",
+            "2006",
+            "2004"
+        ],
+        "datasets": [
+            {
+                "label": "S - Valresultat i procent",
+                "data": [
+                    30.3,
+                    28.3,
+                    31.0,
+                    30.7,
+                    35.0,
+                    39.8
+                ],
+                "backgroundColor": [
+                    "rgb(237, 27, 52)"
+                ],
+                "borderWidth": 1,
+                "borderRadius": 15
+            }
+        ]
+    },
+    "SD": {
+        "labels": [
+            "2022",
+            "2018",
+            "2014",
+            "2010",
+            "2006",
+            "2004"
+        ],
+        "datasets": [
+            {
+                "label": "SD - Valresultat i procent",
+                "data": [
+                    20.5,
+                    17.5,
+                    12.9,
+                    5.7,
+                    2.9,
+                    1.4
+                ],
+                "backgroundColor": [
+                    "rgb(255, 221, 1)"
+                ],
+                "borderWidth": 1,
+                "borderRadius": 15
+            }
+        ]
+    },
+    "M": {
+        "labels": [
+            "2022",
+            "2018",
+            "2014",
+            "2010",
+            "2006",
+            "2004"
+        ],
+        "datasets": [
+            {
+                "label": "M - Valresultat i procent",
+                "data": [
+                    19.1,
+                    19.8,
+                    23.3,
+                    30.1,
+                    26.2,
+                    15.2
+                ],
+                "backgroundColor": [
+                    "rgb(82, 189, 236)"
+                ],
+                "borderWidth": 1,
+                "borderRadius": 15
+            }
+        ]
+    },
+    "V": {
+        "labels": [
+            "2022",
+            "2018",
+            "2014",
+            "2010",
+            "2006",
+            "2004"
+        ],
+        "datasets": [
+            {
+                "label": "V - Valresultat i procent",
+                "data": [
+                    6.7,
+                    8.0,
+                    5.7,
+                    5.6,
+                    5.9,
+                    8.4
+                ],
+                "backgroundColor": [
+                   "rgb(218, 41, 28)"
+                ],
+                "borderWidth": 1,
+                "borderRadius": 15
+            }
+        ]
+    },
+    "C": {
+        "labels": [
+            "2022",
+            "2018",
+            "2014",
+            "2010",
+            "2006",
+            "2004"
+        ],
+        "datasets": [
+            {
+                "label": "C - Valresultat i procent",
+                "data": [
+                    6.7,
+                    8.6,
+                    6.1,
+                    6.6,
+                    7.9,
+                    6.2
+                ],
+                "backgroundColor": [
+                    "rgb(0, 153, 51)"
+                ],
+                "borderWidth": 1,
+                "borderRadius": 15
+            }
+        ]
+    },
+    "KD": {
+        "labels": [
+            "2022",
+            "2018",
+            "2014",
+            "2010",
+            "2006",
+            "2004"
+        ],
+        "datasets": [
+            {
+                "label": "KD - Valresultat i procent",
+                "data": [
+                    5.3,
+                    6.3,
+                    4.6,
+                    5.6,
+                    6.6,
+                    9.1
+                ],
+                "backgroundColor": [
+                   "rgb(0, 0, 119)"
+                ],
+                "borderWidth": 1,
+                "borderRadius": 15
+            }
+        ]
+    },
+    "MP": {
+        "labels": [
+            "2022",
+            "2018",
+            "2014",
+            "2010",
+            "2006",
+            "2004"
+        ],
+        "datasets": [
+            {
+                "label": "MP - Valresultat i procent",
+                "data": [
+                    5.1,
+                    4.4,
+                    6.9,
+                    7.3,
+                    5.2,
+                    7.3
+                ],
+                "backgroundColor": [
+               "rgb(131, 207, 57)"
+                ],
+                "borderWidth": 1,
+                "borderRadius": 15
+            }
+        ]
+    },
+    "L": {
+        "labels": [
+            "2022",
+            "2018",
+            "2014",
+            "2010",
+            "2006",
+            "2004"
+        ],
+        "datasets": [
+            {
+                "label": "L - Valresultat i procent",
+                "data": [
+                    4.6,
+                    5.5,
+                    5.4,
+                    7.1,
+                    7.5,
+                    4.6
+                ],
+                "backgroundColor": [
+                  "rgb(0, 106, 179)"
+                ],
+                "borderWidth": 1,
+                "borderRadius": 15
+            }
+        ]
+    }
+}

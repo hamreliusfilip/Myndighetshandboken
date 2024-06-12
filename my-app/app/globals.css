@@ -21,6 +21,15 @@
     @apply max-h-[1000px];
   }
 }
+.chart-container-small {
+  @apply relative w-full h-auto flex-1 max-h-[300px];
+}
+
+@screen sm {
+  .chart-container-small {
+    @apply max-h-[300px];
+  }
+}
 
 @layer base {
   :root {

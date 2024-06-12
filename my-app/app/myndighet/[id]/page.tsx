@@ -27,7 +27,6 @@ export default async function Page({ params }: any) {
   }
 
   const data = await fetchMyndigheter();
-  const base64String = data.logo_url;
 
   return (
     <>
@@ -42,9 +41,9 @@ export default async function Page({ params }: any) {
         <div className="mx-auto w-4/5 flex justify-center items-center">
           <div className="grid grid-cols-1 gap-10 items-center">
             <p className="text-2xl 2xl:text-4xl xl:text-3xl font-bold text-center">{data.name}</p>
-            {base64String ? (
+            {data.name ? (
               <div className="flex justify-center">
-                <img className="h-auto max-h-40 max-w-96 lg:w-auto max-w-md" src={base64String} alt="Base64 Encoded" />
+                <img className="h-auto max-h-40 max-w-96 lg:w-auto max-w-md" src={data.logo_url} alt="Base64 Encoded" />
               </div>
             ) : null}
           </div>

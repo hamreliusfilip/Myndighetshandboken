@@ -1,0 +1,25 @@
+{
+    "option1": {
+        "title": "Valresultat: 2002-2022",
+        "responsive": true,
+        "maintainAspectRatio": false,
+        "scales": {
+            "x": {
+                "type": "category"
+            },
+            "y": {
+                "beginAtZero": true
+            }
+        },
+        "plugins": {
+            "legend": {
+                "display": false,
+                "position": "top"
+            },
+            "title": {
+                "display": false,
+                "text": "Valresultat: 2002-2022"
+            }
+        }
+    }
+}
