@@ -1,4 +1,5 @@
 # Myndighetshandboken
+Next 14, Typescript, Tailwind, MongoDB
 
 ## Features
 
