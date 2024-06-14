@@ -2,7 +2,6 @@ import React, { Suspense } from "react";
 import CompleteMenu from '@/components/Main/completeMenu';
 import Logo from '@/components/Main/logo';
 import Footer from '@/components/Main/footer';
-import { Card } from "@/components/ui/card";
 import ClientSideComponentCom from "@/components/DatabaseComponents/ClientSideComponentCom";
 
 const fetchCompanies = async () => {
@@ -21,6 +20,10 @@ const fetchCompanies = async () => {
 
 const CompanyComponent = async () => {
     const companies = await fetchCompanies();
+
+    if (!companies) {
+        return <p className="font-bold mt-10 text-red-600 flex justify-center items-center">Ett oväntat fel har inträffat - Besök oss vid ett senare tillfälle.</p>;
+    }
 
     return (
         <div>

@@ -1,0 +1,30 @@
+.hoverText {
+    transition:
+      0.2s font-weight,
+      0.2s color;
+  }
+  
+  .hoverText:hover {
+    font-weight: bold;
+    color: rgb(6, 182, 212);
+  }
+  
+  /* To the right */
+  .hoverText:hover + .hoverText {
+    font-weight: bold;
+    color: rgb(59, 130, 246);
+  }
+  
+  .hoverText:hover + .hoverText + .hoverText {
+    font-weight: bold;
+  }
+  
+  /* To the left */
+  .hoverText:has(+ .hoverText:hover) {
+    font-weight: bold;
+    color: rgb(59, 130, 246);
+  }
+  
+  .hoverText:has(+ .hoverText + .hoverText:hover) {
+    font-weight: bold;
+  }

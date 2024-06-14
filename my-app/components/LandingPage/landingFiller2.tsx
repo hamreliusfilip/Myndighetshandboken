@@ -3,14 +3,14 @@ import Link from 'next/link';
 
 export default function LandingFiller2() {
     return (
-        <div className='mt-10 bg-white h-96 flex justify-center items-center'>
-            <div className='mt-20'>
-                <h1 className='text-center font-bold text-4xl text-black mb-5 mt-48 '>
+        <div className='mt-80 bg-white h-96 flex justify-center items-center'>
+            <div>
+                <h1 className='text-center font-bold text-6xl text-black mb-5'>
                     All <span className='bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text'>data</span> på ett och <span className='bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text font-extrabold'>samma ställe</span>
                 </h1>
-                <h1 className='text-center font-normal text-l text-black mb-10 '>
+                <p className='text-center font-base mt-10 text-xl text-slate-400'>
                     All data kring vår statsapparat samlad på ett och samma ställe. <br /> Enkelt att hitta och enkelt att förstå.
-                </h1>
+                </p> 
 
                 <div className='mt-20'>
                     <div className="grid grid-cols-3 gap-4 justify-center items-center">
@@ -51,7 +51,6 @@ export default function LandingFiller2() {
                                 <p className="text-sm text-center font-regular text-slate-500 m-3">Har du dålig koll på grunderna? <br></br>Låt oss hjälpa dig med snabb och enkel information.</p>
                             </div>
                         </Link>
-
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
-import dbConnect from '../../../../lib/dbConnect';
-import Myndighet from "../../../../lib/models/myndighet";
+import dbConnect from '@/lib/dbConnect';
+import Myndighet from "@/lib/models/myndighet";
 
 export async function GET(req: any, { params }: any) {
     

@@ -1,81 +1,127 @@
-import React from 'react';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import {
-    Card,
-    CardContent,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card";
+import { motion, useTransform, useScroll } from "framer-motion";
+import { useRef } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
-export default function LandingFiller4() {
 
+interface CardProps {
+    cardDA: any;
+}
+
+
+const landingFiller4 = () => {
     return (
-        <div className='mt-72 mb-72'>
-            <div className='flex flex-col lg:flex-row justify-center items-center relative'>
-                <div className='mb-10 lg:mb-0 lg:ml-10'>
-                    <h1 className='text-left font-bold text-4xl sm:text-5xl lg:text-6xl text-black'>
-                        <span className='bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text pb-2'>Allmänbildning</span> <br></br>på ett snabbt <br></br> och <span className='pt-2 bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text'> intuitivt </span> sätt.
-                    </h1>
-                </div>
-                <div className='grid grid-cols-1 sm:grid-cols-1 2xl:grid-cols-3 gap-4 bg-white rounded-xl p-6 sm:p-10 lg:p-20'>
-
-                    <Card className="w-full h-96 bg-black">
-                        <CardHeader>
-                            <CardTitle className='text-white'>Tips</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="w-10 h-10">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.25 2.25 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 0 1-5.276 3.67m0 0a9 9 0 0 1-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
-                            </svg>
-                        </CardContent>
-                        <CardContent>
-                            <p className='text-white'>Svårt att hitta pålitlig och relevant information från svenska myndigheter? Kolla in våra tips för de bästa webbplatserna som erbjuds av den svenska staten.</p>
-                        </CardContent>
-                        <CardContent>
-                            <Link href='/Tips'>
-                                <Button variant="outline" className='bg-white text-black'>Läs mer</Button>
-                            </Link>
-                        </CardContent>
-                    </Card>
-                    <Card className="w-full h-96 bg-gradient-to-r from-cyan-500 to-blue-500">
-                        <CardHeader>
-                            <CardTitle className='text-white'>Ambassader</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="w-10 h-10">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
-                            </svg>
-                        </CardContent>
-                        <CardContent>
-                            <p className='text-white'>Vill du veta var Sverige har sina ambassader? Ta reda på mer om Sveriges olika ambassader och generalkonsulat.</p>
-                        </CardContent>
-                        <CardContent>
-                            <Link href='/utrikesrelationer/abroadMyndighet'>
-                                <Button variant="outline" className='bg-white text-black'>Läs mer</Button>
-                            </Link>
-                        </CardContent>
-                    </Card>
-                    <Card className="w-full h-96 bg-black">
-                        <CardHeader>
-                            <CardTitle className='text-white'>Politiska ledare & partier</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="w-10 h-10">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0 1 20.25 6v12A2.25 2.25 0 0 1 18 20.25H6A2.25 2.25 0 0 1 3.75 18V6A2.25 2.25 0 0 1 6 3.75h1.5m9 0h-9" />
-                            </svg>
-                        </CardContent>
-                        <CardContent>
-                            <p className='text-white'>Myndighetshandboken erbjuder snabb men detaljerad information om våra politiska ledare och partierna de representerar. Vill du veta hur mycket varje parti får i statligt stöd? Upptäck det här!</p>
-                        </CardContent>
-                        <CardContent>
-                            <Link href='/faktaover/politik'>
-                                <Button variant="outline" className='bg-white text-black'>Läs mer</Button>
-                            </Link>
-                        </CardContent>
-                    </Card>
-                </div>
-            </div>
+        <div className=" mb-80">
+            <HorizontalScrollCarousel />
         </div>
     );
-}
+};
+
+const HorizontalScrollCarousel = () => {
+    const targetRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: targetRef,
+    });
+
+    const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+
+    return (
+        <section ref={targetRef} className="relative h-[300vh] bg-white">
+            <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+                <motion.div style={{ x }} className="flex gap-4">
+                    {cards.map((cardDA) => {
+                        return <Cardcomp cardDA={cardDA} key={cardDA.id} />;
+                    })}
+                </motion.div>
+            </div>
+        </section>
+    );
+};
+
+const Cardcomp: React.FC<CardProps> = ({ cardDA }) => {
+    return (
+        <div
+            key={cardDA.id}>
+            <Card className="bg-gradient-to-r from-cyan-500 to-blue-500 w-96 h-96">
+                <CardHeader>
+                    <CardTitle className='text-white flex flex-row justify-start items-center'>
+                        <p className="text-4xl">{cardDA.title}</p>
+                    </CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <p className='text-white'>{cardDA.description}</p>
+                </CardContent>
+                <CardContent>
+                    <Link href={cardDA.link}>
+                        <Button variant="outline" className='bg-white text-black'>Läs mer</Button>
+                    </Link>
+                </CardContent>
+            </Card>
+        </div>
+    );
+};
+
+export default landingFiller4;
+
+const cards = [
+    {
+        id: 1,
+        title: "Utlands myndigheter",
+        description: "Vill du veta var Sverige har sina ambassader? Ta reda på mer om Sveriges olika ambassader och generalkonsulat i våran sökbara databas.",
+        link: "/utrikesrelationer/abroadMyndighet",
+        icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="size-10">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+            </svg>
+        ),
+    },
+    {
+        id: 3,
+        title: "Statens bolagsportfölj",
+        description: "Utforska statens bolagsportfölj och dess olika företag. Vilka bolag är statligt ägda och hur mycket omsätter dem?",
+        link: "/utrikesrelationer/abroadMyndighet",
+        icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+
+        ),
+    },
+    {
+        id: 4,
+        title: "Trovärdiga källor & Tips",
+        description: "Våra tips på trovärdiga källor och hemsidor - allt från nyheter till väder - för att du ska kunna känna dig trygg med informationen du tar del av.",
+        link: "/utrikesrelationer/abroadMyndighet",
+        icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10 ml-3">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+            </svg>
+
+        ),
+    },
+    {
+        id: 5,
+        title: "Riksdagen & Votering",
+        description: "Utforska tidigare riksdagsval och annan statistik. Frächa upp dina kunskaper om riksdagen och regeringen.",
+        link: "/utrikesrelationer/abroadMyndighet",
+        icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+            </svg>
+
+        ),
+    },
+    {
+        id: 6,
+        title: "Myndigheter vs Statliga företag",
+        description: "Vad är skillnaden mellan en myndighet och ett statligt företag? Lär dig mer om de olika typerna av statliga organisationer.",
+        link: "/utrikesrelationer/abroadMyndighet",
+        icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+            </svg>
+
+        ),
+    }
+];

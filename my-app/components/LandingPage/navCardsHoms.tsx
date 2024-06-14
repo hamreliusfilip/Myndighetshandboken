@@ -8,18 +8,19 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion"
 
 export default function NavCardsHoms() {
     return (
-        <div className='mt-60'>
-            <div className='flex justify-center items-center'>
-                <hr className="w-24 h-1 my-4 mr-2 bg-black border-0 rounded md:my-10 dark:bg-gray-700" />
-                <h1 className='text-center font-bold text-2xl'>
-                    <span className='text-3xl'>Utvalda höjdpunkter</span>
-                </h1>
-                <hr className="w-24 h-1 my-4 ml-2 bg-black border-0 rounded md:my-10 dark:bg-gray-700" />
-            </div>
-
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ 
+                once: true,
+                amount: "all"
+             }}
+        >
+        <div className='mt-80'>
             <div className="flex flex-wrap justify-center mt-10">
 
                 <Link href="/departement" passHref>
@@ -95,5 +96,6 @@ export default function NavCardsHoms() {
                 </Link>
             </div>
         </div>
+        </motion.div>
     );
 }

@@ -49,7 +49,7 @@ export default async function Page({ params }: any) {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-5 mt-10">
+        <div className="grid lg:grid-cols-1 xl:grid-cols-2 gap-5 mt-10">
           <div>
             <Card className="h-96 m-2">
               <div className='grid md:grid-cols-2 grid-cols-1 gap-4 p-5 overflow-y-auto'>

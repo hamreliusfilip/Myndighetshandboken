@@ -10,6 +10,7 @@ export async function GET(req: any) {
         const fields = searchParams.get('fields');
 
         let projection: { [key: string]: number } = {};
+        
         if (fields) {
           fields.split(',').forEach(field => {
             projection[field.trim()] = 1;

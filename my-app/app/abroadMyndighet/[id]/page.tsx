@@ -8,25 +8,34 @@ import Footer from "@/components/Main/footer";
 export default async function Page({ params }: any) {
 
   const fetchAMyndigheter = async () => {
-
     try {
       const res = await fetch(`http://localhost:3000/api/Amyndigheter/${params.id}`, {
         method: "GET",
-        cache: "no-cache"
+        cache: "no-cache",
+        headers: {
+          "Cache-Control": "max-age=3600"
+        }
       });
+
+      if (!res.ok) {
+        const errorText = await res.text();
+        console.error("Error response:", errorText);
+        throw new Error(`Error fetching myndigheter: ${res.status}`);
+      }
+
       const data = await res.json();
 
       return data.Amyndighet;
     } catch (error) {
-      console.error("Error fetching Amyndigheter:", error);
+      console.error("Error fetching myndigheter:", error);
       return [];
     }
-  }
+  };
 
   const data = await fetchAMyndigheter();
 
   return (
-    <>
+    <div>
       <div>
         <Logo />
         <CompleteMenu />
@@ -40,8 +49,6 @@ export default async function Page({ params }: any) {
             <p className="2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl font-bold text-center">{data.Country} - {data.City}</p>
           </div>
         </div>
-
-
         <div className="flex justify-center items-center">
           <Card className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 mt-10 mb-96 p-5'>
             <div className="m-3">
@@ -80,6 +87,6 @@ export default async function Page({ params }: any) {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }

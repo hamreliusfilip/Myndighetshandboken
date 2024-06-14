@@ -20,8 +20,8 @@ const ClientSideComponent: React.FC<ClientSideComponentProps> = ({ myndigheter }
 
     return (
         <div className='mt-4 md:mt-20'>
-            <div className="flex flex-col lg:flex-row m-4 gap-5 justify-items-center">
-                <div className='lg:basis-1/2'>
+            <div className="flex flex-col lg:flex-row m-4 gap-5 justify-center">
+                <div className='lg:basis-1/3'>
                     <Filters myndigheter={myndigheter} onFiltersChange={handleFiltersChange} />
                 </div>
                 <div className="lg:basis-1/2">
@@ -41,7 +41,3 @@ const ClientSideComponent: React.FC<ClientSideComponentProps> = ({ myndigheter }
 };
 
 export default ClientSideComponent;
-
-
-
-

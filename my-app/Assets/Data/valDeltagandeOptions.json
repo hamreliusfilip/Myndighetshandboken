@@ -1,0 +1,71 @@
+{
+    "option1": {
+        "title": "Valdeltagande i riksdagsval, procent",
+        "responsive": true,
+        "maintainAspectRatio": false,
+        "scales": {
+            "x": {
+                "type": "category"
+            },
+            "y": {
+                "beginAtZero": true
+            }
+        },
+        "plugins": {
+            "legend": {
+                "display": false,
+                "position": "top"
+            },
+            "title": {
+                "display": true,
+                "text": "Valdeltagande i riksdagsval, procent"
+            }
+        }
+    },
+    "option2": {
+        "title": "Valdeltagande i regionfullmäktigval, procent",
+        "responsive": true,
+        "maintainAspectRatio": false,
+        "scales": {
+            "x": {
+                "type": "category"
+            },
+            "y": {
+                "beginAtZero": true
+            }
+        },
+        "plugins": {
+            "legend": {
+                "display": false,
+                "position": "top"
+            },
+            "title": {
+                "display": true,
+                "text": "Valdeltagande i regionfullmäktigval, procent"
+            }
+        }
+    },
+    "option3": {
+        "title": "Valdeltagande i kommunfullmäktigval, procent",
+        "responsive": true,
+        "maintainAspectRatio": false,
+        "scales": {
+            "x": {
+                "type": "category"
+            },
+            "y": {
+                "beginAtZero": true
+            }
+        },
+        "plugins": {
+            "legend": {
+                "display": false,
+                "position": "top"
+            },
+            "title": {
+                "display": true,
+                "text": "Valdeltagande i kommunfullmäktigval, procent"
+            }
+        }
+    }
+}

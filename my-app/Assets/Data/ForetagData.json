@@ -1,77 +1,117 @@
 {
-    "data1": {
-      "labels": [
-        "Transport",
-        "Konsument",
-        "Telekom",
-        "Tjänst",
-        "Infrastruktur",
-        "Finans",
-        "Fastighet",
-        "Basindustri/Energi"
-      ],
-      "datasets": [
-        {
-          "label": "Utgifter",
-          "data": [2,2,5,5,5,7,13,60],
-          "backgroundColor": [
-            "rgb(34, 81, 199)",
-            "rgb(175, 134, 17)",
-            "rgb(66, 45, 155)",
-            "rgb(221, 145, 98)",
-            "rgb(82, 178, 82)",
-            "rgb(240, 64, 20)",
-            "rgb(124, 18, 145)",
-            "rgb(18, 194, 101)"
-          ],
-          "borderWidth": 1,
-          "borderRadius": 15
-        }
-      ]
-    },
-    "data2": {
-        "labels": [
-          "LKAB",
-          "Akademiska Hus",
-          "SBAB",
-          "Svenska Spel",
-          "Sveaskog",
-          "Övriga",
-          "Totalt"
+  "data1": {
+    "labels": [
+      "Transport",
+      "Konsument",
+      "Telekom",
+      "Tjänst",
+      "Infrastruktur",
+      "Finans",
+      "Fastighet",
+      "Basindustri/Energi"
+    ],
+    "datasets": [
+      {
+        "label": "Utgifter",
+        "data": [
+          2,
+          2,
+          5,
+          5,
+          5,
+          7,
+          13,
+          60
         ],
-        "datasets": [
-          {
-            "label": ["Företag"],
-            "data": [15.1,5.5,2.1,2.0,2.0,-3.3,23.3],
-            "backgroundColor": [
-              "rgb(14 165 233)"
-            ],
-            "borderWidth": 1,
-            "borderRadius": 15
-          }
-        ]
-      },
-      "data3": {
-        "labels": [
-          "Vattenfall",
-          "LKAB",
-          "PostNord",
-          "Systembolaget",
-          "Telia Company",
-          "Apoteket",
-          "Svevia"
+        "backgroundColor": [
+          "rgb(255, 165, 0)",
+          "rgb(255, 165, 0)",
+          "rgb(255, 0, 0)",
+          "rgb(220, 0, 85)",
+          "rgb(200, 0, 130)",
+          "rgb(160, 0, 160)",
+          "rgb(130, 0, 200)",
+          "rgb(85, 0, 220)"
         ],
-        "datasets": [
-          {
-            "label": ["Företag"],
-            "data": [239644, 46543, 40212, 37182, 90827, 21293, 11293],
-            "backgroundColor": [
-              "rgb(14 165 233)"
-            ],
-            "borderWidth": 1,
-            "borderRadius": 15
-          }
-        ]
+        "borderWidth": 1,
+        "borderRadius": 15
       }
+    ]
+  },
+  "data2": {
+    "labels": [
+      "LKAB",
+      "Akademiska Hus",
+      "SBAB",
+      "Svenska Spel",
+      "Sveaskog",
+      "Övriga",
+      "Totalt"
+    ],
+    "datasets": [
+      {
+        "label": [
+          "Företag"
+        ],
+        "data": [
+          15.1,
+          5.5,
+          2.1,
+          2.0,
+          2.0,
+          -3.3,
+          23.3
+        ],
+        "backgroundColor": [
+          "rgb(255, 165, 0)",
+          "rgb(255, 165, 0)",
+          "rgb(255, 0, 0)",
+          "rgb(220, 0, 85)",
+          "rgb(200, 0, 130)",
+          "rgb(160, 0, 160)",
+          "rgb(130, 0, 200)"
+        ],
+        "borderWidth": 1,
+        "borderRadius": 15
+      }
+    ]
+  },
+  "data3": {
+    "labels": [
+      "Vattenfall",
+      "LKAB",
+      "PostNord",
+      "Systembolaget",
+      "Telia Company",
+      "Apoteket",
+      "Svevia"
+    ],
+    "datasets": [
+      {
+        "label": [
+          "Företag"
+        ],
+        "data": [
+          239644,
+          46543,
+          40212,
+          37182,
+          90827,
+          21293,
+          11293
+        ],
+        "backgroundColor": [
+          "rgb(255, 165, 0)",
+          "rgb(255, 165, 0)",
+          "rgb(255, 0, 0)",
+          "rgb(220, 0, 85)",
+          "rgb(200, 0, 130)",
+          "rgb(160, 0, 160)",
+          "rgb(130, 0, 200)"
+        ],
+        "borderWidth": 1,
+        "borderRadius": 15
+      }
+    ]
   }
-  
+}

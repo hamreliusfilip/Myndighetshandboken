@@ -3,21 +3,20 @@
 import React, { useEffect, useState } from "react";
 import CompleteMenu from '../components/Main/completeMenu';
 import Logo from '../components/Main/logo';
-import NavCardsHoms from '../components/LandingPage/navCardsHoms';
 import Footer from '../components/Main/footer';
-import LandingFiller from '../components/LandingPage/landingFiller';
 import LandingFiller2 from "@/components/LandingPage/landingFiller2";
-import LandingFiller3 from "@/components/LandingPage/landingFiller3";
+import { TextParallaxContentExample } from "@/components/LandingPage/landingFiller3";
 import LandingFiller4 from "@/components/LandingPage/landingFiller4";
+import LandingFiller5 from "../components/LandingPage/landingFiller5";
+import LandingFiller6 from "@/components/LandingPage/landingFiller6";
+import LandingFiller7 from "@/components/LandingPage/landingFiller7";
 import Info from "../components/LandingPage/infoText";
 import Facts from "@/components/LandingPage/facts";
 import MobileWarning from '@/components/mobileComponents/warningPrompt';
-import MobileFooter from '@/components/mobileComponents/mobileFooter';
 import MobileInfo from '@/components/mobileComponents/mobileFiller';
 import LandingFiller22 from '@/components/mobileComponents/landingFiller22';
 import LandingFiller33 from '@/components/mobileComponents/landingFiller33';
 import LandingFiller44 from '@/components/mobileComponents/landingFiller44';
-import LandingFiller5 from "../components/LandingPage/landingFiller5";
 import AboutWeb from "@/components/LandingPage/aboutWeb";
 import AboutMobile from "@/components/mobileComponents/aboutMobile";
 
@@ -40,18 +39,20 @@ export default function Home() {
       <Logo />
       <CompleteMenu />
       {!isMobile && <Info />}
-      {!isMobile && <NavCardsHoms />}
-      {!isMobile && <Facts />}
-      {!isMobile && <LandingFiller5 />}
-      {!isMobile && <LandingFiller />}
-      {!isMobile && <LandingFiller3 />}
-      {!isMobile && <LandingFiller2 />}
-      {!isMobile && <LandingFiller4 />}
-      {!isMobile && <AboutWeb />}
       {isMobile && <MobileInfo />}
-      {isMobile && <MobileWarning />}
+      {isMobile && <div className="h-72" />}
+      <TextParallaxContentExample />
+      {!isMobile && <Facts />}
+      {!isMobile && <LandingFiller6 />}
+      {!isMobile && <LandingFiller5 />}
+      {!isMobile && <LandingFiller4 />}
+      {!isMobile && <LandingFiller2 />}
+      {!isMobile && <AboutWeb />}
+      {!isMobile && <LandingFiller7 />}
+   
+      {/* {isMobile && <MobileWarning />} */}
       {isMobile && <LandingFiller33 />}
-      {isMobile && <LandingFiller22 />}  
+      {isMobile && <LandingFiller22 />}
       {isMobile && <LandingFiller44 />}
       {isMobile && <LandingFiller5 />}
       {isMobile && <AboutMobile />}

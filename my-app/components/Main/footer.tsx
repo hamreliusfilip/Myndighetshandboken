@@ -11,7 +11,15 @@ export default function Footer() {
             <div className="flex flex-col items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 pt-24 pb-24">
                 <div className="mb-8 md:mb-0">
                     <div className="mr-2">
-                        <Image src={logo} alt="Logo" width={400} height={400} className="mx-auto md:mx-0" />
+                        <Image
+                            src={logo}
+                            alt="Logo"
+                            height={0}
+                            width={0}
+                            style={{ width: '400px', height: "auto" }}
+                            priority={true}
+                            className="mx-auto md:mx-0"
+                        />
                     </div>
                 </div>
 

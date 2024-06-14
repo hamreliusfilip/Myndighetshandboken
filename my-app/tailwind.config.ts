@@ -85,6 +85,20 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        spin: {
+          '0%': { transform: 'rotate(270deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        translate: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(100%)' },
+        }
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        spin: 'spin 20s linear infinite',
+        translate: 'translate 2s linear infinite',
       },
       height: {
         '120': '48rem',
@@ -99,10 +113,6 @@ const config: Config = {
       width: {
         '120': '48rem',
         '100': '44rem' 
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },

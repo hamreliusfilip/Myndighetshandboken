@@ -26,14 +26,28 @@ export default function Logo() {
             {isMobile ? (
                 <div className="flex justify-start ml-3">
                     <Link href="/">
-                        <Image src={logo} alt="Svenska Myndigheter" width={250} height={250} />
+                        <Image
+                            src={logo}
+                            alt="Svenska Myndigheter"
+                            height={0}
+                            width={0}
+                            style={{ width: '250px', height: "auto" }}
+                            priority={true}
+                        />
                     </Link>
                 </div>
             ) : (
                 <div className="flex items-center ml-1 mt-1">
                     <Link href="/">
-                        <Image src={logo} alt="Svenska Myndigheter" width={350} height={350} />
-                    </Link >
+                        <Image
+                            src={logo}
+                            alt="Svenska Myndigheter"
+                            height={0}
+                            width={0}
+                            style={{ width: '350px', height: "auto" }}
+                            priority={true}
+                        />
+                    </Link>
                 </div>
             )}
         </div>

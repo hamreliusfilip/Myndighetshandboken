@@ -32,6 +32,8 @@ interface FiltersProps {
 const FiltersCom: React.FC<FiltersProps> = ({ companies, onFiltersChange }) => {
 
     const [isMobile, setIsMobile] = useState(false);
+    const [filterReset, setFilterReset] = useState(false);
+
 
     useEffect(() => {
         const checkIfMobile = () => {
@@ -43,12 +45,6 @@ const FiltersCom: React.FC<FiltersProps> = ({ companies, onFiltersChange }) => {
         }
         setIsMobile(checkIfMobile());
     }, []);
-
-
-    const [loading, setLoading] = useState(true);
-    const [filteredCompanies, setFilteredCompanies] = useState<companies[]>([]);
-    const [filterReset, setFilterReset] = useState(false);
-    const [sortingPlaceholder, setSortingPlaceholder] = useState("Alfabetisk ordning");
 
     const [searchQuery, setSearchQuery] = useState(() => {
         if (typeof window !== 'undefined') {

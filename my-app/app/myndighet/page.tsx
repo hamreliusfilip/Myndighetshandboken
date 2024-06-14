@@ -19,7 +19,12 @@ const fetchMyndigheter = async () => {
 };
 
 const MyndigheterComponent = async () => {
+
     const myndigheter = await fetchMyndigheter();
+
+    if (!myndigheter) {
+        return <p className="font-bold mt-10 text-red-600 flex justify-center items-center">Ett oväntat fel har inträffat - Besök oss vid ett senare tillfälle.</p>;
+    }
 
     return (
         <div>

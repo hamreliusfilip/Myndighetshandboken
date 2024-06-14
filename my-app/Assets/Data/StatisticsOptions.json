@@ -63,6 +63,7 @@
     },
     "plugins": {
       "legend": {
+        "display": false,
         "position": "top"
       },
       "title": {
@@ -88,6 +89,7 @@
     },
     "plugins": {
       "legend": {
+        "display": false,
         "position": "top"
       },
       "title": {
@@ -113,6 +115,7 @@
     },
     "plugins": {
       "legend": {
+        "display": true,
         "position": "top"
       },
       "title": {
@@ -158,6 +161,7 @@
     },
     "plugins": {
       "legend": {
+        "display": false,
         "position": "top"
       },
       "title": {
@@ -180,6 +184,7 @@
     },
     "plugins": {
       "legend": {
+        "display": false,
         "position": "top"
       },
       "title": {
@@ -202,6 +207,7 @@
     },
     "plugins": {
       "legend": {
+        "display": false,
         "position": "top"
       },
       "title": {
@@ -224,6 +230,7 @@
     },
     "plugins": {
       "legend": {
+        "display": false,
         "position": "top"
       },
       "title": {
@@ -269,6 +276,7 @@
     },
     "plugins": {
       "legend": {
+        "display": false,
         "position": "top"
       },
       "title": {

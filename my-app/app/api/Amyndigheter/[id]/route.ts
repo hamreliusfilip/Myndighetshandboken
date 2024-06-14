@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
-import dbConnect from '../../../../lib/dbConnect';
-import AMyndighet from "../../../../lib/models/Amyndighet";
+import dbConnect from '@/lib/dbConnect';
+import AMyndighet from "@/lib/models/Amyndighet";
 
 export async function GET(req: any, { params }: any) {
     
@@ -47,6 +47,6 @@ export async function DELETE(req: any, { params }: any) {
         return NextResponse.json({ message: "AMyndighet deleted successfully", Amyndighet }, { status: 200 });
     } catch (error) {
         console.log(error);
-        return NextResponse.json({ message: "AProblem deleting data", error: error }, { status: 500 });
+        return NextResponse.json({ message: "Problem deleting data", error: error }, { status: 500 });
     }
 }

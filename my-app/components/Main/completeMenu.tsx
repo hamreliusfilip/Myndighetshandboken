@@ -158,7 +158,7 @@ export default function CompleteMenu() {
                             <div className="bg-slate-300 h-1 w-5 mt-1 rounded rounded-corners"></div>
                           </div>
                         )}</li>
-                      <li className="p-4 ml-5"><Link href="/faktaover/riksdagen">Riksdagen & Regeringen</Link>
+                      <li className="p-4 ml-5"><Link href="/faktaover/riksdagen">Riksdagen, Regeringen & Votering</Link>
                         {isCurrentPath("/faktaover/riksdagen") && (
                           <div className="flex justify-start">
                             <div className="bg-slate-300 h-1 w-5 mt-1 rounded rounded-corners"></div>
@@ -337,7 +337,7 @@ export default function CompleteMenu() {
                     </Link>
                     <MenubarSeparator />
                     <Link href="/faktaover/riksdagen">
-                      <MenubarItem>Riksdagen & Regeringen</MenubarItem>
+                      <MenubarItem>Riksdagen, Regeringen & Votering</MenubarItem>
                       {isCurrentPath("/faktaover/riksdagen") && (
                         <div className="flex justify-start">
                           <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>

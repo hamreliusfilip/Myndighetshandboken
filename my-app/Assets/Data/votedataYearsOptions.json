@@ -1,0 +1,140 @@
+{
+    "option1": {
+        "title": "Riksdagsvalet 2022",
+        "responsive": true,
+        "maintainAspectRatio": false,
+        "scales": {
+            "x": {
+                "type": "category"
+            },
+            "y": {
+                "beginAtZero": true
+            }
+        },
+        "plugins": {
+            "legend": {
+                "display": false,
+                "position": "top"
+            },
+            "title": {
+                "display": true,
+                "text": "Riksdagsvalet 2022"
+            }
+        }
+    },
+    "option2": {
+        "title": "Riksdagsvalet 2018",
+        "responsive": true,
+        "maintainAspectRatio": false,
+        "scales": {
+            "x": {
+                "type": "category"
+            },
+            "y": {
+                "beginAtZero": true
+            }
+        },
+        "plugins": {
+            "legend": {
+                "display": false,
+                "position": "top"
+            },
+            "title": {
+                "display": true,
+                "text": "Riksdagsvalet 2018"
+            }
+        }
+    },
+    "option3": {
+        "title": "Riksdagsvalet 2014",
+        "responsive": true,
+        "maintainAspectRatio": false,
+        "scales": {
+            "x": {
+                "type": "category"
+            },
+            "y": {
+                "beginAtZero": true
+            }
+        },
+        "plugins": {
+            "legend": {
+                "display": false,
+                "position": "top"
+            },
+            "title": {
+                "display": true,
+                "text": "Riksdagsvalet 2014"
+            }
+        }
+    },
+    "option4": {
+        "title": "Riksdagsvalet 2010",
+        "responsive": true,
+        "maintainAspectRatio": false,
+        "scales": {
+            "x": {
+                "type": "category"
+            },
+            "y": {
+                "beginAtZero": true
+            }
+        },
+        "plugins": {
+            "legend": {
+                "display": false,
+                "position": "top"
+            },
+            "title": {
+                "display": true,
+                "text": "Riksdagsvalet 2010"
+            }
+        }
+    },
+    "option5": {
+        "title": "Riksdagsvalet 2006",
+        "responsive": true,
+        "maintainAspectRatio": false,
+        "scales": {
+            "x": {
+                "type": "category"
+            },
+            "y": {
+                "beginAtZero": true
+            }
+        },
+        "plugins": {
+            "legend": {
+                "display": false,
+                "position": "top"
+            },
+            "title": {
+                "display": true,
+                "text": "Riksdagsvalet 2006"
+            }
+        }
+    },
+    "option6": {
+        "title": "Riksdagsvalet 2002",
+        "responsive": true,
+        "maintainAspectRatio": false,
+        "scales": {
+            "x": {
+                "type": "category"
+            },
+            "y": {
+                "beginAtZero": true
+            }
+        },
+        "plugins": {
+            "legend": {
+                "display": false,
+                "position": "top"
+            },
+            "title": {
+                "display": true,
+                "text": "Riksdagsvalet 2002"
+            }
+        }
+    }
+}

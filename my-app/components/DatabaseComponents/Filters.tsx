@@ -32,6 +32,7 @@ interface FiltersProps {
 const Filters: React.FC<FiltersProps> = ({ myndigheter, onFiltersChange }) => {
 
     const [isMobile, setIsMobile] = useState(false);
+    const [filterReset, setFilterReset] = useState(false);
 
     useEffect(() => {
         const checkIfMobile = () => {
@@ -43,9 +44,6 @@ const Filters: React.FC<FiltersProps> = ({ myndigheter, onFiltersChange }) => {
         }
         setIsMobile(checkIfMobile());
     }, []);
-
-
-    const [filterReset, setFilterReset] = useState(false);
 
     const [searchQuery, setSearchQuery] = useState(() => {
         if (typeof window !== 'undefined') {

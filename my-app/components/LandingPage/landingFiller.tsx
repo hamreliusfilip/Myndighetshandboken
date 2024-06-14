@@ -10,12 +10,12 @@ import {
 
 export default function LandingFiller() {
     return (
-        <div className='mt-40 mb-40'>
-            <div className='mb-8'>
-                <h1 className='text-center font-bold text-4xl'>
-                    <span className='bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text px-1 pb-1'>Interaktiva verktyg </span>
+        <div className='mt-80'>
+            <div className=''>
+                <h1 className='text-center font-bold text-6xl mb-5'>
+                    <span className='bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text px-1 p-2'>Interaktiva verktyg </span>
                 </h1>
-                <p className='text-center font-normal text-l mt-5'> Utforska Svenska statens byrokrati med interaktiva och intuitiva verktyg. <br></br> Flödesscheman och extensiva listor med filter. </p>
+                <p className='text-center font-base text-xl text-slate-400'> Utforska Svenska statens byrokrati med interaktiva och intuitiva verktyg. <br></br> Flödesscheman och extensiva listor med filter. </p>
             </div>
             <div>
                 <hr className="w-48 h-1 mx-auto my-4 bg-gradient-to-r from-cyan-500 to-blue-500 border-0 rounded md:my-10 dark:bg-gray-700"></hr>
