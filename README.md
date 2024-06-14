@@ -2,15 +2,15 @@
 
 ## Features
 
-### Search Engine:
-- Myndigheter
-- Utlandsmyndigheter
-- Statliga företag
+- ### Search Engine:
+  - Myndigheter
+  - Utlandsmyndigheter
+  - Statliga företag
 
-### Graphs & Statistics
+- ### Graphs & Statistics
 
-### Articles & Facts 
+- ### Articles & Facts 
 
-### Login for admin 
+- ### Login for admin 
 
-### Admin page to add/delete/modify the data 
+- ### Admin page to add/delete/modify the data 
