@@ -26,11 +26,25 @@
         "plugins": {
             "legend": {
                 "display": true,
-                "position": "bottom"
+                "position": "left"
             },
             "title": {
                 "display": false,
                 "text": "Utgifter - 2020, Wikipedia (procent)"
+            }
+        }
+    },
+    "option3": {
+        "responsive": true,
+        "maintainAspectRatio": false,
+        "plugins": {
+            "legend": {
+                "display": false,
+                "position": "bottom"
+            },
+            "title": {
+                "display": false,
+                "text": "Utgifter"
             }
         }
     }

@@ -14,6 +14,7 @@
   }
 }
 
+
 .perspective-1000 {
   perspective: 1000px;
 }
@@ -129,5 +130,13 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@media only screen and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 2) {
+  html, body {
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+    touch-action: pan-y; /* Ensure vertical scroll works while preventing horizontal scroll */
   }
 }

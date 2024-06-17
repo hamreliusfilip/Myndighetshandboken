@@ -22,6 +22,7 @@ import AboutMobile from "@/components/mobileComponents/aboutMobile";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -32,7 +33,12 @@ export default function Home() {
       return isMobile && !isiPad;
     }
     setIsMobile(checkIfMobile());
+    setLoading(false);
   }, []);
+
+  if (loading) {
+    return null; 
+  }
 
   return (
     <div>
@@ -53,8 +59,7 @@ export default function Home() {
       {/* {isMobile && <MobileWarning />} */}
       {isMobile && <LandingFiller33 />}
       {isMobile && <LandingFiller22 />}
-      {isMobile && <LandingFiller44 />}
-      {isMobile && <LandingFiller5 />}
+      {/* {isMobile && <LandingFiller44 />} */}
       {isMobile && <AboutMobile />}
       <Footer />
     </div>

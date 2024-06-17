@@ -6,6 +6,7 @@ export interface AMyndigheter extends mongoose.Document {
   Phone: string;
   Email: string;
   Web: string;
+  Type: string;
 }
 
 const AMyndigheter = new mongoose.Schema<AMyndigheter>({
@@ -30,6 +31,10 @@ const AMyndigheter = new mongoose.Schema<AMyndigheter>({
     Web: {
       type: String,
       required: [true, "Please provide webadress about the myndighet"],
+    },
+    Type: {
+      type: String,
+      required: [true, "Please provide the type of the myndighet"],
     }
   }, {
     collection: 'AMyndigheter', 

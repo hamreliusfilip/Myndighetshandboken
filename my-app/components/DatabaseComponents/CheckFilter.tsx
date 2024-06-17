@@ -25,8 +25,7 @@ const CheckFilter: React.FC<CheckboxFilterProps> = ({ options, onChange, reset, 
                     ...parsedFilters.ruleFilters
                 }
                 : {
-                    ...parsedFilters.ruleFilters,
-                    ...parsedFilters.extraFilters
+                    ...parsedFilters.relationFilters
                 };
             setFilters(combinedFilters);
         } else {

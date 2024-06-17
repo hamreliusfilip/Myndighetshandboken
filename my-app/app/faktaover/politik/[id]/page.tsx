@@ -29,6 +29,8 @@ interface PartyData {
     ledareMoney: string;
     mandat: string;
     eu_madat: string;
+    eu_votes: string;
+    komuner: string;
     money: string;
     votes: string;
     bild: string;
@@ -103,6 +105,8 @@ export default function PoliticianPage() {
                                         <CardDescription className="mt-2"><span className="font-bold">Mandat: </span>{currentData.mandat} st</CardDescription>
                                         <CardDescription className="mt-2"><span className="font-bold">Andel röster 2022: </span>{currentData.votes} %</CardDescription>
                                         <CardDescription className="mt-2"><span className="font-bold">EU-mandat: </span>{currentData.eu_madat} st</CardDescription>
+                                        <CardDescription className="mt-2"><span className="font-bold">EU-röster: </span>{currentData.eu_votes} %</CardDescription>
+                                        <CardDescription className="mt-2"><span className="font-bold">Kommun-mandat: </span>{currentData.komuner} st</CardDescription>
                                     </CardContent>
                                 </Card>
                                 <Card>
@@ -141,11 +145,14 @@ export default function PoliticianPage() {
                                         <CardDescription className="mt-2"><span className="font-bold">Grundat: </span>{currentData.grundat} </CardDescription>
                                         <CardDescription className="mt-2"><span className="font-bold">Ideologi: </span>{currentData.ideologi}</CardDescription>
                                         <CardDescription className="mt-2"><span className="font-bold">Antal medlemmar: </span>{currentData.antal_medlemmar} st </CardDescription>
-                                        <CardDescription className="mt-2"><span className="font-bold">Partiets hemsida: </span><Link href={currentData.parti_hemsida} target="_blank" rel="noreferrer">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 mt-1">
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                                            </svg>
-                                        </Link></CardDescription>
+                                        <Link href={currentData.parti_hemsida} target="_blank" rel="noreferrer">
+                                            <div className="flex justify-start items-center flex-row">
+                                                <CardDescription className="mt-2"><span className="font-bold">Partiets hemsida: </span></CardDescription>
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 ml-2 mt-2">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                                </svg>
+                                            </div>
+                                        </Link>
                                     </CardContent>
                                 </Card>
                                 <Card>

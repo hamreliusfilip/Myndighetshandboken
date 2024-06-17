@@ -26,7 +26,7 @@ const ClientSideComponent: React.FC<ClientSideComponentProps> = ({ myndigheter }
                 </div>
                 <div className="lg:basis-1/2">
                     <div className="overflow-y-auto overflow-x-hidden">
-                        <Card className="h-full md:h-120 overflow-y-auto overflow-x-hidden w-full min-w-96 md:min-w-120">
+                        <Card className="h-full md:h-120 overflow-y-auto overflow-x-hidden">
                             {filteredMyndigheter.map((myndighet) => (
                                 <div key={myndighet._id}>
                                     <ListCard myndighet={myndighet} />

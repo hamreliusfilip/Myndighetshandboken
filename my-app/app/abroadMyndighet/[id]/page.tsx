@@ -47,6 +47,7 @@ export default async function Page({ params }: any) {
         <div className="mx-auto w-4/5 flex justify-center items-center mt-10">
           <div className="grid grid-cols-1 gap-10 items-center">
             <p className="2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl font-bold text-center">{data.Country} - {data.City}</p>
+            <p className="mt-3 text-lg font-base text-center">{data.Type}</p>
           </div>
         </div>
         <div className="flex justify-center items-center">

@@ -30,16 +30,64 @@ export default function Budget() {
             </div>
             <div className="text-center">
                 <h1 className="font-bold text-4xl mt-20 bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text px-1 pb-1"> Utgifter i fokus </h1>
-                <p className="font-semibold text-small text-slate-300 m-4">Utgifter i procent - 2020</p>
+                <p className="font-semibold text-small text-slate-300 m-4">Utgifter i procent - 2023 utfall</p>
             </div>
 
 
             <div className='flex justify-center'>
                 <div className="grid grid-cols-1 sm:w-full lg:w-2/3">
 
-                    <div className="chart-container2 min-h-[500px] p-5">
+                    <div className="chart-container2 min-h-[700px] p-5">
                         {/* @ts-ignore */}
-                        <Doughnut data={data.data2} options={option.option2} />
+                        <Doughnut data={data.data2023} options={option.option2} />
+                    </div>
+
+                    <div className="text-center">
+                        <h1 className="font-bold text-4xl mt-20 bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text"> Kommande år </h1>
+                        <p className="font-semibold text-small text-slate-300 m-4">Statens budgetsaldo 2024–2027 (miljarder kronor)</p>
+                    </div> 
+
+                    <div className="flex justify-center">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div className="chart-container2 min-h-[500px]">
+                                {/* @ts-ignore */}
+                                <Doughnut data={data.data2024} options={option.option3} />
+                            </div>
+                            <div className="chart-container2 min-h-[500px]">
+                                {/* @ts-ignore */}
+                                <Doughnut data={data.data2025} options={option.option3} />
+                            </div>
+                            <div className="chart-container2 min-h-[500px]">
+                                {/* @ts-ignore */}
+                                <Doughnut data={data.data2026} options={option.option3} />
+                            </div>
+                            <div className="chart-container2 min-h-[500px]">
+                                {/* @ts-ignore */}
+                                <Doughnut data={data.data2027} options={option.option3} />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="text-center">
+                        <h1 className="font-bold text-4xl mt-20 bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text"> Föregående år </h1>
+                        <p className="font-semibold text-small text-slate-300 m-4">Statens budgetsaldo 2020–2023 (miljarder kronor)</p>
+                    </div>
+
+                    <div className="flex justify-center">
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div className="chart-container2 min-h-[500px]">
+                                {/* @ts-ignore */}
+                                {/* <Doughnut data={data.data2} options={option.option3} /> */}
+                            </div>
+                            <div className="chart-container2 min-h-[500px]">
+                                {/* @ts-ignore */}
+                                {/* <Doughnut data={data.data2} options={option.option3} /> */}
+                            </div>
+                            <div className="chart-container2 min-h-[500px]">
+                                {/* @ts-ignore */}
+                                {/* <Doughnut data={data.data2} options={option.option3} /> */}
+                            </div>
+                        </div>
                     </div>
 
 
@@ -117,7 +165,7 @@ export default function Budget() {
                                     <CardDescription className="text-sm"><span className='bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text'>Vart kommer datan ifrån?</span></CardDescription>
                                 </CardHeader>
                                 <CardContent>
-                                    <p> Data hämtas från Regeringens proposition 2023/24:1 - Budgetpropositionen för 2024, utgiven den 15 september 2023 i Stockholm. Cirkeldiagrammet och händelseförloppet baseras på information från Wikipedia - Sveriges statsbudget och i sin tur Regeringskansliets årsbok 2020, s 59.</p>
+                                    <p> Data hämtas från Regeringens proposition 2023/24:1 - Budgetpropositionen för 2024, utgiven den 15 september 2023 i Stockholm. Cirkeldiagrammen är hämtade direkt från regeringskansliets hemsida. Händelseförloppet baseras på information från Wikipedia - Sveriges statsbudget och i sin tur Regeringskansliets årsbok 2020, s 59.</p>
                                 </CardContent>
                                 <CardContent>
                                     <Link href="https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf" target="_blank">
@@ -126,13 +174,16 @@ export default function Budget() {
                                     <Link href="https://sv.wikipedia.org/wiki/Sveriges_statsbudget" target="_blank">
                                         <Button variant="outline" className='bg-white text-black m-1'>Wikipedia - Sveriges Statsbudget</Button>
                                     </Link>
+                                    <Link href="https://www.regeringen.se/sveriges-regering/finansdepartementet/statens-budget/statens-budget-i-siffror/" target="_blank">
+                                        <Button variant="outline" className='bg-white text-black m-1'>Regeringskansliet budget</Button>
+                                    </Link>
                                 </CardContent>
                             </Card>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                </div >
+            </div >
+        </div >
     );
 }
 

@@ -8,12 +8,7 @@ import { AlertCard } from "./alert";
 
 export default function Form({ data, type }: any) {
 
-    let EDITMODE = false;
-    if (type === "Amyndighet") {
-        EDITMODE = data.myndighet._id !== "new";
-    } else {
-        EDITMODE = data.company._id !== "new";
-    }
+    const EDITMODE = type === "company" ? data?.company?._id !== "new" : data?.myndighet?._id !== "new";
 
     const router = useRouter();
 

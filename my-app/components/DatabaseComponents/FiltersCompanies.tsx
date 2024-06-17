@@ -282,7 +282,7 @@ const FiltersCom: React.FC<FiltersProps> = ({ companies, onFiltersChange }) => {
                                                         max="1851"
                                                         value={slider1Value}
                                                         onChange={handleInput1Change}
-                                                        className="border border-bg-slate-300 rounded p-1"
+                                                        className="border border-bg-slate-300 rounded p-1 w-20"
                                                     />
                                                 </div>
                                                 <div className="flex items-center ml-7 text-sm font-semibold">
@@ -293,7 +293,7 @@ const FiltersCom: React.FC<FiltersProps> = ({ companies, onFiltersChange }) => {
                                                         max="2024"
                                                         value={slider2Value}
                                                         onChange={handleInput2Change}
-                                                        className="border border-bg-slate-300 rounded p-1"
+                                                        className="border border-bg-slate-300 rounded p-1 w-20"
                                                     />
                                                 </div>
                                             </div>

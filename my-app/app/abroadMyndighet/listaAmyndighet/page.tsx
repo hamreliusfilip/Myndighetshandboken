@@ -9,7 +9,7 @@ export default function Page() {
         <div>
             <Logo />
             <CompleteMenu />
-            <ListVariant type="Amyndighet" />
+            <ListVariant />
             <Footer />
         </div>
     );

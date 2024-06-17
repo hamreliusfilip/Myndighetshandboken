@@ -19,7 +19,8 @@ export default function ListCard({ Amyndighet }: ListCardProps) {
                 <div className='grid grid-cols-2' style={{ gridTemplateColumns: '3fr 1fr' }}>
                     <div className='flex-1'>
                         <CardTitle>{item.Country}</CardTitle>
-                        <CardDescription className='mt-2'>{item.City}</CardDescription>
+                        <CardDescription className='mt-2 text-lg font-bold'>{item.City}</CardDescription>
+                        <CardDescription className='mt-2'>{item.Type}</CardDescription>
                     </div>
 
                     <div className='grid grid-cols-1 gap-3 content-start justify-self-end flex-none'>

@@ -27,7 +27,7 @@ export default function GraphForetag() {
                 <p className='text-center font-normal text-l mt-5'> Statens bolagsportfölj bestod av 43 bolag vid årsskiftet 2022/23 <br></br> och har sin tyngdpunkt inom basindustri och energi.</p>
             </div>
             <div className='flex justify-center'>
-                <div className="grid gap-4 sm:grid-cols-1 xl:grid-cols-3 sm:w-full lg:w-2/3">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                     <div className="flex justify-center">
                         <div className="grid gap-4 p-5 grid-cols-1">
                             <Card className='w-96 h-96'>

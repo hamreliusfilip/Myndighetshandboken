@@ -43,7 +43,7 @@ export default async function Page({ params }: any) {
             <p className="text-2xl 2xl:text-4xl xl:text-3xl font-bold text-center">{data.name}</p>
             {data.name ? (
               <div className="flex justify-center">
-                <img className="h-auto max-h-40 max-w-96 lg:w-auto max-w-md" src={data.logo_url} alt="Base64 Encoded" />
+                <img className="h-auto max-h-40 max-w-96 lg:w-auto max-w-md" src={data.logo_url} alt="" />
               </div>
             ) : null}
           </div>
@@ -84,12 +84,15 @@ export default async function Page({ params }: any) {
 
               <div className="grid grid-cols-1 gap-2 pl-5">
                 {data.web && (
-                  <div className="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mr-2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                    </svg>
-                    <Link className="text-xs" href={`https://${data.web}`} target="_blank">Hemsida</Link>
-                  </div>
+                  <Link className="text-xs" href={`https://${data.web}`} target="_blank">
+                    <div className="flex items-center">
+
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mr-2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                      </svg>
+                      Hemsida
+                    </div>
+                  </Link>
                 )}
                 {data.epost && (
                   <div className="flex items-center">

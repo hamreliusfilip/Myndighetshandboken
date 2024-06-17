@@ -20,6 +20,7 @@ export default function FormVariant({ data, type }: any) {
         Phone: "",
         Email: "",
         Web: "",
+        Type: ""
     };
 
     if (EDITMODE) {
@@ -56,13 +57,13 @@ export default function FormVariant({ data, type }: any) {
 
     const handleChange = (e: any) => {
         const { name, value } = e.target;
-    
+
         setFormData((prevData: any) => ({
             ...prevData,
             [name]: value,
         }));
     }
-    
+
     const validateFormData = (formData: any) => {
         return true;
     }
@@ -187,6 +188,21 @@ export default function FormVariant({ data, type }: any) {
                             required={false}
                             value={formData.Web}
                             placeholder="Fyll i myndighetens webbplats"
+                            className="border-solid border-2 border-slate-300 rounded-sm p-1 pl-2 mt-1"
+                        />
+                    </div>
+
+                    {/* TYPE */}
+                    <div className="m-5">
+                        <CardDescription>Type</CardDescription>
+                        <input
+                            id="Type"
+                            name="Type"
+                            type="text"
+                            onChange={handleChange}
+                            required={false}
+                            value={formData.Type}
+                            placeholder="Fyll i myndighetens typ"
                             className="border-solid border-2 border-slate-300 rounded-sm p-1 pl-2 mt-1"
                         />
                     </div>

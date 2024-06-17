@@ -7,7 +7,7 @@ import ClientSideComponentEmb from "@/components/DatabaseComponents/ClientSideCo
 
 const fetchAMyndigheter = async () => {
     try {
-        const res = await fetch("http://localhost:3000/api/Amyndigheter?fields=Country,_id,City", {
+        const res = await fetch("http://localhost:3000/api/Amyndigheter?fields=Country,_id,City,Type", {
             method: "GET",
             next: { revalidate: 10 }
         });

@@ -19,17 +19,21 @@ const ClientSideComponent: React.FC<AClientSideComponentProps> = ({ Amyndigheter
     }, []);
 
     return (
-        <div className='mt-4 md:mt-20 flex justify-center items-center'>
-            <div className="lg:basis-1/2">
-                <div className="overflow-y-auto overflow-x-hidden">
+        <div className='mt-4 md:mt-20'>
+            <div className="flex flex-col lg:flex-row m-4 gap-5 justify-center">
+                <div className='lg:basis-1/3'>
                     <FiltersEmb Amyndigheter={Amyndigheter} onFiltersChange={handleFiltersChange} />
-                    <Card className="h-full md:h-120 overflow-y-auto overflow-x-hidden min-w-96 md:min-w-120 m-5 sm:m-0">
-                        {filteredMyndigheter.map((Amyndighet) => (
-                            <div key={Amyndighet._id}>
-                                <ListCard Amyndighet={Amyndighet} />
-                            </div>
-                        ))}
-                    </Card>
+                </div>
+                <div className="lg:basis-1/2">
+                    <div className="overflow-y-auto overflow-x-hidden">
+                        <Card className="h-full md:h-120 overflow-y-auto overflow-x-hidden">
+                            {filteredMyndigheter.map((myndighet) => (
+                                <div key={myndighet._id}>
+                                    <ListCard Amyndighet={myndighet} />
+                                </div>
+                            ))}
+                        </Card>
+                    </div>
                 </div>
             </div>
         </div>

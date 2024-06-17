@@ -63,29 +63,14 @@ export default function GenericText({ type }: { type: string }) {
     const selectedText = texts.texts[selectedIndex];
 
     return (
-        <div>
-            <div className="">
-                <div className="mt-10 m-3">
-                    <div className="flex flex-wrap justify-center">
-                        <Card className="p-2 mt-10 w-full lg:w-1/3">
-                            {texts.texts.map((text, index) => (
-                                <div
-                                    key={text.id}
-                                    onClick={() => handleButtonClick(index)}
-                                    className={selectedIndex === index ? 'font-regular text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md mr-2 cursor-pointer' : 'font-regular text-slate-500 bg-white hover:bg-slate-100 px-4 py-2 rounded-md mr-2 cursor-pointer'}
-                                >
-                                    {text.title}
-                                </div>
-                            ))}
-                        </Card>
-                    </div>
-                </div>
+        <div className="mt-10">
+            <div className="flex justify-center items-center p-10">
+                <div className="w-1/2 mx-auto">
+                    <div className="grid grid-cols-3 gap-4">
 
-                <div className="mt-10 m-3">
-                    <div className="flex flex-wrap justify-center">
-                        <Card key={selectedText.id} className="w-full lg:w-1/3">
-                            <CardContent>
-                                <div className="p-1 flex justify-between flex-grow mt-3">
+                        <div className="">
+                            <div className="col-span-1">
+                                <Card className="p-2">
                                     {[{ label: "Lätt", value: 1 }, { label: "Normal", value: 0 }, { label: "Avancerad", value: 2 }].map(({ label, value }) => (
                                         <div
                                             key={value}
@@ -98,46 +83,62 @@ export default function GenericText({ type }: { type: string }) {
                                             </svg>
                                         </div>
                                     ))}
-                                </div>
-                            </CardContent>
-                            <CardHeader className="pb-3">
-                                {selectedText.title && <CardTitle>{selectedText.title}</CardTitle>}
-                                {selectedText.subtitle && <CardDescription>{selectedText.subtitle}</CardDescription>}
-                                {selectedText.vad && <CardDescription className="text-sm"><span className='text-slate-600'><span className="font-bold">Vad är det?: </span> {selectedText.vad}</span></CardDescription>}
-                                {selectedText.cost && <CardDescription className="text-sm"><span className='text-slate-600'><span className="font-bold">Kostnad: </span> {selectedText.cost}</span></CardDescription>}
-                                {selectedText.since && <CardDescription className="text-sm"><span className='text-slate-600'><span className="font-bold">Sverige gick med: </span> {selectedText.since}</span></CardDescription>}
-                                {selectedText.members && <CardDescription className="text-sm"><span className='text-slate-600'><span className="font-bold">Antal medlemsländer: </span> {selectedText.members} st</span></CardDescription>}
-                                {selectedText.web && (
-                                    <CardDescription className="text-sm">
-                                        <span className="text-slate-600 flex justify-left items-center">
-                                            <span className="font-bold">Hemsida: </span>
-                                            <a href={selectedText.web} target="_blank" rel="noopener noreferrer">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 ml-1">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                                                </svg>
-                                            </a>
-                                        </span>
-                                    </CardDescription>
-                                )}
-                            </CardHeader>
-                            <CardContent>
-                                {selectedText.img && <CardDescription className="text-sm"><span className='text-slate-600'><span className="font-bold">Flagga: </span></span></CardDescription>}
-                                {selectedText.img && <img src={selectedText.img} alt={selectedText.title} className="w-1/3 mt-3" />}
-                            </CardContent>
-                            <CardContent>
-                                <p className="text-lg"><span className='text-slate-600'><span className="font-bold">Generell information: </span></span></p>
-                                {difficulty === 0 && selectedText.contentNormal && <p>{selectedText.contentNormal}</p>}
-                                {difficulty === 1 && selectedText.contentEasy && <p>{selectedText.contentEasy}</p>}
-                                {difficulty === 2 && selectedText.contentHard && <p>{selectedText.contentHard}</p>}
-                            </CardContent>
-                        </Card>
+                                </Card>
+                                <Card className="p-2 mt-5">
+                                    {texts.texts.map((text, index) => (
+                                        <div
+                                            key={text.id}
+                                            onClick={() => handleButtonClick(index)}
+                                            className={selectedIndex === index ? 'font-regular text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md mr-2 cursor-pointer' : 'font-regular text-slate-500 bg-white hover:bg-slate-100 px-4 py-2 rounded-md mr-2 cursor-pointer'}
+                                        >
+                                            {text.title}
+                                        </div>
+                                    ))}
+                                </Card>
+                            </div>
+                        </div>
+
+                        <div className="col-span-2">
+                            <Card key={selectedText.id} className="">
+                                <CardHeader className="pb-3">
+                                    {selectedText.title && <CardTitle>{selectedText.title}</CardTitle>}
+                                    {selectedText.subtitle && <CardDescription>{selectedText.subtitle}</CardDescription>}
+                                    {selectedText.vad && <CardDescription className="text-sm"><span className='text-slate-600'><span className="font-bold">Vad är det?: </span> {selectedText.vad}</span></CardDescription>}
+                                    {selectedText.cost && <CardDescription className="text-sm"><span className='text-slate-600'><span className="font-bold">Kostnad: </span> {selectedText.cost}</span></CardDescription>}
+                                    {selectedText.since && <CardDescription className="text-sm"><span className='text-slate-600'><span className="font-bold">Sverige gick med: </span> {selectedText.since}</span></CardDescription>}
+                                    {selectedText.members && <CardDescription className="text-sm"><span className='text-slate-600'><span className="font-bold">Antal medlemsländer: </span> {selectedText.members} st</span></CardDescription>}
+                                    {selectedText.web && (
+                                        <CardDescription className="text-sm">
+                                            <span className="text-slate-600 flex justify-left items-center">
+                                                <span className="font-bold">Hemsida: </span>
+                                                <a href={selectedText.web} target="_blank" rel="noopener noreferrer">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 ml-1">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                                    </svg>
+                                                </a>
+                                            </span>
+                                        </CardDescription>
+                                    )}
+                                </CardHeader>
+                                <CardContent>
+                                    {selectedText.img && <CardDescription className="text-sm"><span className='text-slate-600'><span className="font-bold">Flagga: </span></span></CardDescription>}
+                                    {selectedText.img && <img src={selectedText.img} alt={selectedText.title} className="w-1/4 mt-3" />}
+                                </CardContent>
+                                <CardContent>
+                                    <p className="text-lg "><span className='text-slate-600'><span className="font-bold">Generell information: </span></span></p>
+                                    {difficulty === 0 && selectedText.contentNormal && <p className="text-justify">{selectedText.contentNormal}</p>}
+                                    {difficulty === 1 && selectedText.contentEasy && <p className="text-justify">{selectedText.contentEasy}</p>}
+                                    {difficulty === 2 && selectedText.contentHard && <p className="text-justify">{selectedText.contentHard}</p>}
+                                </CardContent>
+                            </Card>
+                        </div>
                     </div>
+
                 </div>
             </div>
-
-            <div className="mt-10 m-3">
+            <div className="mt-10 w-1/2 mx-auto">
                 <div className="flex flex-wrap justify-center">
-                    <Card className="w-full lg:w-1/3">
+                    <Card className="">
                         <CardHeader>
                             <CardTitle>Om datan</CardTitle>
                             <CardDescription className="text-sm bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text">Vart kommer informationen ifrån?</CardDescription>
@@ -147,7 +148,7 @@ export default function GenericText({ type }: { type: string }) {
                         </CardContent>
                         <CardContent>
                             <Link href="https://chat.openai.com" target="_blank">
-                                <Button variant="outline" className='bg-white text-black m-1'>ChatGPT - OpenAI</Button>
+                                <Button variant="outline" className='bg-white text-black'>ChatGPT - OpenAI</Button>
                             </Link>
                         </CardContent>
                     </Card>

@@ -17,21 +17,23 @@ export default function Page() {
         <div>
             <Logo />
             <CompleteMenu />
-            <div className="text-center">
+            <div className="text-center mt-10">
                 <h1 className="font-bold text-4xl bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text mt-10 mb-1 px-1 pb-1">
                     Om informationen & databaserna
                 </h1>
                 <p className="font-regular text-small text-slate-300 mb-10">Vart kommer all information och alla databaser ifrån? <br></br> Är det trovärdigt? </p>
                 <div className="flex justify-center mt-10">
-                    <Card className="m-4 p+2 w-full md:w-1/2">
-                        <div className="p-5">
-                            <CardContent>
-                                <p>Informationen på den här hemsidan är hämtad från trovärdiga källor och myndighetskällor. I vissa fall har Wikipedia använts, detta är alltid förtydligat längst ner på sidan. </p>
+                    <div className="p-5">
+                        <div className="flex justify-center">
+                            <div className="w-2/3">
+                                <p className="text-justify">Informationen på den här hemsidan är hämtad från trovärdiga källor och myndighetskällor. I vissa fall har Wikipedia använts, detta är alltid förtydligat längst ner på sidan. </p>
                                 <br></br>
-                                <p>Denna hemsida arbetar med ett flertal olika databaser, till exemepl en för myndigheter eller en för statliga företag. Alla databaserna har konstruerats av oss själva - detta menar både ur tekniskt perspktiv men också angående datan och informationen. Databaserna saknar motstycke och har konstruerats på olika sätt, databasen över myndigheterna är konstruerad med information från Riksarkivet, SCB:s myndighetsregister, Regeringskansliets hemsida, Statskontorets rapport 'Statsförvaltningen i korthet' - 2023 och Wikipedia. Logotyperna har hämtats från respektive myndighets hemsida. Det ska dock noteras att informationen är inte kontrollerad, i vissa fall uppkommer felaktigheter - detta beror på diskreptenser i källor. Ett tydligt exempel är disprektansen mellan SCB's myndighetregister och Statskontorets rapport: båda källorna från 2023 skiljer 4 myndigheter i deras listor - där SCB har fyra fler: RIKSDAGENS OMBUDSMÄN, RIKSDAGSFÖRVALTNINGEN, RIKSREVISIONEN och SVERIGES RIKSBANK. Skillnader som dessa kan göra att även våra databaser är felaktiga, men i det stora hela stämmer de till största del.</p>
-                            </CardContent>
-                            <p className="mb-3 text-slate-500"> Exempel på använda källor: </p>  
-                            <CardContent>
+                                <p className="text-justify">Denna hemsida arbetar med ett flertal olika databaser, till exemepl en för myndigheter eller en för statliga företag. Alla databaserna har konstruerats av oss själva - detta menar både ur tekniskt perspktiv men också angående datan och informationen. Databaserna saknar motstycke och har konstruerats på olika sätt, databasen över myndigheterna är konstruerad med information från Riksarkivet, SCB:s myndighetsregister, Regeringskansliets hemsida, Statskontorets rapport 'Statsförvaltningen i korthet' - 2023 och Wikipedia. Logotyperna har hämtats från respektive myndighets hemsida. Det ska dock noteras att informationen är inte kontrollerad, i vissa fall uppkommer felaktigheter - detta beror på diskreptenser i källor. Ett tydligt exempel är disprektansen mellan SCB's myndighetregister och Statskontorets rapport: båda källorna från 2023 skiljer 4 myndigheter i deras listor - där SCB har fyra fler: Riksdagens ombudsmän, Riksdagsförvaltningen, Riksrevisionen och Sveriges Riksdabnk. Dessa är uppenbart myndigheter men det förekommer alltså skillnader som dessa i den publika datan som kan tillgås - detta leder till att det finns en risk för fel i även våra databaser. </p>
+                            </div>
+                        </div>
+                        <p className="mb-3 text-slate-500 mt-20"> Exempel på använda källor: </p>
+                        <div className="flex justify-center flex-wrap">
+                            <div className="w-1/3">
                                 <Link href="https://riksarkivet.se/start" target="_blank">
                                     <Button variant="outline" className='bg-white text-black m-1'>Riksarkivet</Button>
                                 </Link>
@@ -56,9 +58,9 @@ export default function Page() {
                                 <Link href="https://www.msb.se/" target="_blank">
                                     <Button variant="outline" className='bg-white text-black m-1'>MSB</Button>
                                 </Link>
-                            </CardContent>
+                            </div>
                         </div>
-                    </Card>
+                    </div>
                 </div>
             </div>
             <Footer />
