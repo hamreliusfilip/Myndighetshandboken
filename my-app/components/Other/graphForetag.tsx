@@ -32,7 +32,7 @@ export default function GraphForetag() {
                         <div className="grid gap-4 p-5 grid-cols-1">
                             <Card className='w-96 h-96'>
                                 <CardContent>
-                                    <div className='m-5'>
+                                    <div className='m-5 mt-10'>
                                         <p className='font-bold text-sm text-left mb-2'>Utdelning</p>
                                         <div className='flex justify-left items-end'>
                                             <p className='font-extrabold text-5xl bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text'>23,0</p>
@@ -121,7 +121,7 @@ export default function GraphForetag() {
                 <div className="grid grid-cols-1">
 
                     <div>
-                        <h1 className="font-bold text-4xl mt-20 bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text"> Område </h1>
+                    <h1 className="font-bold text-4xl mt-20 text-black"> Område </h1>
                         <p className="font-semibold text-small text-slate-300 m-4">Bolagsportföljen per område i procent - 2022/23</p>
 
                         <div className="chart-container min-h-[300px] p-5">
@@ -132,7 +132,7 @@ export default function GraphForetag() {
 
 
                     <div className="">
-                        <h1 className="font-bold text-4xl mt-20 bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text px-1 pb-1"> Sju bolag står för 80% av nettoomsttningen </h1>
+                    <h1 className="font-bold text-4xl mt-20 text-black"> Sju bolag står för 80% av nettoomsttningen </h1>
                         <p className="font-semibold text-small text-slate-300 m-4">Inklusive intressebolag - Nettoomstättning mnkr</p>
 
                         <div className="chart-container min-h-[300px] p-5">
@@ -142,7 +142,7 @@ export default function GraphForetag() {
                     </div>
 
                     <div className="">
-                        <h1 className="font-bold text-4xl mt-20 bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text px-1 pb-1"> Resultat efter skatt </h1>
+                    <h1 className="font-bold text-4xl mt-20 text-black"> Resultat efter skatt </h1>
                         <p className="font-semibold text-small text-slate-300 m-4">Bolag med störst resultatpåverkan, jan-dec 2022, mdkr</p>
 
                         <div className="chart-container min-h-[300px] p-5">

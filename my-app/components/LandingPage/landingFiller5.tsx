@@ -21,10 +21,10 @@ export default function LandingFiller5() {
                             <span className='bg-gradient-to-r from-slate-600 to-white inline-block text-transparent bg-clip-text p-1'>Sveriges okända myndighetsorgan och</span><span className='bg-gradient-to-r from-white to-slate-600 inline-block text-transparent bg-clip-text p-1'>underrättelse enheter</span>
                         </h1>
                         <div className='flex justify-center items-center flex-row mt-10'>
-                            <Link href="/myndighet">
+                            <Link href="/faktaover/SekretessMyndighet">
                                 <Button variant={"outline"} className='bg-neutral-900 text-white m-1'> Okända Myndigheter </Button>
                             </Link>
-                            <Link href="/SekretessMyndighet">
+                            <Link href="/myndighet">
                                 <Button variant={"outline"} className='bg-white text-neutral-900 m-1'> Alla Myndigheter </Button>
                             </Link>
                         </div>

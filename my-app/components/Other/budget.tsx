@@ -23,17 +23,9 @@ export default function Budget() {
 
         <div>
             <div className="text-center">
-                <div className="mb-2">
-                    <h1 className="font-bold text-4xl mt-20 bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text px-1 pb-1"> Statens bolagsportfölj </h1>
-                    <p className='text-center font-normal text-l mt-5'> Statens bolagsportfölj bestod av 43 bolag vid årsskiftet 2022/23 <br></br>och har sin tyngdpunkt inom basindustri och energi.</p>
-                </div>
-            </div>
-            <div className="text-center">
-                <h1 className="font-bold text-4xl mt-20 bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text px-1 pb-1"> Utgifter i fokus </h1>
+                <h1 className="font-bold text-4xl mt-20 text-black"> Utgifter i fokus </h1>
                 <p className="font-semibold text-small text-slate-300 m-4">Utgifter i procent - 2023 utfall</p>
             </div>
-
-
             <div className='flex justify-center'>
                 <div className="grid grid-cols-1 sm:w-full lg:w-2/3">
 
@@ -43,9 +35,9 @@ export default function Budget() {
                     </div>
 
                     <div className="text-center">
-                        <h1 className="font-bold text-4xl mt-20 bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text"> Kommande år </h1>
+                    <h1 className="font-bold text-4xl mt-20 text-black"> Kommande år </h1>
                         <p className="font-semibold text-small text-slate-300 m-4">Statens budgetsaldo 2024–2027 (miljarder kronor)</p>
-                    </div> 
+                    </div>
 
                     <div className="flex justify-center">
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -69,27 +61,15 @@ export default function Budget() {
                     </div>
 
                     <div className="text-center">
-                        <h1 className="font-bold text-4xl mt-20 bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text"> Föregående år </h1>
-                        <p className="font-semibold text-small text-slate-300 m-4">Statens budgetsaldo 2020–2023 (miljarder kronor)</p>
+                    <h1 className="font-bold text-4xl mt-20 text-black"> Kommande år </h1>
+                        <p className="font-semibold text-small text-slate-300 m-4">Statens budgetsaldo 2024–2027 (miljarder kronor)</p>
                     </div>
-
-                    <div className="flex justify-center">
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                            <div className="chart-container2 min-h-[500px]">
-                                {/* @ts-ignore */}
-                                {/* <Doughnut data={data.data2} options={option.option3} /> */}
-                            </div>
-                            <div className="chart-container2 min-h-[500px]">
-                                {/* @ts-ignore */}
-                                {/* <Doughnut data={data.data2} options={option.option3} /> */}
-                            </div>
-                            <div className="chart-container2 min-h-[500px]">
-                                {/* @ts-ignore */}
-                                {/* <Doughnut data={data.data2} options={option.option3} /> */}
-                            </div>
+                    <div className="flex justify-center items-center">
+                        <div className="chart-container min-h-[300px] p-5">
+                            {/* @ts-ignore */}
+                            <Bar data={data.data1} options={option.option1} />
                         </div>
                     </div>
-
 
                     <div className="flex justify-center mt-20">
                         <div className=" sm:w-full lg:w-1/2 m-3">
@@ -104,18 +84,6 @@ export default function Budget() {
                             </Card>
                         </div>
                     </div>
-
-                    <div className="text-center">
-                        <h1 className="font-bold text-4xl mt-20 bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text"> Kommande år </h1>
-                        <p className="font-semibold text-small text-slate-300 m-4">Statens budgetsaldo 2024–2027 (miljarder kronor)</p>
-                    </div>
-                    <div className="flex justify-center items-center">
-                        <div className="chart-container min-h-[300px] p-5">
-                            {/* @ts-ignore */}
-                            <Bar data={data.data1} options={option.option1} />
-                        </div>
-                    </div>
-
 
                     <div className="flex justify-center mt-20">
                         <div className=" sm:w-full lg:w-1/2 m-3">

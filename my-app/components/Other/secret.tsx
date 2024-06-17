@@ -37,11 +37,9 @@ export default function SecComp() {
                     <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
                         {tipsData.map((tip: any, index: any) => (
                             <Card key={index} className="m-5 w-auto">
-                                <div className="ml-6 mt-6 flex justify-between items-center">
-                                    <CardTitle className="text-lg">{tip.name}</CardTitle>
-                                    <img src={tip.img} alt={tip.name} className="w-20 rounded-sm mr-6 h-20 w-auto" />
-                                </div>
-                                <div className="ml-6">
+                                <div className="flex justify-between items-center">
+                                    <CardTitle className="text-lg ml-5">{tip.name}</CardTitle>
+                                    <img src={tip.img} alt={tip.name} className="w-20 h-auto ml-8 mt-8" />
                                 </div>
                                 <CardContent>
                                     <CardDescription className="mt-2"><span className="font-bold">Akronym: </span>{tip.ak}</CardDescription>

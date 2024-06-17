@@ -15,7 +15,7 @@
           1419,
           1468
         ],
-        "backgroundColor": "rgb(212 212 212)",
+        "backgroundColor":  "rgb(255, 81, 15)",
         "borderWidth": 1,
         "borderRadius": 15
       },
@@ -28,7 +28,7 @@
           1362,
           1359
         ],
-        "backgroundColor": "rgb(14 165 233)",
+        "backgroundColor":  "rgb(255, 165, 0)",
         "borderWidth": 1,
         "borderRadius": 15
       }
