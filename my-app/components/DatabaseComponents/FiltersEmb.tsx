@@ -47,9 +47,9 @@ const Filters: React.FC<FiltersProps> = ({ Amyndigheter, onFiltersChange }) => {
 
     const [searchQuery, setSearchQuery] = useState(() => {
         if (typeof window !== 'undefined') {
-            const storedFilters = localStorage.getItem('AmyndighetFilters');
+            const storedFilters = localStorage.getItem('myndighetFilters');
             if (storedFilters) {
-                return JSON.parse(storedFilters).searchQuery || '';
+                return JSON.parse(storedFilters).searchQuery;
             }
             return '';
         }
@@ -57,9 +57,9 @@ const Filters: React.FC<FiltersProps> = ({ Amyndigheter, onFiltersChange }) => {
 
     const [relationFilters, setRelationFilters] = useState(() => {
         if (typeof window !== 'undefined') {
-            const storedFilters = localStorage.getItem('AmyndighetFilters');
+            const storedFilters = localStorage.getItem('myndighetFilters');
             if (storedFilters) {
-                return JSON.parse(storedFilters).relationFilters || {};
+                return JSON.parse(storedFilters).relationFilters;
             }
             return {};
         }
@@ -88,12 +88,13 @@ const Filters: React.FC<FiltersProps> = ({ Amyndigheter, onFiltersChange }) => {
 
     useEffect(() => {
         const filteredAMyndigheter = Amyndigheter.filter(Amyndighet => {
-            const nameMatch = Amyndighet.City.toLowerCase().includes(searchQuery.toLowerCase());
-            const orgMatch = Amyndighet.Country.toLowerCase().includes(searchQuery.toLowerCase());
 
-            const relationMatch = Object.entries(relationFilters).every(([relation, checked]) => !checked || (checked && relationFilters[Amyndighet.Type]));
+            const CityMatch = Amyndighet.City.toLowerCase().includes(searchQuery.toLowerCase());
+            const CountryMatch = Amyndighet.Country.toLowerCase().includes(searchQuery.toLowerCase());
 
-            return (nameMatch || orgMatch) && relationMatch;
+            const relationMatch = Object.entries(relationFilters).every(([rule, checked]) => !checked || checked && relationFilters[Amyndighet.Type]);
+
+            return (CityMatch || CountryMatch) && relationMatch;
         });
 
         onFiltersChange(filteredAMyndigheter);
