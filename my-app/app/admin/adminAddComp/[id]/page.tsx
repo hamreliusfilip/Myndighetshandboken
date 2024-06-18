@@ -5,7 +5,7 @@ import AdminMenu from "@/components/adminComponents/adminMenu";
 const getTicketById = async (id: string) => {
 
     try {
-        const res = await fetch(`http://localhost:3000/api/companies/${id}`, {
+        const res = await fetch(`https://myndighetshandboken.se/api/companies/${id}`, {
             cache: "no-cache"
         });
         const data = await res.json();

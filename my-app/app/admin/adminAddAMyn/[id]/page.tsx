@@ -5,7 +5,7 @@ import FormVariant from '@/components/adminComponents/FormVariant'
 const getTicketById = async (id: string) => {
 
     try {
-        const res = await fetch(`http://localhost:3000/api/Amyndigheter/${id}`, {
+        const res = await fetch(`https://myndighetshandboken.se/api/Amyndigheter/${id}`, {
             cache: "no-cache"
         });
         const data = await res.json();

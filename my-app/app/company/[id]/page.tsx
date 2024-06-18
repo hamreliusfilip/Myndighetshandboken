@@ -9,7 +9,7 @@ export default async function Page({ params }: any) {
 
     const fetchCompanies = async () => {
         try {
-            const res = await fetch(`http://localhost:3000/api/companies/${params.id}`, {
+            const res = await fetch(`https://myndighetshandboken.se/api/companies/${params.id}`, {
                 method: "GET",
                 cache: "no-cache"
             });

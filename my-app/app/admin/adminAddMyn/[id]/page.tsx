@@ -5,7 +5,7 @@ import Form from '@/components/adminComponents/Form'
 const getTicketById = async (id: string) => {
 
     try {
-        const res = await fetch(`http://localhost:3000/api/myndigheter/${id}`, {
+        const res = await fetch(`https://myndighetshandboken.se/api/myndigheter/${id}`, {
             cache: "no-cache"
         });
         const data = await res.json();

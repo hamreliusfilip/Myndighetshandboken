@@ -6,7 +6,7 @@ import ClientSideComponent from "@/components/DatabaseComponents/ClientSideCompo
 
 const fetchMyndigheter = async () => {
     try {
-        const res = await fetch("http://localhost:3000/api/myndigheter?fields=name,_id,relation,created,rule,info,org", {
+        const res = await fetch("https://myndighetshandboken.se/api/myndigheter?fields=name,_id,relation,created,rule,info,org", {
             method: "GET",
             next: { revalidate: 10 }
         });

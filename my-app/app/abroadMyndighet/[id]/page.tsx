@@ -9,7 +9,7 @@ export default async function Page({ params }: any) {
 
   const fetchAMyndigheter = async () => {
     try {
-      const res = await fetch(`http://localhost:3000/api/Amyndigheter/${params.id}`, {
+      const res = await fetch(`https://myndighetshandboken.se/api/Amyndigheter/${params.id}`, {
         method: "GET",
         cache: "no-cache",
         headers: {
