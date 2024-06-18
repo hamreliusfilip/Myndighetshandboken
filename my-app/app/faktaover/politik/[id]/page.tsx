@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 
 import stats from '@/Assets/Data/VoteSTER.json';
-import option from '@/Assets/data/VoteSTEROtions.json';
+import option from '@/Assets/Data/VoteSTEROtions.json';
 
 import { Bar } from 'react-chartjs-2';
 import { Chart, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
