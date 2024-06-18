@@ -5,7 +5,7 @@ export default function AboutWeb() {
 
     return (
 
-        <div className='mt-80 bg-neutral-900 h-screen rounded-3xl mr-20 ml-20 mt-100'>
+        <div className='mt-96 bg-neutral-900 pt-42 pb-42 rounded-3xl mr-20 ml-20 flex justify-center items-center flex-col'>
             <div className='flex flex-col justify-center items-center'>
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -15,7 +15,7 @@ export default function AboutWeb() {
                         amount: 0.7
                     }}
                 >
-                    <div className='p-48'>
+                    <div className='p-48 '>
                         <h1 className='text-left font-bold text-2xl md:text-5xl text-white'>
                             Vad är myndighetshandboken?
                         </h1>

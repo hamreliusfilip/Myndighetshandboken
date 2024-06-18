@@ -43,22 +43,24 @@ const Cardcomp: React.FC<CardProps> = ({ cardDA }) => {
     return (
         <div
             key={cardDA.id}>
-            <Card className="bg-gradient-to-r from-cyan-500 to-blue-500 w-96 h-96">
-                <CardHeader>
-                    <CardTitle className='text-white flex flex-row justify-start items-center'>
-                        <p className="text-4xl">{cardDA.title}</p>
-                    </CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <p className='text-white'>{cardDA.description}</p>
-                </CardContent>
-                <CardContent>
-                    <Link href={cardDA.link}>
-                        <Button variant="outline" className='bg-white text-black'>Läs mer</Button>
-                    </Link>
-                </CardContent>
+            <Card className="bg-gradient-to-r from-cyan-500 to-blue-500 w-120 h-120 flex justify-center items-center text-center">
+                <div className='flex flex-col justify-center items-center'>
+
+
+                    <p className="text-5xl font-bold text-white">{cardDA.title}</p>
+
+
+                    <p className='text-slate-200 font-base text-xl mt-10 w-2/3 mx-auto'>{cardDA.description}</p>
+
+                    <div className="mt-10">
+                        <Link href={cardDA.link}>
+                            <Button variant="outline" className='bg-white text-black'>Läs mer</Button>
+                        </Link>
+                    </div>
+                </div>
+
             </Card>
-        </div>
+        </div >
     );
 };
 

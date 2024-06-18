@@ -47,30 +47,7 @@ export default function AboutRiks() {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-center mt-10">
-                <div className="sm:w-full m-3 p-10">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <Card className="">
-                            <CardHeader>
-                                <CardTitle>Riksdagen</CardTitle>
-                                <CardDescription className="text-sm"><span className='bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text'>Vad gör riksdagen?</span></CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <p>Riksdagen är Sveriges lagstiftande församling och består av 349 ledamöter som väljs vart fjärde år i allmänna val. Valresultatet avgör hur de 349 platserna eller mandaten ska fördelas mellan de politiska partierna. För att komma in i riksdagen måste ett parti ha fått minst fyra procent av alla röster i riksdagsvalet eller minst 12 procent av rösterna i en valkrets. Svenska medborgare som är eller har varit bosatta i landet och har fyllt 18 år senast på valdagen har rätt att kandidera till riksdagen. För att kunna väljas in i riksdagen måste man företräda ett politiskt parti. Partimedlemmarna utser de personer inom det egna partiet som de tycker är lämpliga att representera partiet i riksdagen. <br></br> <br></br> Riksdagens viktigaste uppgifter är att stifta lagar, besluta om statens finanser och kontrollera regeringens arbete. Talmannen leder riksdagens arbete och är riksdagens högste ämbetsman. Ett lagförslag som läggs fram av en riksdagsman eller ett parti kallas motion. Ett förslag från regeringen kallas proposition. Innan riksdagen röstar om ett lagförslag förbereds frågan i något av riksdagens utskott. Utskotten är arbetsgrupper med ansvar för olika politikområden där alla riksdagspartierna finns representerade. Exempel på utskott är Finansutskottet och Arbetsmarknadsutskottet. En annan viktig uppgift för riksdagen är att besluta om statens utgifter och inkomster. Detta görs med utgångspunkt i två propositioner som regeringen lämnar i april och september varje år: den ekonomiska vårpropositionen och budgetpropositionen. En ytterligare uppgift för riksdagen är att kontrollera regeringen och den offentliga förvaltningen. Det kallas riksdagens kontrollmakt. Reglerna för denna kontroll finns i regeringsformen. Riksdagen har fem kontrollinstrument: Konstitutionsutskottets granskning av regeringen. Misstroendeförklaring mot statsråd. Riksdagens ombudsmän. Riksrevisionen. Ledamöternas interpellationer och frågor till statsråden.</p>
-                            </CardContent>
-                        </Card>
-                        <Card className="mt-10 md:mt-0">
-                            <CardHeader>
-                                <CardTitle>Regeringen</CardTitle>
-                                <CardDescription><span className='bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text'>Vad gör regeringen?</span></CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <p>Regeringen utgör en central del av den svenska politiska processen och har en avgörande roll i att driva landets utveckling och förvalta dess lagstiftning. Efter varje riksdagsval är det det parti eller den partikoalition som får flest röster som har möjlighet att bilda regering. Talmannen har i uppgift att nominera en statsminister för den nyvalda riksdagen, som sedan måste godkännas av riksdagen för att officiellt tillträda som regeringschef. Som regeringschef har statsministern makten att utse övriga ministrar, eller statsråd, som tillsammans utgör regeringen. Dessa ministrar ansvarar för olika politikområden och arbetar tillsammans för att genomföra regeringens politiska agenda.</p><br></br> <p>Regeringen är följaktligen ansvarig gentemot riksdagen och måste kunna få dess stöd för att genomföra sina politiska mål och beslut. För att underlätta sitt arbete har regeringen tillgång till ett omfattande regeringskansli, organiserat i olika departement, som hanterar specifika frågor inom samhället. Dessutom finns det statliga myndigheter och bolag som verkar under regeringens ledning och stödjer dess arbete inom olika sektorer såsom utbildning, hälsa, och infrastruktur.</p><br></br> <p>Genom denna komplexa struktur samarbetar regeringen med riksdagen och andra statliga organ för att formulera och genomföra lagar och politiska åtgärder som syftar till att främja Sveriges samhällsutveckling och välfärd. Regeringens arbete och samspel med andra aktörer i samhället är avgörande för att säkerställa en stabil och framgångsrik utveckling för landet och dess medborgare.</p>
-                            </CardContent>
-                        </Card>
-                    </div>
-                </div>
-            </div>
+           
             <div className="flex justify-center mt-10">
                 <Card>
                     <CardHeader>
@@ -131,6 +108,31 @@ export default function AboutRiks() {
                         </div>
                     </CardContent>
                 </Card>
+            </div>
+
+            <div className="flex justify-center mt-10">
+                <div className="sm:w-full m-3 p-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <Card className="">
+                            <CardHeader>
+                                <CardTitle>Riksdagen</CardTitle>
+                                <CardDescription className="text-sm"><span className='bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text'>Vad gör riksdagen?</span></CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                                <p>Riksdagen är Sveriges lagstiftande församling och består av 349 ledamöter som väljs vart fjärde år i allmänna val. Valresultatet avgör hur de 349 platserna eller mandaten ska fördelas mellan de politiska partierna. För att komma in i riksdagen måste ett parti ha fått minst fyra procent av alla röster i riksdagsvalet eller minst 12 procent av rösterna i en valkrets. Svenska medborgare som är eller har varit bosatta i landet och har fyllt 18 år senast på valdagen har rätt att kandidera till riksdagen. För att kunna väljas in i riksdagen måste man företräda ett politiskt parti. Partimedlemmarna utser de personer inom det egna partiet som de tycker är lämpliga att representera partiet i riksdagen. <br></br> <br></br> Riksdagens viktigaste uppgifter är att stifta lagar, besluta om statens finanser och kontrollera regeringens arbete. Talmannen leder riksdagens arbete och är riksdagens högste ämbetsman. Ett lagförslag som läggs fram av en riksdagsman eller ett parti kallas motion. Ett förslag från regeringen kallas proposition. Innan riksdagen röstar om ett lagförslag förbereds frågan i något av riksdagens utskott. Utskotten är arbetsgrupper med ansvar för olika politikområden där alla riksdagspartierna finns representerade. Exempel på utskott är Finansutskottet och Arbetsmarknadsutskottet. En annan viktig uppgift för riksdagen är att besluta om statens utgifter och inkomster. Detta görs med utgångspunkt i två propositioner som regeringen lämnar i april och september varje år: den ekonomiska vårpropositionen och budgetpropositionen. En ytterligare uppgift för riksdagen är att kontrollera regeringen och den offentliga förvaltningen. Det kallas riksdagens kontrollmakt. Reglerna för denna kontroll finns i regeringsformen. Riksdagen har fem kontrollinstrument: Konstitutionsutskottets granskning av regeringen. Misstroendeförklaring mot statsråd. Riksdagens ombudsmän. Riksrevisionen. Ledamöternas interpellationer och frågor till statsråden.</p>
+                            </CardContent>
+                        </Card>
+                        <Card className="mt-10 md:mt-0">
+                            <CardHeader>
+                                <CardTitle>Regeringen</CardTitle>
+                                <CardDescription><span className='bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text'>Vad gör regeringen?</span></CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                                <p>Regeringen utgör en central del av den svenska politiska processen och har en avgörande roll i att driva landets utveckling och förvalta dess lagstiftning. Efter varje riksdagsval är det det parti eller den partikoalition som får flest röster som har möjlighet att bilda regering. Talmannen har i uppgift att nominera en statsminister för den nyvalda riksdagen, som sedan måste godkännas av riksdagen för att officiellt tillträda som regeringschef. Som regeringschef har statsministern makten att utse övriga ministrar, eller statsråd, som tillsammans utgör regeringen. Dessa ministrar ansvarar för olika politikområden och arbetar tillsammans för att genomföra regeringens politiska agenda.</p><br></br> <p>Regeringen är följaktligen ansvarig gentemot riksdagen och måste kunna få dess stöd för att genomföra sina politiska mål och beslut. För att underlätta sitt arbete har regeringen tillgång till ett omfattande regeringskansli, organiserat i olika departement, som hanterar specifika frågor inom samhället. Dessutom finns det statliga myndigheter och bolag som verkar under regeringens ledning och stödjer dess arbete inom olika sektorer såsom utbildning, hälsa, och infrastruktur.</p><br></br> <p>Genom denna komplexa struktur samarbetar regeringen med riksdagen och andra statliga organ för att formulera och genomföra lagar och politiska åtgärder som syftar till att främja Sveriges samhällsutveckling och välfärd. Regeringens arbete och samspel med andra aktörer i samhället är avgörande för att säkerställa en stabil och framgångsrik utveckling för landet och dess medborgare.</p>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </div>
             </div>
 
             <div className="flex justify-center mt-10">

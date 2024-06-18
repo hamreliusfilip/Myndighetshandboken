@@ -65,8 +65,8 @@ export default function GenericText({ type }: { type: string }) {
     return (
         <div className="mt-10">
             <div className="flex justify-center items-center p-10">
-                <div className="w-1/2 mx-auto">
-                    <div className="grid grid-cols-3 gap-4">
+                <div className="w-full md:w-1/2 mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
                         <div className="">
                             <div className="col-span-1">
@@ -98,7 +98,7 @@ export default function GenericText({ type }: { type: string }) {
                             </div>
                         </div>
 
-                        <div className="col-span-2">
+                        <div className="col-span-1 md:col-span-2">
                             <Card key={selectedText.id} className="">
                                 <CardHeader className="pb-3">
                                     {selectedText.title && <CardTitle>{selectedText.title}</CardTitle>}
@@ -136,15 +136,15 @@ export default function GenericText({ type }: { type: string }) {
 
                 </div>
             </div>
-            <div className="mt-10 w-1/2 mx-auto">
+            <div className="mt-10 w-full md:w-1/2 mx-auto">
                 <div className="flex flex-wrap justify-center">
-                    <Card className="">
+                    <Card className="m-10 md:m-0">
                         <CardHeader>
                             <CardTitle>Om datan</CardTitle>
                             <CardDescription className="text-sm bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text">Vart kommer informationen ifrån?</CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <p>Den här datan är AI genererad med hjälp av Open AI's ChatGPT-3.5. Informationen har tagits fram genom att ställa de frågor som är markerat i blått på respektive kort.</p>
+                            <p>Den här datan är AI genererad med hjälp av Open AI's ChatGPT-3.5. Informationen har tagits fram genom att ställa de frågor som är utskrivna som underrubrik på respktive kort. Datan är ett proof of concept - gedigna artiklar tillkommer vid ett senare tillfälle.</p>
                         </CardContent>
                         <CardContent>
                             <Link href="https://chat.openai.com" target="_blank">

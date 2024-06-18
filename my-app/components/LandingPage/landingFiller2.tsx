@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function LandingFiller2() {
     return (
-        <div className='mt-80 bg-white h-96 flex justify-center items-center'>
+        <div className='mt-80 mb-100 bg-white h-96 flex justify-center items-center'>
             <div>
                 <h1 className='text-center font-bold text-6xl text-black mb-5'>
                     All <span className='bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text'>data</span> på ett och <span className='bg-gradient-to-r from-cyan-500 to-blue-500 inline-block text-transparent bg-clip-text font-extrabold'>samma ställe</span>

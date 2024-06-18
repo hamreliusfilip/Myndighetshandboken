@@ -94,7 +94,7 @@ export default function CompleteMenu() {
                             <div className="bg-slate-300 h-1 w-5 mt-1 rounded rounded-corners"></div>
                           </div>
                         )}</li>
-                        <li className="p-4"><Link href="/departement">Departementkarta</Link>
+                      <li className="p-4"><Link href="/departement">Departementkarta</Link>
                         {isCurrentPath("/departement") && (
                           <div className="flex justify-start">
                             <div className="bg-slate-300 h-1 w-5 mt-1 rounded rounded-corners"></div>
@@ -139,6 +139,12 @@ export default function CompleteMenu() {
                             <div className="bg-slate-300 h-1 w-5 mt-1 rounded rounded-corners"></div>
                           </div>
                         )}</li>
+                      <li className="p-4 ml-5"><Link href="/faktaover/riksdagen">Riksdagen, Regeringen & Votering</Link>
+                        {isCurrentPath("/faktaover/riksdagen") && (
+                          <div className="flex justify-start">
+                            <div className="bg-slate-300 h-1 w-5 mt-1 rounded rounded-corners"></div>
+                          </div>
+                        )}</li>
                       <p className='font-semibold text-lg ml-5'> Fakta </p>
                       <li className="p-4 ml-5"><Link href="/faktaover/SekretessMyndighet">Sekretessbelagda Organ</Link>
                         {isCurrentPath("/faktaover/SekretessMyndighet") && (
@@ -154,12 +160,6 @@ export default function CompleteMenu() {
                         )}</li>
                       <li className="p-4 ml-5"><Link href="/faktaover/foretagMyndigheter">Myndigheter & Företag</Link>
                         {isCurrentPath("/faktaover/foretagMyndigheter") && (
-                          <div className="flex justify-start">
-                            <div className="bg-slate-300 h-1 w-5 mt-1 rounded rounded-corners"></div>
-                          </div>
-                        )}</li>
-                      <li className="p-4 ml-5"><Link href="/faktaover/riksdagen">Riksdagen, Regeringen & Votering</Link>
-                        {isCurrentPath("/faktaover/riksdagen") && (
                           <div className="flex justify-start">
                             <div className="bg-slate-300 h-1 w-5 mt-1 rounded rounded-corners"></div>
                           </div>
@@ -309,6 +309,15 @@ export default function CompleteMenu() {
                         </div>
                       )}
                     </Link>
+                    <MenubarSeparator />
+                    <Link href="/faktaover/riksdagen">
+                      <MenubarItem>Riksdagen, Regeringen & Votering</MenubarItem>
+                      {isCurrentPath("/faktaover/riksdagen") && (
+                        <div className="flex justify-start">
+                          <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
+                        </div>
+                      )}
+                    </Link>
                   </MenubarSubContent>
                 </MenubarSub>
                 <MenubarSeparator />
@@ -336,15 +345,6 @@ export default function CompleteMenu() {
                     <Link href="/faktaover/foretagMyndigheter">
                       <MenubarItem>Myndigheter & Företag</MenubarItem>
                       {isCurrentPath("/faktaover/foretagMyndigheter") && (
-                        <div className="flex justify-start">
-                          <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
-                        </div>
-                      )}
-                    </Link>
-                    <MenubarSeparator />
-                    <Link href="/faktaover/riksdagen">
-                      <MenubarItem>Riksdagen, Regeringen & Votering</MenubarItem>
-                      {isCurrentPath("/faktaover/riksdagen") && (
                         <div className="flex justify-start">
                           <div className="bg-slate-300 h-1 w-5 mb-1 ml-2 rounded rounded-corners"></div>
                         </div>

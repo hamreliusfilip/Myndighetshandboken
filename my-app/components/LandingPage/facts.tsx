@@ -17,7 +17,7 @@ export default function Facts() {
                 amount: 0.7
             }}
         >
-            <div className='mt-80 flex justify-center flex-col items-center h-screen bg-gradient-to-r from-cyan-500 to-blue-500 rounded-3xl mr-20 ml-20'>
+            <div className='mt-80 flex justify-center flex-col items-center pt-72 pb-72 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-3xl mr-20 ml-20'>
                     <div className='w-1/2 mx-auto'>
                         <div className='mb-8'>
                             <h1 className='text-center text-white font-bold text-6xl'>Statistik</h1>
