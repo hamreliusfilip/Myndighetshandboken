@@ -170,7 +170,7 @@ const Filters: React.FC<FiltersProps> = ({ myndigheter, onFiltersChange }) => {
         <div>
             {isMobile ? (
                 <div className='overflow-x-hidden'>
-                    <div className="flex flex-col m-1 gap-0 justify-items-center">
+                    <div className="flex flex-col gap-0 justify-items-center">
                         <div className="flex flex-row relative w-full">
                             <input
                                 type="text"
@@ -274,7 +274,7 @@ const Filters: React.FC<FiltersProps> = ({ myndigheter, onFiltersChange }) => {
                                     placeholder="Sök med namn eller org nr..."
                                     value={searchQuery}
                                     onChange={handleSearchChange}
-                                    className="border border-gray-200 rounded-md p-2 w-full mb-4 font-base font-inter text-xs"
+                                    className="border border-gray-200 rounded-md p-3 w-full mb-4 font-base font-inter text-xs"
                                 />
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -282,7 +282,7 @@ const Filters: React.FC<FiltersProps> = ({ myndigheter, onFiltersChange }) => {
                                     viewBox="0 0 24 24"
                                     strokeWidth={1.5}
                                     stroke="grey"
-                                    className="absolute size-6 right-2 top-2"
+                                    className="absolute size-7 right-2 top-2"
                                 >
                                     <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                                 </svg>

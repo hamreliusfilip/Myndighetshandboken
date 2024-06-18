@@ -72,7 +72,7 @@ export default function Budget() {
                     </div>
 
                     <div className="flex justify-center mt-20">
-                        <div className=" sm:w-full lg:w-1/2 m-3">
+                        <div className=" sm:w-full lg:w-2/3 m-3">
                             <Card>
                                 <CardHeader>
                                     <CardTitle>Sveriges Statsbudget</CardTitle>
@@ -86,7 +86,7 @@ export default function Budget() {
                     </div>
 
                     <div className="flex justify-center mt-20">
-                        <div className=" sm:w-full lg:w-1/2 m-3">
+                        <div className=" sm:w-full lg:w-2/3 m-3">
                             <Card className="p+2">
                                 <CardHeader>
                                     <CardTitle>Budgetprocessens Händelseförlopp</CardTitle>
@@ -126,7 +126,7 @@ export default function Budget() {
                     </div>
 
                     <div className="flex justify-center pt-16">
-                        <div className="sm:w-full lg:w-1/2 m-3">
+                        <div className="sm:w-full lg:w-2/3 m-3">
                             <Card>
                                 <CardHeader>
                                     <CardTitle>Om datan</CardTitle>
