@@ -1,7 +1,7 @@
 import CompleteMenu from "@/components/Main/completeMenu";
 import Logo from "@/components/Main/logo";
 import { Button } from "@/components/ui/button";
-import { Card, CardDescription } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import Footer from "@/components/Main/footer";
 

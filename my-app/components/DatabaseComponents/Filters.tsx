@@ -32,7 +32,6 @@ interface FiltersProps {
 const Filters: React.FC<FiltersProps> = ({ myndigheter, onFiltersChange }) => {
 
     const [isMobile, setIsMobile] = useState(false);
-    const [filterReset, setFilterReset] = useState(false);
 
     useEffect(() => {
         const checkIfMobile = () => {
@@ -204,7 +203,6 @@ const Filters: React.FC<FiltersProps> = ({ myndigheter, onFiltersChange }) => {
                                                             'Arbetsmarknadsdepartementet', 'Finansdepartementet', 'Försvarsdepartementet', 'Justitiedepartementet', 'Klimat- och näringslivsdepartementet', 'Kulturdepartementet', 'Landsbygds- och infrastrukturdepartementet', 'Socialdepartementet', 'Statsrådsberedningen', 'Utbildningsdepartementet', 'Utrikesdepartementet'
                                                         ]}
                                                         onChange={handleRelationFilterChange}
-                                                        reset={filterReset}
                                                         storageKey="myndighetFilters"
                                                     />
                                                 </AccordionContent>
@@ -219,7 +217,6 @@ const Filters: React.FC<FiltersProps> = ({ myndigheter, onFiltersChange }) => {
                                                             'Styrelse', 'Enrådighet', 'SBA', 'Nämnd', 'Kommitté', 'Universitet eller högskola', 'Regeringskansliet', 'Arbetsgivarkollegium', 'Domstol', 'AP-Fond', 'Hyresnämnd', 'Lagråd', 'Övrigt'
                                                         ]}
                                                         onChange={handleRuleFilterChange}
-                                                        reset={filterReset}
                                                         storageKey="myndighetFilters"
                                                     />
                                                 </AccordionContent>
@@ -296,7 +293,6 @@ const Filters: React.FC<FiltersProps> = ({ myndigheter, onFiltersChange }) => {
                                                 'Arbetsmarknadsdepartementet', 'Finansdepartementet', 'Försvarsdepartementet', 'Justitiedepartementet', 'Klimat- och näringslivsdepartementet', 'Kulturdepartementet', 'Landsbygds- och infrastrukturdepartementet', 'Socialdepartementet', 'Statsrådsberedningen', 'Utbildningsdepartementet', 'Utrikesdepartementet'
                                             ]}
                                             onChange={handleRelationFilterChange}
-                                            reset={filterReset}
                                             storageKey="myndighetFilters"
                                         />
                                     </AccordionContent>
@@ -311,7 +307,6 @@ const Filters: React.FC<FiltersProps> = ({ myndigheter, onFiltersChange }) => {
                                                 'Styrelse', 'Enrådighet', 'SBA', 'Nämnd', 'Kommitté', 'Universitet eller högskola', 'Regeringskansliet', 'Arbetsgivarkollegium', 'Domstol', 'AP-Fond', 'Hyresnämnd', 'Lagråd', 'Övrigt'
                                             ]}
                                             onChange={handleRuleFilterChange}
-                                            reset={filterReset}
                                             storageKey="myndighetFilters"
                                         />
                                     </AccordionContent>

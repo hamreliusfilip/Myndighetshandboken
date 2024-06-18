@@ -1,7 +1,7 @@
 import React from "react";
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import data from '../../Assets/Data/TipsData.json';
 
 export default function TipsCom() {

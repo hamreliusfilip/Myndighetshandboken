@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardDescription, CardTitle } from '../ui/card';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Collapsible } from "@/components/ui/collapsible";
 import Link from 'next/link';
 
 type ListCardProps = {

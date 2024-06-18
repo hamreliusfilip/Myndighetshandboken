@@ -8,10 +8,8 @@ import data from '@/Assets/Data/pol_parties.json';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
-
 import stats from '@/Assets/Data/VoteSTER.json';
 import option from '@/Assets/Data/VoteSTEROtions.json';
-
 import { Bar } from 'react-chartjs-2';
 import { Chart, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 

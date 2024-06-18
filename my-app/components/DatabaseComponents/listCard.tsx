@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Card, CardDescription, CardTitle } from '../ui/card';
+import { Card, CardDescription } from '../ui/card';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import Link from 'next/link';
 

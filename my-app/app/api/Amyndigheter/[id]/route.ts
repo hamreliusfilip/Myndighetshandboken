@@ -6,8 +6,6 @@ export async function GET(req: any, { params }: any) {
     
     try {
         await dbConnect();
-        const { id } = params.id;
-    
         const Amyndighet = await AMyndighet.findById(params.id);
         return NextResponse.json({ Amyndighet }, { status: 200 });
     } catch (error) {
@@ -19,12 +17,9 @@ export async function GET(req: any, { params }: any) {
 export async function PUT(req: any, { params }: any) {
 
     try {
-        const { id } = params.id;
 
         const body = await req.json();
-
         const upatedData = body.formData;
-
         const updateTicketData = await AMyndighet.findByIdAndUpdate(upatedData._id, {
             ...upatedData,
         });

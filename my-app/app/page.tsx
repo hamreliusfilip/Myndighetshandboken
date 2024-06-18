@@ -12,11 +12,9 @@ import LandingFiller6 from "@/components/LandingPage/landingFiller6";
 import LandingFiller7 from "@/components/LandingPage/landingFiller7";
 import Info from "../components/LandingPage/infoText";
 import Facts from "@/components/LandingPage/facts";
-import MobileWarning from '@/components/mobileComponents/warningPrompt';
 import MobileInfo from '@/components/mobileComponents/mobileFiller';
 import LandingFiller22 from '@/components/mobileComponents/landingFiller22';
 import LandingFiller33 from '@/components/mobileComponents/landingFiller33';
-import LandingFiller44 from '@/components/mobileComponents/landingFiller44';
 import AboutWeb from "@/components/LandingPage/aboutWeb";
 import AboutMobile from "@/components/mobileComponents/aboutMobile";
 
@@ -55,11 +53,8 @@ export default function Home() {
       {!isMobile && <LandingFiller2 />}
       {!isMobile && <AboutWeb />}
       {!isMobile && <LandingFiller7 />}
-   
-      {/* {isMobile && <MobileWarning />} */}
       {isMobile && <LandingFiller33 />}
       {isMobile && <LandingFiller22 />}
-      {/* {isMobile && <LandingFiller44 />} */}
       {isMobile && <AboutMobile />}
       <Footer />
     </div>

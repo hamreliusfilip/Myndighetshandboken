@@ -20,7 +20,7 @@ import {
     NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 
-import company, { companies } from '@/lib/models/company';
+import { companies } from '@/lib/models/company';
 import CheckFilter from '@/components/DatabaseComponents/CheckFilter';
 
 
@@ -32,8 +32,6 @@ interface FiltersProps {
 const FiltersCom: React.FC<FiltersProps> = ({ companies, onFiltersChange }) => {
 
     const [isMobile, setIsMobile] = useState(false);
-    const [filterReset, setFilterReset] = useState(false);
-
 
     useEffect(() => {
         const checkIfMobile = () => {
@@ -187,7 +185,6 @@ const FiltersCom: React.FC<FiltersProps> = ({ companies, onFiltersChange }) => {
                                                     <CheckFilter
                                                         options={['Helt statligt ägt', 'Delvis statligt ägt']}
                                                         onChange={handleRuleFilterChange}
-                                                        reset={filterReset}
                                                         storageKey="compFilters"
                                                     />
                                                 </AccordionContent>
@@ -263,7 +260,6 @@ const FiltersCom: React.FC<FiltersProps> = ({ companies, onFiltersChange }) => {
                                             <CheckFilter
                                                 options={['Helt statligt ägt', 'Delvis statligt ägt']}
                                                 onChange={handleRuleFilterChange}
-                                                reset={filterReset}
                                                 storageKey="compFilters"
                                             />
                                         </AccordionContent>

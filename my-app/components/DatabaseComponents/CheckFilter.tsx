@@ -3,11 +3,10 @@ import React, { useEffect, useState } from 'react';
 interface CheckboxFilterProps {
     options: string[];
     onChange: (filters: Record<string, boolean>) => void;
-    reset: boolean;
     storageKey: 'myndighetFilters' | 'compFilters' | 'AmyndighetFilters';
 }
 
-const CheckFilter: React.FC<CheckboxFilterProps> = ({ options, onChange, reset, storageKey }) => {
+const CheckFilter: React.FC<CheckboxFilterProps> = ({ options, onChange, storageKey }) => {
     const [filters, setFilters] = useState<Record<string, boolean>>({});
 
     useEffect(() => {
@@ -36,14 +35,6 @@ const CheckFilter: React.FC<CheckboxFilterProps> = ({ options, onChange, reset, 
         }
     }, [options, storageKey]);
 
-    useEffect(() => {
-        if (reset) {
-            setFilters(options.reduce((acc, option) => {
-                acc[option] = false;
-                return acc;
-            }, {} as Record<string, boolean>));
-        }
-    }, [reset, options]);
 
     const handleCheckboxChange = (option: string) => {
         const newFilters = { ...filters, [option]: !filters[option] };

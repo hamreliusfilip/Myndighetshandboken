@@ -24,7 +24,6 @@ export async function GET(req: any, { params }: any) {
     
     try {
         await dbConnect();
-        const { id } = params.id;
     
         const company = await Company.findById(params.id);
         return NextResponse.json({ company }, { status: 200 });
@@ -37,7 +36,6 @@ export async function GET(req: any, { params }: any) {
 export async function PUT(req: any, { params }: any) {
 
     try {
-        const { id } = params.id;
 
         const body = await req.json();
 

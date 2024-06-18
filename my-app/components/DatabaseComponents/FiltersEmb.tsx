@@ -32,7 +32,6 @@ interface FiltersProps {
 const Filters: React.FC<FiltersProps> = ({ Amyndigheter, onFiltersChange }) => {
 
     const [isMobile, setIsMobile] = useState(false);
-    const [filterReset, setFilterReset] = useState(false);
 
     useEffect(() => {
         const checkIfMobile = () => {
@@ -151,7 +150,6 @@ const Filters: React.FC<FiltersProps> = ({ Amyndigheter, onFiltersChange }) => {
                                                             'Ambassad', 'Representation', 'Generalkonsulat', 'Dialoginstitutet', 'Delegation'
                                                         ]}
                                                         onChange={handleRelationFilterChange}
-                                                        reset={filterReset}
                                                         storageKey="AmyndighetFilters"
                                                     />
                                                 </AccordionContent>
@@ -197,7 +195,6 @@ const Filters: React.FC<FiltersProps> = ({ Amyndigheter, onFiltersChange }) => {
                                                 'Ambassad', 'Representation', 'Generalkonsulat', 'Dialoginstitutet', 'Delegation'
                                             ]}
                                             onChange={handleRelationFilterChange}
-                                            reset={filterReset}
                                             storageKey="AmyndighetFilters"
                                         />
                                     </AccordionContent>

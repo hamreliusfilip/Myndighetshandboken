@@ -6,7 +6,6 @@ export async function GET(req: any, { params }: any) {
     
     try {
         await dbConnect();
-        const { id } = params.id;
     
         const myndighet = await Myndighet.findById(params.id);
         return NextResponse.json({ myndighet }, { status: 200 });
@@ -19,8 +18,6 @@ export async function GET(req: any, { params }: any) {
 export async function PUT(req: any, { params }: any) {
 
     try {
-        const { id } = params.id;
-
         const body = await req.json();
 
         const upatedData = body.formData;

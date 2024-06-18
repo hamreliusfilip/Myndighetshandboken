@@ -2,7 +2,6 @@ import React, { Suspense } from "react";
 import CompleteMenu from '@/components/Main/completeMenu';
 import Logo from '@/components/Main/logo';
 import Footer from '@/components/Main/footer';
-import { Card } from "@/components/ui/card";
 import ClientSideComponentEmb from "@/components/DatabaseComponents/ClientSideComponentEmb";
 
 const fetchAMyndigheter = async () => {
