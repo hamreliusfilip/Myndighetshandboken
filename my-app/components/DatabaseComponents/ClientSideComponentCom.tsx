@@ -26,7 +26,6 @@ const ClientSideComponentCom: React.FC<ClientSideComponentProps> = ({ companies 
 
     const handleFiltersChange = useCallback((filteredData: companies[]) => {
         setFilteredCompanies(filteredData);
-        changeSorting("alfa"); 
     }, []);
 
     function changeSorting(value: string) {

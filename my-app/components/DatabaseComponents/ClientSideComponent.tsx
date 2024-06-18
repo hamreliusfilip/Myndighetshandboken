@@ -25,7 +25,6 @@ const ClientSideComponent: React.FC<ClientSideComponentProps> = ({ myndigheter }
 
     const handleFiltersChange = useCallback((filteredData: Myndigheter[]) => {
         setFilteredMyndigheter(filteredData);
-        changeSorting("alfa"); 
     }, []);
 
     function changeSorting(value: string) {
