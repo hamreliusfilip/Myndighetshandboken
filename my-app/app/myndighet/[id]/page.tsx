@@ -43,7 +43,7 @@ export default async function Page({ params }: any) {
             <p className="text-2xl 2xl:text-4xl xl:text-3xl font-bold text-center">{data.name}</p>
             {data.name ? (
               <div className="flex justify-center">
-                <img className="h-auto max-h-40 max-w-96 lg:w-auto max-w-md" src={data.logo_url} alt="" />
+                <img className="h-auto max-h-40 max-w-80 lg:w-auto max-w-md" src={data.logo_url} alt="" />
               </div>
             ) : null}
           </div>
@@ -125,5 +125,3 @@ export default async function Page({ params }: any) {
     </>
   );
 }
-
-// ---
