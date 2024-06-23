@@ -3,6 +3,7 @@ import CompleteMenu from '@/components/Main/completeMenu';
 import Logo from '@/components/Main/logo';
 import Footer from '@/components/Main/footer';
 import ClientSideComponentCom from "@/components/DatabaseComponents/ClientSideComponentCom";
+import Head from 'next/head'
 
 const fetchCompanies = async () => {
     try {
@@ -36,6 +37,9 @@ export default function Page() {
 
     return (
         <div>
+            <Head>
+                <title>Företag - Myndighetshandboken</title>
+            </Head>
             <Logo />
             <CompleteMenu />
             <Suspense fallback={<p className="font-bold mt-10 text-black flex justify-center items-center">Laddar data...</p>}>

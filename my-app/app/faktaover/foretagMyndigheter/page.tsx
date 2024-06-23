@@ -2,12 +2,15 @@ import React from "react";
 import CompleteMenu from '../../../components/Main/completeMenu';
 import Logo from '../../../components/Main/logo';
 import Footer from '../../../components/Main/footer';
-
 import GenericText from "@/components/Other/genricTextCom";
+import Head from 'next/head'
 
 export default function Page() {
   return (
     <div>
+      <Head>
+        <title>Myndigheter & Statliga Företag - Myndighetshandboken</title>
+      </Head>
       <Logo />
       <CompleteMenu />
       <div className="text-center">

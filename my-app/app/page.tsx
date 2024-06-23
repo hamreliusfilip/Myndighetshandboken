@@ -18,6 +18,8 @@ import LandingFiller33 from '@/components/mobileComponents/landingFiller33';
 import AboutWeb from "@/components/LandingPage/aboutWeb";
 import AboutMobile from "@/components/mobileComponents/aboutMobile";
 
+import Head from 'next/head'
+
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -35,11 +37,14 @@ export default function Home() {
   }, []);
 
   if (loading) {
-    return null; 
+    return null;
   }
 
   return (
     <div>
+      <Head>
+        <title>Startsida - Myndighetshandboken</title>
+      </Head>
       <Logo />
       <CompleteMenu />
       {!isMobile && <Info />}
