@@ -126,9 +126,9 @@ export default function GenericText({ type }: { type: string }) {
                                 </CardContent>
                                 <CardContent>
                                     <p className="text-lg "><span className='text-slate-600'><span className="font-bold">Generell information: </span></span></p>
-                                    {difficulty === 0 && selectedText.contentNormal && <p className="text-justify">{selectedText.contentNormal}</p>}
-                                    {difficulty === 1 && selectedText.contentEasy && <p className="text-justify">{selectedText.contentEasy}</p>}
-                                    {difficulty === 2 && selectedText.contentHard && <p className="text-justify">{selectedText.contentHard}</p>}
+                                    {difficulty === 0 && selectedText.contentNormal && <p className="text-left">{selectedText.contentNormal}</p>}
+                                    {difficulty === 1 && selectedText.contentEasy && <p className="text-left">{selectedText.contentEasy}</p>}
+                                    {difficulty === 2 && selectedText.contentHard && <p className="text-left">{selectedText.contentHard}</p>}
                                 </CardContent>
                             </Card>
                         </div>

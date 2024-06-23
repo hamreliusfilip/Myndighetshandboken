@@ -46,12 +46,12 @@ export default function Home() {
       {isMobile && <MobileInfo />}
       {isMobile && <div className="h-72" />}
       <TextParallaxContentExample />
+      {!isMobile && <AboutWeb />}
       {!isMobile && <Facts />}
       {!isMobile && <LandingFiller6 />}
       {!isMobile && <LandingFiller5 />}
       {!isMobile && <LandingFiller4 />}
       {!isMobile && <LandingFiller2 />}
-      {!isMobile && <AboutWeb />}
       {!isMobile && <LandingFiller7 />}
       {isMobile && <LandingFiller33 />}
       {isMobile && <LandingFiller22 />}
