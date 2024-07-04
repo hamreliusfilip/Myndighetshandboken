@@ -33,7 +33,7 @@ export default async function sitemap() {
       lastModified: new Date().toISOString(),
     }));
 
-    const staticRoutes = ["", "/departement", "/faktaover/statistik", "/statistikForetag", "/faktaover/statsbudget", "/faktaover/riksdagen", "/faktaover/SekretessMyndighet", "/faktaover/relations", "/faktaover/foretagMyndigheter", "/faktaover/staten", "/faktaover/Tips", "/om/OmOss", "/om/OmInfo", "/om/Kontakt", "/faktaover/politik", "/faktaover/politik/C", "/faktaover/politik/KD", "/faktaover/politik/L", "/faktaover/politik/S", "/faktaover/politik/M", "/faktaover/politik/V", "/faktaover/politik/MP", "/faktaover/politik/SD"].map((route) => ({
+    const staticRoutes = ["", "/departement", "/faktaover/statistik", "/faktaover/statistikForetag", "/faktaover/statsbudget", "/faktaover/riksdagen", "/faktaover/SekretessMyndighet", "/faktaover/relations", "/faktaover/foretagMyndigheter", "/faktaover/staten", "/faktaover/Tips", "/om/OmOss", "/om/OmInfo", "/om/Kontakt", "/faktaover/politik", "/faktaover/politik/C", "/faktaover/politik/KD", "/faktaover/politik/L", "/faktaover/politik/S", "/faktaover/politik/M", "/faktaover/politik/V", "/faktaover/politik/MP", "/faktaover/politik/SD"].map((route) => ({
       url: `${URL}${route}`,
       lastModified: new Date().toISOString(),
     }));

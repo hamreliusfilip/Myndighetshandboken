@@ -57,7 +57,7 @@ export default function GenericText({ type }: { type: string }) {
     };
 
     if (!texts) {
-        return <div className="text-center flex justify-center items center font-regular text-black text-xl">Laddar...</div>;
+        return <div className="text-center flex justify-center items center font-regular text-black text-xl mt-20">Laddar...</div>;
     }
 
     const selectedText = texts.texts[selectedIndex];

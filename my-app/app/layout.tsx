@@ -20,11 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html>
+      <head>
+        <link rel="icon" href="favicon.ico"></link>
+      </head>
       <body className={inter.className}>
         {children}
         <Analytics />
         <SpeedInsights />
-        </body>
+      </body>
     </html>
   );
 }
